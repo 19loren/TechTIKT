@@ -24,67 +24,46 @@
             </div>
         </div> -->
 
-        <!-- Barra de Navegação TechTIKT -->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top top-nav-collapse">
-            <div class="container">
+        <!-- Nav -->
+        <header>
 
-                <!-- Logotipo TechTIKT -->
-                <a class="navbar-brand logo-image" href="index.html"><img src="assets/techtikt_logo.jpeg" alt="logo"></a>     
-                
-                <!-- Itens Navegação -->
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav ml-auto">
-                        
-                        <!-- Info -->
-                        <li class="nav-item">
-                            <a class="nav-item nav-link active" href="#info">Info</a>
-                        </li>
+            <!-- Logo -->
+            <img class="logo" src="assets/techtikt_logo1.jpeg" alt="logo">
+            
+            <!-- Links -->
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#recarga">Recarga</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                </ul>
+            </nav>
 
-                        <!-- Recarga -->
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#recarga">Recarga<span class="sr-only"></span></a>
-                        </li>
+            <!-- Btn Nav -->
+            <a class="nav-gerarbilhete" href="#geracao-bilhete">
+                <button>Gerar Bilhete</button>
+            </a>
+        </header>
 
-                        <!-- Planos -->
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#planos">Planos</a>
-                        </li>
-
-                        <!-- Histórico -->
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="historico.html">Historico</a>
-                        </li>
-                    </ul>
-
-                    <!-- Gerar Bilhete -->
-                    <span class="nav-item">
-                        <a class="btn-outline-sm page-scroll" href="#gerarBilhete">Gerar Bilhete</a>
-                    </span>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Imagem Principal TechTIKT -->
-
-        <section class="img-principal">
+        <!-- Img Principal -->
+        <section class="section__imgpr">
             <div class="image">
-                <img src="assets/techtikt_principal.jpg" alt="">
+                <img src="assets/techtikt_principal.jpg" alt="img-principal">
             </div>
         </section>
 
+
         <!-- Info -->
-        <header class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-                            <h3>Sobre o Projeto</h3>
-                            <p class="p-large p-heading">Elaborado na disciplina de Projeto Integrador II, <b>TechTIKT</b> é um projeto que tem como foco a geração de um bilhete para meios de transporte.</p>
-                            <p>A execução do trabalho foi feita para uso no ambiente Web. A escolha do plano é realizada após a geração do bilhete, e é possível verificar o histórico de recarga e histórico de utilização do Bilhete TechTIKT gerado.</p>
-                        </div>
-                    </div> 
+        <section class="section__info" id="info">
+            <div class="info">
+                <div class="text-container">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Elaborado para a disciplina de Projeto Integrador II, <b>TechTIKT</b> é um projeto que tem como foco a geração de um bilhete para meios de transporte.
+                    <br/>O fluxo de utilização do bilhete começa pela geração de um código de 8 dígitos para identificação do bilhete. A escolha do plano é realizada após a geração do bilhete, e é possível verificar o histórico de recarga e histórico de utilização do <b>Bilhete TechTIKT</b> gerado.</p>
                 </div>
             </div>
+        </section>
 
         <!-- Gerar Bilhete -->
         <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;" id="gerarBilhete">
