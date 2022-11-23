@@ -203,166 +203,102 @@ h6 {
 	}
 } */
 
+
+/* -----------------------*/
 /* 02. Barra de Navegação */
+/* -----------------------*/
 
-nav {
-	position: sticky;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
 }
 
-.navbar .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+li, a, button {
+    font: 500 16px "Montserrat", sans-serif;
+    text-decoration: none;
+    color: #000;
 }
 
-.navbar-brand.logo-image {
-	display: flex;
-	justify-content: flex-start;
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 3%;
+    position: sticky;
 }
 
- .navbar-custom {
-	background-color: #fff;
-	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-	font: 500 0.875rem/0.875rem "Montserrat", sans-serif;
-	transition: all 0.2s;
-} 
-
-.navbar-custom .navbar-brand.logo-image img {
-    width: 150px;
-	height: 32.61px;
+.logo {
+    cursor: pointer;
+    margin-right: auto;
 }
 
-
-.navbar-custom .navbar-nav {
-	margin-top: 0.75rem;
-	margin-bottom: 0.5rem;
+.nav__links{
+    list-style: none;
 }
 
-.navbar-custom .nav-item .nav-link {
-	padding: 0.625rem 0.75rem;
-	color: #000;
-	text-decoration: none;
-	transition: all 0.2s ease;
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
 }
 
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
-	color: #E33B4A;
+.nav__links li a {
+    transition: all 0.2s;
 }
 
-.nav-tabs {
-    border-bottom: 1px solid #dee2e6;
-  }
-
-.nav-tabs .nav-item {
-    margin-bottom: -1px;
-  } 
-
-
-
-.navbar-custom .navbar-nav {
-	margin-top: 0;
-	margin-bottom: 0;
+.nav__links li a:hover {
+    color: #e33b4a;
 }
 
-.navbar-custom .nav-item .nav-link {
-	padding: 0.25rem 0.75rem;
-}
+/* Btn Nav */
 
-.navbar-custom.top-nav-collapse {
-	padding: 0.5rem 1.5rem 0.5rem 2rem;
-	background-color: #f7fafd;
-	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.navbar-custom.top-nav-collapse .nav-item .nav-link {
-	color: #333;
-}
-
-.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
-.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-	color: #ff556e;
-}
-
-
-.navbar-custom .nav-item .btn-outline-sm {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 0.625rem;
-}
-
-
-/* .navbar-collapse {
-	display: flex;
-	align-items: center;
-} */
-
-/* Botão Gerar Bilhete */
-
-.btn-outline-sm {
+.nav-gerarbilhete button {
+    margin-right: 20px;
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 0.125rem solid #000;
+	border: 0.125rem solid #e33b4a;
 	border-radius: 2rem;
 	background-color: transparent;
-	color: #000;
+	color: #e33b4a;
 	font: 500 0.875rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
 }
 
-.btn-outline-sm:hover {
-	border: 0.125rem solid #000;
-	background-color: #000;
-	color: #fff;
-	text-decoration: none;
-}
-.navbar-custom .nav-item .btn-outline-sm {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	margin-left: 0.5rem;
-	border: 0.125rem solid #E33B4A;
-	color: #E33B4A;
-}
-
-.navbar-custom .nav-item .btn-outline-sm:hover {
-	border: 0.125rem solid #E33B4A;
-	background-color: #E33B4A;
+.nav-gerarbilhete button:hover {
+	border: 0.125rem solid #e33b4a;
+	background-color: #e33b4a;
 	color: #fff;
 }
 
-.navbar-custom .navbar-toggler {
-	padding: 0;
-	border: none;
-	color: #000;
-	font-size: 2rem;
-}
 
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
-	display: none;
-}
-
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
-	display: inline-block;
-}
-
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
-	display: none;
-}
-
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
-	display: inline-block;
-	margin-right: 0.125rem;
-}
-
-
+/* ---------------------*/
 /* 03. Imagem Principal */
-  
+/* ---------------------*/
+
 section {
-    min-height: 100vh;
+    min-height: 45vh;
 }
 
+/* div */
+.image {
+    display: flex;
+    justify-content: auto;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border: none;
+}
+.image img{
+    width: 100vw;
+    height: 688px;
+	object-fit: cover;
+	object-position: 0 -300px;
+}
 /* div */
 .image {
     display: flex;
@@ -383,7 +319,7 @@ section {
 }
 
 
-/* 04. Info */
+/* 04. Info - ATUALIZAR */ 
 
 .header {
 	position: absolute;
