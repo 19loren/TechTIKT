@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        
+        <title>TechTIKT</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="bootstrap.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Favicon  -->
+        <link rel="icon" href="assets/techtikt_favicon.png">
+    </head>
+    <body data-spy="scroll" data-target=".fixed-top">
+
+            <!-- Carregamento -->
+        <!-- <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div> -->
+
+        <!-- Barra de Navegação TechTIKT -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top top-nav-collapse">
+            <div class="container">
+
+                <!-- Logotipo TechTIKT -->
+                <a class="navbar-brand logo-image" href="index.html"><img src="assets/techtikt_logo.jpeg" alt="logo"></a>     
+                
+                <!-- Itens Navegação -->
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <!-- Info -->
+                        <li class="nav-item">
+                            <a class="nav-item nav-link active" href="#info">Info</a>
+                        </li>
+
+                        <!-- Recarga -->
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#recarga">Recarga<span class="sr-only"></span></a>
+                        </li>
+
+                        <!-- Planos -->
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#planos">Planos</a>
+                        </li>
+
+                        <!-- Histórico -->
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="historico.html">Historico</a>
+                        </li>
+                    </ul>
+
+                    <!-- Gerar Bilhete -->
+                    <span class="nav-item">
+                        <a class="btn-outline-sm page-scroll" href="#gerarBilhete">Gerar Bilhete</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Imagem Principal TechTIKT -->
+
+        <section class="img-principal">
+            <div class="image">
+                <img src="assets/techtikt_principal.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- Info -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h3>Sobre o Projeto</h3>
+                            <p class="p-large p-heading">Elaborado na disciplina de Projeto Integrador II, <b>TechTIKT</b> é um projeto que tem como foco a geração de um bilhete para meios de transporte.</p>
+                            <p>A execução do trabalho foi feita para uso no ambiente Web. A escolha do plano é realizada após a geração do bilhete, e é possível verificar o histórico de recarga e histórico de utilização do Bilhete TechTIKT gerado.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+        <!-- Gerar Bilhete -->
+        <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;" id="gerarBilhete">
+            <div class="row mx-0 align-items-center">
+                <div class="col-lg-6 px-md-5 text-center text-lg-right">
+                    <h1 class="display-2 text-uppercase mb-3">Gere seu TechTIKT</h1>
+                    <p class="text-dark mb-4">Comece nossa jornada criando seu bilhete.</p> 
+                    <a class="btn-gerar-bilhete" type="button" id="teste" onclick="ConfirmationModalID()">Gerar Bilhete</a>
+                    <label id="codigo" type="text"></label>
+                    <div id="confirmation" class="modal-container">
+                        <div class="modal">
+                                <div class="modal-header">
+                                    <h2> Tem certeza que deseja continuar?</h2>
+                                </div>
+                                <div class="modal-content">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-button modal-cancel-button" onclick="CancelModalID()">Cancelar</button>
+                                    <button class="modal-button modal-confirm-button" onclick="ConfirmGerarID()">Confirmar</button>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imagem -->
+                <div class="img-gerar-bilhete">
+                    <img class="img-ger-bilhete" src="assets/techtikt_geracaobilhete.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+                    
+                    
+                    <!-- Planos -->
+                    <div class="planos-txt">
+                        <h1 class="txt-planos">Planos</h1>
+                    </div>
+                    <div class="planos">
+                        <div class="plano-unico">
+                            <img src="assets/plano-unico.png">
+                        </div>
+                        
+                        <div class="plano-duo">
+                            <img src="assets/plano-duo.png">
+                        </div>
+        
+                        <div class="plano-7days">
+                            <img src="assets/plano-7days.png">
+                        </div>
+        
+                        <div class="plano-30days">
+                            <img src="assets/plano-30days.png">
+                        </div>
+                    </div>
+                    <!-- Tipo Recarga  -->
+                    <div class="seletor">
+                        <select class="seletor-tipo" id="tipoRecarga">
+                            <option value="unico">UNICO</option>
+                            <option value="duplo">DUO</option>
+                            <option value="semanal">7DAYS</option>
+                            <option value="mensal">30DAYS</option>
+                        </select>
+                    </div>
+
+                    <!-- Input Código -->
+                    <div>
+                        <div>
+                            <h3>Digite seu Código:</h3>
+                            <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
+                            <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a>
+                            <label type="text" id="codigoRecarga"></label>
+                        </div>
+                    </div>
+
+
+                    
+
+
+                    <!-- Contador -->
+                    <!-- <div class="counter">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                     -->
+                                    <!-- Contador -->
+                                    <!-- <div id="counter"> -->
+                                        <!-- Devs -->
+                                        <!-- <div class="cell">
+                                            <i class="fas fa-users"> -->
+                                                <!-- <img src="assets/devs_roxo.jpeg"> -->
+                                            <!-- </i>
+                                            <div class="counter-value number-count" data-count="5">5</div>
+                                            <p class="counter-info">Devs</p>
+                                        </div> -->
+                                        <!-- Front-end -->
+                                        <!-- <div class="cell">
+                                            <i class="fas fa-code green">
+                                                 <img src="assets/front.png"> -->
+                                           <!-- </i>
+                                            <div class="counter-value number-count" data-count="385">385</div>
+                                            <p class="counter-info">Linhas de Front-end</p>
+                                        </div> -->
+                                        <!-- Back-end -->
+                                        <!-- <div class="cell">
+                                            <i class="fas fa-cog red"></i>
+                                            <div class="counter-value number-count" data-count="159">159</div>
+                                            <p class="counter-info">Linhas de Back-end</p>
+                                        </div> -->
+                                        <!-- Dailys -->
+                                        <!-- <div class="cell">
+                                            <i class="fas fa-comments yellow"></i>
+                                            <div class="counter-value number-count" data-count="50">50</div>
+                                            <p class="counter-info">Daily Meetings</p>
+                                        </div> -->
+                                        <!-- Dias Desenvolvimento -->
+                                        <!-- <div class="cell">
+                                            <i class="fas fa-rocket blue"></i>
+                                            <div class="counter-value number-count" data-count="117">117</div>
+                                            <p class="counter-info">Dias de Desenvolvimento</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> -->
+
+                    <!-- Integrantes -->
+                    <!-- <div class="owl-carousel testimonial-carousel owl-loaded owl-drag">    
+
+                        <div class="owl-nav disabled">
+                            <div class="owl-prev">prev</div>
+                            <div class="owl-next">next</div>
+                        </div>
+
+                        <div class="owl-dots">
+                            <div class="owl-dot active">
+                                <span></span>
+                            </div>
+                            <div class="owl-dot">
+                                <span></span>
+                            </div>
+                            <div class="owl-dot">
+                                <span></span>
+                            </div>
+                            <div class="owl-dot">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Footer -->
+
+                    <script src="script.js"></script>
+
+    </body>
+</html>

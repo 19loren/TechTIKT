@@ -1,0 +1,846 @@
+/* 
+------------------------------------
+Conteúdo:
+
+01. Carregamento
+02. Barra de Navegação
+03. Imagem Principal
+04. Info
+05. Geração Bilhete
+06. Input Código
+07. Planos
+08. Contador
+09. Desenvolvedores
+10. Footer
+------------------------------------
+
+------------------------------------
+Cores:
+
+Vermelho Btn > #E33B4A
+Azul Btn > #18A0FB
+Background cinza/azul > #E8EFF6
+------------------------------------
+ */
+
+body, html {
+     width: 100%;
+     height: 100%;
+	 margin: 0;
+	 padding: 0;
+}
+
+body, p {
+	color: #000; 
+	font: 400 1rem/1.75rem "Montserrat", sans-serif;
+}
+
+h1 {
+	color: #000;
+    font: 700 "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-size: 52px;    
+    line-height: 85px;
+    letter-spacing: -0.015em;
+}
+
+h2 {
+	color: #000;
+    font: 700 "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+}
+
+h3 {
+	color: #000;
+	font: 700 1.75rem/2.375rem "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-size: 36px;
+	line-height: 72px;
+    letter-spacing: -0.015em;	
+}
+
+h4 {
+	color: #000;
+	font: 700 1.25rem/1.75rem "Open Sans", sans-serif;
+
+    font-style: normal;
+    font-size: 32px;
+	line-height: 72px;
+    letter-spacing: -0.015em;
+}
+
+h5 {
+	color: #000;
+	font: 700 1.125rem/1.625rem "Open Sans", sans-serif;
+}
+
+h6 {
+	color: #000;
+	font: 700 1rem/1.5rem "Open Sans", sans-serif;
+}
+
+
+
+
+
+
+.modal-container{
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	align-items: center;
+	justify-content: center;;
+}
+
+.modal-open{
+	display: flex;
+}
+
+.modal{
+	max-width: 700px;
+	max-height: 500px;
+	background-color: white;
+	border-color: 3px;
+	border-radius: 10px;
+}
+
+.modal-button{
+	text-transform: uppercase;
+	padding: 0.5em 1em;
+	border: none;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 3px;
+	margin-left: 0.5em;
+}
+
+.modal-confirm-button{
+	background-color: #E33B4A;
+}
+
+.modal-header{
+	background-color: rgba(0,0,0,0.1);
+}
+
+.modal-header h2{
+	margin: 1em;
+}
+.modal-content{
+	padding: 1em;
+}
+.modal-footer{
+	padding: 1em;
+	background-color: rgba(0,0,0,0.05);
+	display: flex;
+	justify-content: flex-end;
+}
+/* 01. Carregamento */
+
+/* .spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #f7fafd;
+}
+
+.spinner {
+	position: absolute;
+
+ 
+	top: 50%; 
+	left: 50%; 
+
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem;
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #E33B4A;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+} */
+
+/* 02. Barra de Navegação */
+
+nav {
+	position: sticky;
+}
+
+.navbar .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-brand.logo-image {
+	display: flex;
+	justify-content: flex-start;
+}
+
+ .navbar-custom {
+	background-color: #fff;
+	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+	font: 500 0.875rem/0.875rem "Montserrat", sans-serif;
+	transition: all 0.2s;
+} 
+
+.navbar-custom .navbar-brand.logo-image img {
+    width: 150px;
+	height: 32.61px;
+}
+
+
+.navbar-custom .navbar-nav {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.navbar-custom .nav-item .nav-link {
+	padding: 0.625rem 0.75rem;
+	color: #000;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link.active {
+	color: #E33B4A;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+  } 
+
+
+
+.navbar-custom .navbar-nav {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.navbar-custom .nav-item .nav-link {
+	padding: 0.25rem 0.75rem;
+}
+
+.navbar-custom.top-nav-collapse {
+	padding: 0.5rem 1.5rem 0.5rem 2rem;
+	background-color: #f7fafd;
+	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom.top-nav-collapse .nav-item .nav-link {
+	color: #333;
+}
+
+.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
+.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
+	color: #ff556e;
+}
+
+
+.navbar-custom .nav-item .btn-outline-sm {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.625rem;
+}
+
+
+.navbar-collapse {
+	display: flex;
+	align-items: center;
+} */
+
+/* Botão Gerar Bilhete */
+
+.btn-outline-sm {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #000;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #000;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+.btn-outline-sm:hover {
+	border: 0.125rem solid #000;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+}
+.navbar-custom .nav-item .btn-outline-sm {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 0.5rem;
+	border: 0.125rem solid #E33B4A;
+	color: #E33B4A;
+}
+
+.navbar-custom .nav-item .btn-outline-sm:hover {
+	border: 0.125rem solid #E33B4A;
+	background-color: #E33B4A;
+	color: #fff;
+}
+
+.navbar-custom .navbar-toggler {
+	padding: 0;
+	border: none;
+	color: #000;
+	font-size: 2rem;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+	display: inline-block;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+	display: inline-block;
+	margin-right: 0.125rem;
+}
+
+
+/* 03. Imagem Principal */
+  
+section {
+    min-height: 100vh;
+}
+
+/* div */
+.image {
+    display: flex;
+    justify-content: auto;
+
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border: none;
+}
+.image img{
+    width: 100vw;
+    height: 658px;
+	object-fit: cover;
+	object-position: 0 -300px;
+}
+
+
+/* 04. Info */
+
+.header {
+	position: absolute;
+	overflow: hidden;
+	padding-top: 0rem;
+	padding-bottom: 5rem;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+
+	background-color: #fff;
+}
+
+.header p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+
+	letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.header b{
+	font-weight: 500;
+}
+
+
+/* 05. Geração Bilhete */
+
+/* 06. Input Código */
+
+
+
+/* 07. Planos */
+
+/* Container Retângulo Descrição */
+.ret-desc{
+	position: absolute;
+	left: 7.51%;
+	right: 7.21%;
+	top: 19.3%;
+	bottom: 1.57%;
+
+	background: #F2F2F2;
+	border-radius: 0px 95px 45px 45px;
+}
+
+/* txt Planos */
+.container-planos{
+	padding-top: 0rem;
+	padding-bottom: 5rem;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+
+	display: flex;
+    justify-content: auto;
+}
+.container-planos.container-unico .ret-desc{
+	position: absolute;
+	left: 7.51%;
+	right: 7.21%;
+	top: 19.3%;
+	bottom: 1.57%;
+
+	background: #F2F2F2;
+	border-radius: 0px 95px 45px 45px;
+}
+.planos h1 {
+	font-family: 'Montserrat';  /*Arrumar formatação de Planos*/
+	font-style: normal;
+	font-weight: 400;	
+	font-size: 48px;
+	line-height: 72px;
+	
+	letter-spacing: -0.015em;
+	
+	color: #000;
+}
+
+/* Containers Planos */
+/* Único */
+
+.container-unico {
+	position: absolute;
+
+	background: url(assets/techtikit_laranja.jpeg);
+	border-radius: 25px;
+	display: flex;
+    justify-content: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+	height: 738px;
+}
+
+.quadrado-unico {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 0px;
+
+	width: 333px;
+}
+
+.planos h2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 52px;
+	line-height: 72px;
+	
+	margin-top: 15px;
+	text-align: center;
+	letter-spacing: -0.015em;
+	
+	color: #000;
+}
+
+.quadrado-unico .tipo-unico h4 {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 72px;
+
+	margin-top: 20px;
+	text-align: center;
+    letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.txt-desc-unico{
+	position: center;
+	text-align: start;
+	margin-top: 5px;
+	margin-left: 7px;
+	margin-right: auto;
+}
+
+.ret-desc-unico .txt-desc-unico .btn-unico {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.625rem;
+}
+
+a .btn-unico {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #000;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #000;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+
+/* Duo */
+.container-duo {
+	position: absolute;
+
+	background: url(assets/techtikt_rosa.jpeg);
+	border-radius: 25px;
+	display: flex;
+    justify-content: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+	height: 738px;
+}
+
+.quadrado-duo {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 0px;
+
+	width: 333px;
+}
+
+.planos h2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 52px;
+	line-height: 72px;
+	
+	margin-top: 15px;
+	text-align: center;
+	letter-spacing: -0.015em;
+	
+	color: #000;
+}
+
+.quadrado-duo .tipo-duo h4 {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 72px;
+
+	margin-top: 20px;
+	text-align: center;
+    letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.txt-desc-duo{
+	position: center;
+	text-align: start;
+	margin-top: 5px;
+	margin-left: 7px;
+	margin-right: auto;
+}
+
+.ret-desc-duo .txt-desc-duo .btn-duo {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.625rem;
+}
+
+a .btn-duo {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #000;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #000;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+/* 7DAYS */
+.container-7days {
+	position: absolute;
+
+	background: url(assets/techtikt_roxo.jpeg);
+	border-radius: 25px;
+	display: flex;
+    justify-content: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+	height: 738px;
+}
+
+.quadrado-7days {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 0px;
+
+	width: 333px;
+}
+
+.planos h2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 52px;
+	line-height: 72px;
+	
+	margin-top: 15px;
+	text-align: center;
+	letter-spacing: -0.015em;
+	
+	color: #000;
+}
+
+.quadrado-7days .tipo-7days h4 {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 72px;
+
+	margin-top: 20px;
+	text-align: center;
+    letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.txt-desc-7days{
+	position: center;
+	text-align: start;
+	margin-top: 5px;
+	margin-left: 7px;
+	margin-right: auto;
+}
+
+.ret-desc-7days .txt-desc-7days .btn-7days {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.625rem;
+}
+
+a .btn-7days {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #000;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #000;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+/* 30DAYS */
+
+.container-30days {
+	position: absolute;
+
+	background: url(assets/techtikt_azul.jpeg);
+	border-radius: 25px;
+	display: flex;
+    justify-content: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 333px;
+	height: 738px;
+}
+
+.quadrado-30days {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 0px;
+
+	width: 333px;
+}
+
+.planos h2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 52px;
+	line-height: 72px;
+	
+	margin-top: 15px;
+	text-align: center;
+	letter-spacing: -0.015em;
+	
+	color: #000;
+}
+
+.quadrado-30days .tipo-30days h4 {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 72px;
+
+	margin-top: 20px;
+	text-align: center;
+    letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.txt-desc-30days{
+	position: center;
+	text-align: start;
+	margin-top: 5px;
+	margin-left: 7px;
+	margin-right: auto;
+}
+
+.ret-desc-30days .txt-desc-30days .btn-30days {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.625rem;
+}
+
+a .btn-30days {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #000;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #000;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+/* 08. Contador */
+
+.counter {
+	padding-top: 8rem;
+	padding-bottom: 5rem;
+	background-color: #e8eff6;
+	text-align: center;
+}
+
+.counter #counter {
+	margin-bottom: 0.75rem;
+}
+
+.counter #counter .cell {
+	display: inline-block;
+	width: 6.25rem;
+	margin-right: 1.5rem;
+	margin-bottom: 2rem;
+	margin-left: 1.5rem;
+	vertical-align: top;
+}
+
+.counter #counter .fas {
+	margin-bottom: 0.875rem;
+	font-size: 2.5rem;
+	color: #aa7eec;
+}
+
+.counter #counter .fas.green {
+	color: #19ca94;
+}
+
+.counter #counter .fas.red {
+	color: #ff556e;
+}
+
+.counter #counter .fas.yellow {
+	color: #ffb30f;
+}
+
+.counter #counter .fas.blue {
+	color: #50b9e8;
+}
+
+.counter #counter .counter-value {
+	color: #000;
+	font-weight: 700;
+	font-size: 3.5rem;
+	line-height: 4.25rem;
+	vertical-align: middle;
+}
+
+.counter #counter .counter-info {
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+
+
+
+/* 09. Desenvolvedores */
+/* 10. Footer */
+
