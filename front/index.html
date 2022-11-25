@@ -95,129 +95,159 @@
                     <img class="img-ger-bilhete" src="assets/techtikt_geracaobilhete.jpeg" alt="">
                 </div>
             </div>
+        </div>         
+                    
+        <!-- Planos -->
+        <div class="planos-txt">
+            <h1 class="txt-planos">Planos</h1>
         </div>
-                    
-                    
-                    <!-- Planos -->
-                    <div class="planos-txt">
-                        <h1 class="txt-planos">Planos</h1>
-                    </div>
-                    <div class="planos">
-                        <div class="plano-unico">
-                            <img src="assets/plano-unico.png">
-                        </div>
+        <div class="planos">
+            <div class="plano-unico">
+                <img src="assets/plano-unico.png">
+            </div>
+            
+            <div class="plano-duo">
+                <img src="assets/plano-duo.png">
+            </div>
+
+            <div class="plano-7days">
+                <img src="assets/plano-7days.png">
+            </div>
+
+            <div class="plano-30days">
+                <img src="assets/plano-30days.png">
+            </div>
+        </div>
+        <!-- Tipo Recarga  -->
+        <div class="seletor">
+            <select class="seletor-tipo" id="tipoRecarga">
+                <option value="unico">UNICO</option>
+                <option value="duplo">DUO</option>
+                <option value="semanal">7DAYS</option>
+                <option value="mensal">30DAYS</option>
+            </select>
+        </div>
+
+        <!-- Input Código -->
+        <div>
+            <div>
+                <h3>Digite seu Código:</h3>
+                <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
+                <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a>
+                <label type="text" id="codigoRecarga"></label>
+            </div>
+        </div>
+
+        <!-- Contador -->
+        <div class="counter">
+            <div class="container">
+                <div class="row">
+                    <div class="count-container">
                         
-                        <div class="plano-duo">
-                            <img src="assets/plano-duo.png">
-                        </div>
-        
-                        <div class="plano-7days">
-                            <img src="assets/plano-7days.png">
-                        </div>
-        
-                        <div class="plano-30days">
-                            <img src="assets/plano-30days.png">
-                        </div>
-                    </div>
-                    <!-- Tipo Recarga  -->
-                    <div class="seletor">
-                        <select class="seletor-tipo" id="tipoRecarga">
-                            <option value="unico">UNICO</option>
-                            <option value="duplo">DUO</option>
-                            <option value="semanal">7DAYS</option>
-                            <option value="mensal">30DAYS</option>
-                        </select>
-                    </div>
-
-                    <!-- Input Código -->
-                    <div>
-                        <div>
-                            <h3>Digite seu Código:</h3>
-                            <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
-                            <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a>
-                            <label type="text" id="codigoRecarga"></label>
-                        </div>
-                    </div>
-
-
-                    
-
-
-                    <!-- Contador -->
-                    <!-- <div class="counter">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                     -->
-                                    <!-- Contador -->
-                                    <!-- <div id="counter"> -->
-                                        <!-- Devs -->
-                                        <!-- <div class="cell">
-                                            <i class="fas fa-users"> -->
-                                                <!-- <img src="assets/devs_roxo.jpeg"> -->
-                                            <!-- </i>
-                                            <div class="counter-value number-count" data-count="5">5</div>
-                                            <p class="counter-info">Devs</p>
-                                        </div> -->
-                                        <!-- Front-end -->
-                                        <!-- <div class="cell">
-                                            <i class="fas fa-code green">
-                                                 <img src="assets/front.png"> -->
-                                           <!-- </i>
-                                            <div class="counter-value number-count" data-count="385">385</div>
-                                            <p class="counter-info">Linhas de Front-end</p>
-                                        </div> -->
-                                        <!-- Back-end -->
-                                        <!-- <div class="cell">
-                                            <i class="fas fa-cog red"></i>
-                                            <div class="counter-value number-count" data-count="159">159</div>
-                                            <p class="counter-info">Linhas de Back-end</p>
-                                        </div> -->
-                                        <!-- Dailys -->
-                                        <!-- <div class="cell">
-                                            <i class="fas fa-comments yellow"></i>
-                                            <div class="counter-value number-count" data-count="50">50</div>
-                                            <p class="counter-info">Daily Meetings</p>
-                                        </div> -->
-                                        <!-- Dias Desenvolvimento -->
-                                        <!-- <div class="cell">
-                                            <i class="fas fa-rocket blue"></i>
-                                            <div class="counter-value number-count" data-count="117">117</div>
-                                            <p class="counter-info">Dias de Desenvolvimento</p>
-                                        </div>
-                                    </div>
-                                </div> 
+                        <!-- Contador -->
+                        <div id="counter">
+                            <!-- Devs -->
+                            <div class="cell">
+                                <i class="fas fa-users"></i>
+                                <div class="counter-value number-count" data-count="5">5</div>
+                                <p class="counter-info">Devs</p>
+                            </div>
+                            <!-- Front-end -->
+                            <div class="cell">
+                                <i class="fas fa-code green"></i>
+                                <div class="counter-value number-count" data-count="385">385</div>
+                                <p class="counter-info">Linhas de Front-end</p>
                             </div> 
-                        </div> 
-                    </div> -->
-
-                    <!-- Integrantes -->
-                    <!-- <div class="owl-carousel testimonial-carousel owl-loaded owl-drag">    
-
-                        <div class="owl-nav disabled">
-                            <div class="owl-prev">prev</div>
-                            <div class="owl-next">next</div>
-                        </div>
-
-                        <div class="owl-dots">
-                            <div class="owl-dot active">
-                                <span></span>
+                            <!-- Back-end -->
+                            <div class="cell">
+                                <i class="fas fa-cog red"></i>
+                                <div class="counter-value number-count" data-count="159">159</div>
+                                <p class="counter-info">Linhas de Back-end</p>
                             </div>
-                            <div class="owl-dot">
-                                <span></span>
-                            </div>
-                            <div class="owl-dot">
-                                <span></span>
-                            </div>
-                            <div class="owl-dot">
-                                <span></span>
+                            <!-- Dailys -->
+                            <div class="cell">
+                                <i class="fas fa-comments yellow"></i>
+                                <div class="counter-value number-count" data-count="50">50</div>
+                                <p class="counter-info">Daily Meetings</p>
+                            </div> 
+                            <!-- Dias Desenvolvimento -->
+                            <div class="cell">
+                                <i class="fas fa-rocket blue"></i>
+                                <div class="counter-value number-count" data-count="117">117</div>
+                                <p class="counter-info">Dias de Desenvolvimento</p>
                             </div>
                         </div>
-                    </div> -->
+                    </div> 
+                </div> 
+            </div> 
+        </div>
 
-                    <!-- Footer -->
+        <!-- Integrantes -->
+        <!-- <div class="owl-carousel testimonial-carousel owl-loaded owl-drag">    
 
-                    <script src="script.js"></script>
+            <div class="owl-nav disabled">
+                <div class="owl-prev">prev</div>
+                <div class="owl-next">next</div>
+            </div>
 
+            <div class="owl-dots">
+                <div class="owl-dot active">
+                    <span></span>
+                </div>
+                <div class="owl-dot">
+                    <span></span>
+                </div>
+                <div class="owl-dot">
+                    <span></span>
+                </div>
+                <div class="owl-dot">
+                    <span></span>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Footer -->
+
+        <footer>
+            <div class="footer">
+
+                <!-- Logo Footer -->
+                <img class="logo" src="assets/techtikt_logo1.jpeg" alt="logo">
+
+                <!-- Links Footer -->
+                <div class="footer-sup">
+                    <ul class="nav__links">
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bot">
+
+                </div>
+
+                <!-- Instagram -->
+                <div class="cell">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <!-- Linkedin -->
+                <div class="cell">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div> 
+
+                <!-- GitHub -->
+                <div class="cell">
+                    <i class="fa-brands fa-github"></i>
+                </div> 
+
+                <!-- Site Puc-Campinas -->
+                <div class="cell">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div> 
+            </div> <!-- End Footer -->
+        </footer>
+        <!-- Script -->
+        <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
