@@ -2,16 +2,16 @@
 ------------------------------------
 Conteúdo:
 
-01. Carregamento
-02. Barra de Navegação
-03. Imagem Principal
-04. Info
-05. Geração Bilhete
-06. Input Código
-07. Planos
-08. Contador
-09. Desenvolvedores
-10. Footer
+	01. Carregamento
+	02. Barra de Navegação
+	03. Imagem Principal
+	04. Info
+	05. Geração Bilhete
+	06. Input Código
+	07. Planos
+	08. Contador
+	09. Desenvolvedores
+	10. Footer
 -----------------------------------------------------------------------------------------------------------------
 
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -20,12 +20,12 @@ Conteúdo:
 -----------------------------------------------------------------------------------------------------------------
 Cores:
 
-Vermelho Btn > #E33B4A
-Azul Btn > #18A0FB
-Background cinza/azul > #E8EFF6
-#183052
+	Vermelho Btn > #e33b4a
+	Azul Btn > #18a0fb
+	Background cinza/azul > #e8eff6
+
 ------------------------------------
- */
+*/
 
 body, html {
      width: 100%;
@@ -248,24 +248,6 @@ section {
 	object-fit: cover;
 	object-position: 0 -300px;
 }
-/* div */
-.image {
-    display: flex;
-    justify-content: auto;
-
-
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    border: none;
-}
-.image img{
-    width: 100vw;
-    height: 658px;
-	object-fit: cover;
-	object-position: 0 -300px;
-}
 
 /* ---------------------*/
 /* 04. Info - ATUALIZAR */ 
@@ -340,25 +322,128 @@ section {
 /* --------------------*/
 /* 05. Geração Bilhete */
 /* --------------------*/
+.section__geracao {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #e8eff6;
 
+    min-height: 80vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
+} 
+
+.container-geracao {
+	position: relative;
+    width: 100%;
+    margin: 20px;
+    display: grid;
+	background-color: #e8eff6;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Imagem */
+.img-geracao {
+	display: flex;
+    justify-content: center;
+
+	border: #E8EFF6;
+	border-radius: 25px;
+	margin-left: 35px;
+	margin-top: 55px;
+}
+
+.img-geracao .img {
+	position: relative;
+    overflow: hidden;
+	background-color: #e8eff6;
+}
+.img-geracao .img img {
+    width: auto;
+    height: auto;
+	object-fit: cover;
+	object-position: 0px;
+	border-radius: 45px;
+}
+
+/* Texto */
+.geracao {
+    position: relative;
+    padding: 40px;
+	background-color: #e8eff6;
+	margin-top: 35px;
+}
+
+.txt-geracao {
+    margin-bottom: 50px;
+	background-color: #e8eff6;
+}
+
+.txt-geracao :last-child {
+    margin-bottom: 0;
+	background-color: #e8eff6;
+}
+
+.txt-geracao .h1-geracao {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 85px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+	background-color: #e8eff6;
+}
+
+.txt-geracao .p-geracao {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 50px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+	background-color: #e8eff6;
+}
+
+/* Checkbox */
+.checkbox {
+	background-color: #e8eff6;
+	align-items: center;
+	margin-left: 120px;
+}
+.checkbox .termos-uso {
+	background-color: #e8eff6;
+}
+.checkbox .regras-utlizacao {
+	background-color: #e8eff6;
+}
 
 /* Btn Gerar Bilhete */
 .btn-gerar-bilhete {
-	display: inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
+	display:inline-block;
+	padding: 1.8rem 4.5rem 1.8rem 4.5rem;
 	border: 0.125rem solid #18A0FB;
 	border-radius: 2rem;
-	background-color: transparent;
-	color: #18A0FB;
-	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	background-color: #18a0fb;
+	color: #fff;
+	font: 500 1.25rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
+	margin-left: 160px;
 }
 
 .btn-gerar-bilhete:hover {
-	border: 0.125rem solid #18A0FB;
-	background-color: #18A0FB;
+	border: 0.125rem solid #1691e3;
+	background-color: #1691e3;
 	color: #fff;
 	text-decoration: none;
 }
@@ -390,11 +475,11 @@ section {
 }
 
 .modal-button{
-    font: 700 1rem/1.5rem "Open Sans", sans-serif;
+    font: 700 1rem/1.5rem "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 0.5em 1em;
     border: none;
-    color: white;
+    color: #fff;
     background-color: rgba(0,0,0,0.5);
     border-radius: 3px;
     margin-left: 0.5em;
@@ -426,51 +511,23 @@ section {
 }
 
 
-/* -----------------*/
-/* 06. Input Código */
-/* -----------------*/
-
-.input-codigo {
-	background: #E8EFF6;
-	border-radius: 35px;
-	height: 30px;
-	width: 350px;
-	font: 500 20px "Montserrat", sans-serif;
-	text-align: center;
-}
-
-/* Btn Recarregar */
-.btn-recarregar {
-	display: inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 0.125rem solid #18A0FB;
-	border-radius: 2rem;
-	background-color: transparent;
-	color: #18A0FB;
-	font: 500 0.875rem/0 "Montserrat", sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	margin: 0.5rem 0;
-}
-
-.btn-recarregar:hover {
-	border: 0.125rem solid #18A0FB;
-	background-color: #18A0FB;
-	color: #fff;
-	text-decoration: none;
-}
-
-
 /* -----------*/
-/* 07. Planos */
+/* 06. Planos */
 /* -----------*/
 
-.planos{
-    padding-top: 90px;
-	display: flex;
+.section__planos {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #fff;
+
+    min-height: 80vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
 }
 
-.planos-txt h1{
+.planos-txt .txt-planos {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
@@ -481,6 +538,13 @@ section {
 
 	color: #000;
 }
+
+.planos{
+    padding-top: 90px;
+	display: flex;
+	align-content: space-between;
+}
+
 
 /* Único */
 .plano-unico{
@@ -520,6 +584,52 @@ section {
 }
 
 
+/* -----------------*/
+/* 07. Input Código */
+/* -----------------*/
+
+.section__inputcodigo {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #fff;
+
+    min-height: 45vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-codigo {
+	background: #E8EFF6;
+	border-radius: 35px;
+	height: 30px;
+	width: 350px;
+	font: 500 20px "Montserrat", sans-serif;
+	text-align: center;
+}
+
+/* Btn Recarregar */
+.btn-recarregar {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #18A0FB;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #18A0FB;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+.btn-recarregar:hover {
+	border: 0.125rem solid #18A0FB;
+	background-color: #18A0FB;
+	color: #fff;
+	text-decoration: none;
+}
+
 /* -------------*/
 /* 08. Contador */
 /* -------------*/
@@ -533,6 +643,7 @@ section {
 
 .counter #counter {
 	margin-bottom: 0.75rem;
+	background-color: #e8eff6;
 }
 
 .counter #counter .cell {
@@ -542,12 +653,14 @@ section {
 	margin-bottom: 2rem;
 	margin-left: 1.5rem;
 	vertical-align: top;
+	background-color: #e8eff6;
 }
 
 .counter #counter .fas {
 	margin-bottom: 0.875rem;
 	font-size: 2.5rem;
 	color: #aa7eec;
+	background-color: #e8eff6;
 }
 
 .counter #counter .fas.green {
@@ -572,11 +685,13 @@ section {
 	font-size: 3.5rem;
 	line-height: 4.25rem;
 	vertical-align: middle;
+	background-color: #e8eff6;
 }
 
 .counter #counter .counter-info {
 	margin-bottom: 0;
 	vertical-align: middle;
+	background-color: #e8eff6;
 }
 
 
@@ -598,4 +713,3 @@ section {
 	margin-left: 0rem;
 	vertical-align: top;
 }
-
