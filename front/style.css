@@ -343,6 +343,7 @@ section {
     grid-template-columns: 1fr 1fr;
 }
 
+/* Imagem */
 .img-geracao {
 	/* position: relative;
     display: flex;
@@ -373,6 +374,7 @@ section {
 	object-position: 0 -300px;
 }
 
+/* Texto */
 .geracao {
     position: relative;
     padding: 40px;
@@ -417,18 +419,32 @@ section {
 	background-color: #e8eff6;
 }
 
+/* Checkbox */
+.checkbox {
+	background-color: #e8eff6;
+	align-items: center;
+	margin-left: 160px;
+}
+.checkbox .termos-uso {
+	background-color: #e8eff6;
+}
+.checkbox .regras-utlizacao {
+	background-color: #e8eff6;
+}
+
 /* Btn Gerar Bilhete */
 .btn-gerar-bilhete {
 	display:inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
+	padding: 2rem 4.5rem 2rem 4.5rem;
 	border: 0.125rem solid #18A0FB;
 	border-radius: 2rem;
 	background-color: #18a0fb;
 	color: #fff;
-	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	font: 500 1.25rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
+	margin-left: 210px;
 }
 
 .btn-gerar-bilhete:hover {
@@ -608,6 +624,7 @@ section {
 
 .counter #counter {
 	margin-bottom: 0.75rem;
+	background-color: #e8eff6;
 }
 
 .counter #counter .cell {
@@ -617,12 +634,14 @@ section {
 	margin-bottom: 2rem;
 	margin-left: 1.5rem;
 	vertical-align: top;
+	background-color: #e8eff6;
 }
 
 .counter #counter .fas {
 	margin-bottom: 0.875rem;
 	font-size: 2.5rem;
 	color: #aa7eec;
+	background-color: #e8eff6;
 }
 
 .counter #counter .fas.green {
@@ -647,11 +666,13 @@ section {
 	font-size: 3.5rem;
 	line-height: 4.25rem;
 	vertical-align: middle;
+	background-color: #e8eff6;
 }
 
 .counter #counter .counter-info {
 	margin-bottom: 0;
 	vertical-align: middle;
+	background-color: #e8eff6;
 }
 
 
@@ -673,4 +694,3 @@ section {
 	margin-left: 0rem;
 	vertical-align: top;
 }
-
