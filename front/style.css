@@ -248,24 +248,6 @@ section {
 	object-fit: cover;
 	object-position: 0 -300px;
 }
-/* div */
-.image {
-    display: flex;
-    justify-content: auto;
-
-
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    border: none;
-}
-.image img{
-    width: 100vw;
-    height: 658px;
-	object-fit: cover;
-	object-position: 0 -300px;
-}
 
 /* ---------------------*/
 /* 04. Info - ATUALIZAR */ 
@@ -340,16 +322,109 @@ section {
 /* --------------------*/
 /* 05. Geração Bilhete */
 /* --------------------*/
+.section__geracao {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #e8eff6;
 
+    min-height: 80vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
+} 
+
+.container-geracao {
+	position: relative;
+    width: 100%;
+    margin: 20px;
+    display: grid;
+	background-color: #e8eff6;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-geracao {
+	/* position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	background-color: #e8eff6;
+    padding-bottom: 20px; */
+
+	display: flex;
+    justify-content: auto;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border: none;
+	background-image: "assets/techtikt_geracaobilhete.jpeg";
+}
+
+.img-geracao .img {
+	position: relative;
+    overflow: hidden;
+}
+.img-geracao .img img {
+    width: 100vw;
+    height: 688px;
+	object-fit: cover;
+	object-position: 0 -300px;
+}
+
+.geracao {
+    position: relative;
+    padding: 40px;
+	background-color: #e8eff6;
+}
+
+.txt-geracao {
+    margin-bottom: 50px;
+	background-color: #e8eff6;
+}
+
+.txt-geracao :last-child {
+    margin-bottom: 0;
+	background-color: #e8eff6;
+}
+
+.txt-geracao .h1-geracao {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 85px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+	background-color: #e8eff6;
+}
+
+.txt-geracao .p-geracao {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 50px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+	background-color: #e8eff6;
+}
 
 /* Btn Gerar Bilhete */
 .btn-gerar-bilhete {
-	display: inline-block;
+	display:inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
 	border: 0.125rem solid #18A0FB;
 	border-radius: 2rem;
-	background-color: transparent;
-	color: #18A0FB;
+	background-color: #18a0fb;
+	color: #fff;
 	font: 500 0.875rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -357,8 +432,8 @@ section {
 }
 
 .btn-gerar-bilhete:hover {
-	border: 0.125rem solid #18A0FB;
-	background-color: #18A0FB;
+	border: 0.125rem solid #1691e3;
+	background-color: #1691e3;
 	color: #fff;
 	text-decoration: none;
 }
