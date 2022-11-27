@@ -2,16 +2,16 @@
 ------------------------------------
 Conteúdo:
 
-01. Carregamento
-02. Barra de Navegação
-03. Imagem Principal
-04. Info
-05. Geração Bilhete
-06. Input Código
-07. Planos
-08. Contador
-09. Desenvolvedores
-10. Footer
+	01. Carregamento
+	02. Barra de Navegação
+	03. Imagem Principal
+	04. Info
+	05. Geração Bilhete
+	06. Input Código
+	07. Planos
+	08. Contador
+	09. Desenvolvedores
+	10. Footer
 -----------------------------------------------------------------------------------------------------------------
 
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -20,12 +20,12 @@ Conteúdo:
 -----------------------------------------------------------------------------------------------------------------
 Cores:
 
-Vermelho Btn > #E33B4A
-Azul Btn > #18A0FB
-Background cinza/azul > #E8EFF6
-#183052
+	Vermelho Btn > #e33b4a
+	Azul Btn > #18a0fb
+	Background cinza/azul > #e8eff6
+
 ------------------------------------
- */
+*/
 
 body, html {
      width: 100%;
@@ -345,33 +345,26 @@ section {
 
 /* Imagem */
 .img-geracao {
-	/* position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	background-color: #e8eff6;
-    padding-bottom: 20px; */
-
 	display: flex;
-    justify-content: auto;
+    justify-content: center;
 
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    border: none;
-	background-image: "assets/techtikt_geracaobilhete.jpeg";
+	border: #E8EFF6;
+	border-radius: 25px;
+	margin-left: 35px;
+	margin-top: 55px;
 }
 
 .img-geracao .img {
 	position: relative;
     overflow: hidden;
+	background-color: #e8eff6;
 }
 .img-geracao .img img {
-    width: 100vw;
-    height: 688px;
+    width: auto;
+    height: auto;
 	object-fit: cover;
-	object-position: 0 -300px;
+	object-position: 0px;
+	border-radius: 45px;
 }
 
 /* Texto */
@@ -379,6 +372,7 @@ section {
     position: relative;
     padding: 40px;
 	background-color: #e8eff6;
+	margin-top: 35px;
 }
 
 .txt-geracao {
@@ -423,7 +417,7 @@ section {
 .checkbox {
 	background-color: #e8eff6;
 	align-items: center;
-	margin-left: 160px;
+	margin-left: 120px;
 }
 .checkbox .termos-uso {
 	background-color: #e8eff6;
@@ -435,7 +429,7 @@ section {
 /* Btn Gerar Bilhete */
 .btn-gerar-bilhete {
 	display:inline-block;
-	padding: 2rem 4.5rem 2rem 4.5rem;
+	padding: 1.8rem 4.5rem 1.8rem 4.5rem;
 	border: 0.125rem solid #18A0FB;
 	border-radius: 2rem;
 	background-color: #18a0fb;
@@ -444,7 +438,7 @@ section {
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
-	margin-left: 210px;
+	margin-left: 160px;
 }
 
 .btn-gerar-bilhete:hover {
@@ -481,11 +475,11 @@ section {
 }
 
 .modal-button{
-    font: 700 1rem/1.5rem "Open Sans", sans-serif;
+    font: 700 1rem/1.5rem "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 0.5em 1em;
     border: none;
-    color: white;
+    color: #fff;
     background-color: rgba(0,0,0,0.5);
     border-radius: 3px;
     margin-left: 0.5em;
@@ -517,51 +511,23 @@ section {
 }
 
 
-/* -----------------*/
-/* 06. Input Código */
-/* -----------------*/
-
-.input-codigo {
-	background: #E8EFF6;
-	border-radius: 35px;
-	height: 30px;
-	width: 350px;
-	font: 500 20px "Montserrat", sans-serif;
-	text-align: center;
-}
-
-/* Btn Recarregar */
-.btn-recarregar {
-	display: inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 0.125rem solid #18A0FB;
-	border-radius: 2rem;
-	background-color: transparent;
-	color: #18A0FB;
-	font: 500 0.875rem/0 "Montserrat", sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	margin: 0.5rem 0;
-}
-
-.btn-recarregar:hover {
-	border: 0.125rem solid #18A0FB;
-	background-color: #18A0FB;
-	color: #fff;
-	text-decoration: none;
-}
-
-
 /* -----------*/
-/* 07. Planos */
+/* 06. Planos */
 /* -----------*/
 
-.planos{
-    padding-top: 90px;
-	display: flex;
+.section__planos {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #fff;
+
+    min-height: 80vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
 }
 
-.planos-txt h1{
+.planos-txt .txt-planos {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
@@ -572,6 +538,13 @@ section {
 
 	color: #000;
 }
+
+.planos{
+    padding-top: 90px;
+	display: flex;
+	align-content: space-between;
+}
+
 
 /* Único */
 .plano-unico{
@@ -610,6 +583,52 @@ section {
 	background-color: #E8EFF6;
 }
 
+
+/* -----------------*/
+/* 07. Input Código */
+/* -----------------*/
+
+.section__inputcodigo {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #fff;
+
+    min-height: 45vh;
+    display: flex;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-codigo {
+	background: #E8EFF6;
+	border-radius: 35px;
+	height: 30px;
+	width: 350px;
+	font: 500 20px "Montserrat", sans-serif;
+	text-align: center;
+}
+
+/* Btn Recarregar */
+.btn-recarregar {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 0.125rem solid #18A0FB;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #18A0FB;
+	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+}
+
+.btn-recarregar:hover {
+	border: 0.125rem solid #18A0FB;
+	background-color: #18A0FB;
+	color: #fff;
+	text-decoration: none;
+}
 
 /* -------------*/
 /* 08. Contador */
