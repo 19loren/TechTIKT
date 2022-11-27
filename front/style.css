@@ -12,14 +12,18 @@ Conteúdo:
 08. Contador
 09. Desenvolvedores
 10. Footer
-------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
-------------------------------------
+    Font Awesome Free 5.10.1 - https://fontawesome.com 
+    License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+
+-----------------------------------------------------------------------------------------------------------------
 Cores:
 
 Vermelho Btn > #E33B4A
 Azul Btn > #18A0FB
 Background cinza/azul > #E8EFF6
+#183052
 ------------------------------------
  */
 
@@ -584,3 +588,14 @@ section {
 /* -----------*/
 /* 10. Footer */
 /* -----------*/
+
+/* Redes Sociais */
+.footer .footer-bot .cell {
+	display: inline-block;
+	width: 1.8rem;
+	margin-right: 0rem;
+	margin-bottom: 2rem;
+	margin-left: 0rem;
+	vertical-align: top;
+}
+
