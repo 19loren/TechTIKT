@@ -228,7 +228,7 @@ header {
 /* ---------------------*/
 
 section {
-    min-height: 45vh;
+    min-height: 50vh;
 }
 
 /* div */
@@ -246,7 +246,7 @@ section {
     width: 100vw;
     height: 688px;
 	object-fit: cover;
-	object-position: 0 -300px;
+	object-position: 0 -400px;
 }
 
 /* ---------------------*/
@@ -347,11 +347,9 @@ section {
 .img-geracao {
 	display: flex;
     justify-content: center;
-
-	border: #E8EFF6;
-	border-radius: 25px;
 	margin-left: 35px;
 	margin-top: 55px;
+	background-color: #e8eff6;
 }
 
 .img-geracao .img {
@@ -364,7 +362,7 @@ section {
     height: auto;
 	object-fit: cover;
 	object-position: 0px;
-	border-radius: 45px;
+	border-radius: 35px;
 }
 
 /* Texto */
@@ -417,7 +415,7 @@ section {
 .checkbox {
 	background-color: #e8eff6;
 	align-items: center;
-	margin-left: 120px;
+	margin-left: 250px;
 }
 .checkbox .termos-uso {
 	background-color: #e8eff6;
@@ -438,7 +436,8 @@ section {
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
-	margin-left: 160px;
+	align-items: center;
+	margin-left: 320px;
 }
 
 .btn-gerar-bilhete:hover {
@@ -449,6 +448,10 @@ section {
 }
 
 /* Modal Gerar Bilhete */
+.section__modal {
+	background-color: #E33B4A;
+}
+
 .modal-container{
     z-index: 9999;
     position: fixed;
@@ -466,10 +469,14 @@ section {
     display: flex;
 }
 
+.modal-content {
+	background-color: #fff;
+}
+
 .modal{
     max-width: 700px;
     max-height: 500px;
-    background-color: white;
+    background-color: #fff;
     border-color: 3px;
     border-radius: 10px;
 }
@@ -480,7 +487,7 @@ section {
     padding: 0.5em 1em;
     border: none;
     color: #fff;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5); */
     border-radius: 3px;
     margin-left: 0.5em;
 }
@@ -491,12 +498,13 @@ section {
 .modal-cancel-button{
     background-color: #E33B4A;
 }
-/* .modal-header{
 
-} */
-
+.modal-header {
+	background-color: #fff;
+}
 .modal-header h2 {
-    margin: 1em;
+    /* margin: 1em; */
+	background-color: #fff;
 }
 
 .modal-content {
@@ -506,6 +514,7 @@ section {
 .modal-footer {
     padding: 1em;
 
+	background-color: #fff;
     display: flex;
     justify-content: flex-end;
 }
@@ -707,9 +716,39 @@ section {
 /* Redes Sociais */
 .footer .footer-bot .cell {
 	display: inline-block;
-	width: 1.8rem;
+	width: 2rem;
 	margin-right: 0rem;
 	margin-bottom: 2rem;
 	margin-left: 0rem;
 	vertical-align: top;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 3%;
+    position: sticky;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.footer__ctt{
+    list-style: none;
+}
+
+.footer__ctt li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.footer__ctt li a {
+    transition: all 0.2s;
+}
+
+.footer__ctt li a:hover {
+    color: #e33b4a;
 }
