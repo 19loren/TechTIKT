@@ -227,7 +227,7 @@ header {
 /* 03. Imagem Principal */
 /* ---------------------*/
 
-section {
+.section__imgpr {
     min-height: 50vh;
 }
 
@@ -327,7 +327,7 @@ section {
     margin-bottom: 0; 
 	background-color: #e8eff6;
 
-    min-height: 80vh;
+    min-height: 50vh;
     display: flex;
     align-items:center;
     position: relative;
@@ -338,9 +338,10 @@ section {
 	position: relative;
     width: 100%;
     margin: 20px;
-    display: grid;
+    display: flex;
 	background-color: #e8eff6;
     grid-template-columns: 1fr 1fr;
+	justify-content: space-evenly;
 }
 
 /* Imagem */
@@ -415,7 +416,7 @@ section {
 .checkbox {
 	background-color: #e8eff6;
 	align-items: center;
-	margin-left: 250px;
+	padding-left: 101px;
 }
 .checkbox .termos-uso {
 	background-color: #e8eff6;
@@ -437,7 +438,7 @@ section {
 	transition: all 0.2s;
 	margin: 0.5rem 0;
 	align-items: center;
-	margin-left: 320px;
+	margin-left: 140px;
 }
 
 .btn-gerar-bilhete:hover {
@@ -445,6 +446,12 @@ section {
 	background-color: #1691e3;
 	color: #fff;
 	text-decoration: none;
+}
+
+/* Label */
+.txt-cod-gerado {
+	align-items: center;
+	margin-left: 157px;
 }
 
 /* Modal Gerar Bilhete */
@@ -470,17 +477,17 @@ section {
     max-height: 500px;
     background-color: white;
     border-color: 3px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .modal-button{
-    font: 700 1rem/1.5rem "Montserrat", sans-serif;
+    font: 700 1.2rem/2.2rem "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 0.5em 1em;
     border: none;
     color: #fff;
     background-color: rgba(0,0,0,0.5);
-    border-radius: 3px;
+    border-radius: 10px;
     margin-left: 0.5em;
 }
 
@@ -490,16 +497,9 @@ section {
 .modal-cancel-button{
     background-color: #E33B4A;
 }
-/* .modal-header{
-
-} */
 
 .modal-header h2 {
     margin: 1em;
-}
-
-.modal-content {
-    padding: 1em;
 }
 
 .modal-footer {
@@ -507,6 +507,9 @@ section {
 
     display: flex;
     justify-content: flex-end;
+	border-radius: 10px;
+	margin-bottom: 12px;
+	padding: 12px 6%;
 }
 
 
