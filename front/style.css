@@ -448,6 +448,10 @@ section {
 }
 
 /* Modal Gerar Bilhete */
+.section__modal {
+	background-color: #E33B4A;
+}
+
 .modal-container{
     z-index: 9999;
     position: fixed;
@@ -465,10 +469,14 @@ section {
     display: flex;
 }
 
+.modal-content {
+	background-color: #fff;
+}
+
 .modal{
     max-width: 700px;
     max-height: 500px;
-    background-color: white;
+    background-color: #fff;
     border-color: 3px;
     border-radius: 10px;
 }
@@ -479,7 +487,7 @@ section {
     padding: 0.5em 1em;
     border: none;
     color: #fff;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5); */
     border-radius: 3px;
     margin-left: 0.5em;
 }
@@ -490,12 +498,13 @@ section {
 .modal-cancel-button{
     background-color: #E33B4A;
 }
-/* .modal-header{
 
-} */
-
+.modal-header {
+	background-color: #fff;
+}
 .modal-header h2 {
-    margin: 1em;
+    /* margin: 1em; */
+	background-color: #fff;
 }
 
 .modal-content {
@@ -505,6 +514,7 @@ section {
 .modal-footer {
     padding: 1em;
 
+	background-color: #fff;
     display: flex;
     justify-content: flex-end;
 }
