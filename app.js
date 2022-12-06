@@ -3,13 +3,13 @@ const app=express();
 const Inserir = require("./controllers/insertBilhete");
 const recarregar = require("./controllers/insertrecarga");
 //const verificarBilhete = require("./controllers/verificarBilhete");
-const front = require("./frontEnd/js/script");
+const front = require("./js/script");
 
 
-app.use(express.static(__dirname+"/frontEnd"));
+app.use(express.static(__dirname+"/front"));
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/frontEnd/index.html");
+    res.sendFile(__dirname+"/front/index.html");
 });
 
 app.post("/gerarBilhete/:codigo",async(req,next)=>{
