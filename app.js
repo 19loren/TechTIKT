@@ -1,15 +1,15 @@
 const express=require("express");
 const app=express();
-const Inserir = require("./controllers/insertBilhete");
-const recarregar = require("./controllers/insertrecarga");
-//const verificarBilhete = require("./controllers/verificarBilhete");
-const front = require("./js/script");
+const Inserir = require("./src/controllers/insertBilhete");
+const recarregar = require("./src/controllers/insertrecarga");
+//const verificarBilhete = require("./src/controllers/verificarBilhete");
+const front = require("./src/front/js/script");
 
 
-app.use(express.static(__dirname+"/front"));
+app.use(express.static(__dirname+"/src/front"));
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/front/index.html");
+    res.sendFile(__dirname+"/src/front/index.html");
 });
 
 app.post("/gerarBilhete/:codigo",async(req,next)=>{

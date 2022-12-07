@@ -725,7 +725,7 @@ section {
 
 footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex;
     align-items: center;
     padding: 5px 3%;
     position: sticky;

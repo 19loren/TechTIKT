@@ -1,5 +1,3 @@
-
-
 function ConfirmationModalID(){
     let confirmation = document.getElementById("confirmation");
     if(!confirmation.classList.contains("modal-open")){
