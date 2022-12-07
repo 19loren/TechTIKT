@@ -2,18 +2,19 @@
 ------------------------------------
 Conteúdo:
 
-	01. Carregamento
-	02. Barra de Navegação
-	03. Imagem Principal
-	04. Info
+	01. Barra de Navegação
+	02. Página Inicial
+	03. Modal Termos de Uso
+	04. Modal Regras de Utilização
 	05. Geração Bilhete
-	06. Input Código
+	06. Modal Geração do Código
 	07. Planos
-	08. Contador
-	09. Desenvolvedores
-	10. Footer
+	08. Input Código
+	09. Meu TechTIKT
+	10. Info
+	11. Footer
 -----------------------------------------------------------------------------------------------------------------
-
+	> Icons:
     Font Awesome Free 5.10.1 - https://fontawesome.com 
     License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
@@ -21,10 +22,11 @@ Conteúdo:
 Cores:
 
 	Vermelho Btn > #e33b4a
-	Azul Btn > #18a0fb
+	Azul claro > #18a0fb
 	Background cinza/azul > #e8eff6
+	Background bege > #fffbf6
 
-------------------------------------
+--------------------------------------
 */
 
 body, html {
@@ -90,71 +92,9 @@ h6 {
 }
 
 
-/* 01. Carregamento */
-
-/* .spinner-wrapper {
-	position: fixed;
-	z-index: 999999;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: #f7fafd;
-}
-
-.spinner {
-	position: absolute;
-
- 
-	top: 50%; 
-	left: 50%; 
-
-	width: 3.75rem;
-	height: 1.25rem;
-	margin: -0.625rem 0 0 -1.875rem;
-	text-align: center;
-}
-
-.spinner > div {
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	border-radius: 100%;
-	background-color: #E33B4A;
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0); }
-	40% { -webkit-transform: scale(1.0); }
-}
-
-@keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
-		-webkit-transform: scale(0);
-		-ms-transform: scale(0);
-		transform: scale(0);
-	} 40% { 
-		-webkit-transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		transform: scale(1.0);
-	}
-} */
-
 
 /* -----------------------*/
-/* 02. Barra de Navegação */
+/* 01. Barra de Navegação */
 /* -----------------------*/
 
 * {
@@ -223,12 +163,19 @@ header {
 }
 
 
-/* ---------------------*/
-/* 03. Imagem Principal */
-/* ---------------------*/
+/* -------------------*/
+/* 02. Página Inicial */
+/* -------------------*/
 
+/* position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url( */
 section {
-    min-height: 50vh;
+    min-height: 45vh;
 }
 
 /* div */
@@ -246,78 +193,16 @@ section {
     width: 100vw;
     height: 688px;
 	object-fit: cover;
-	object-position: 0 -400px;
+	object-position: 0 -300px;
 }
 
-/* ---------------------*/
-/* 04. Info - ATUALIZAR */ 
-/* ---------------------*/
+/* ------------------------*/
+/* 03. Modal Termos de Uso */ 
+/* ------------------------*/
 
-.section__info {
-	margin-top: 0;
-    margin-bottom: 0; 
-	background-color: #fff;
-
-    min-height: 45vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-} 
-.info {
-    display: flex;
-    justify-content: auto;
-    margin-bottom: 0;
-
-    left: 53px;
-    right: 53px;
-    border: none;
-    position: absolute;
-}
-.info p {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
-
-	letter-spacing: -0.015em;
-
-	color: #000
-}
-
-.info b{
-	font-weight: 500;
-}
-
-
-/*
-.header {
-	position: absolute;
-	overflow: hidden;
-	padding-top: 0rem;
-	padding-bottom: 5rem;
-	margin-left: 3.5rem;
-	margin-right: 3.5rem;
-
-	background-color: #fff;
-}
-
-.header p {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
-
-	letter-spacing: -0.015em;
-
-	color: #000
-}
-
-.header b{
-	font-weight: 500;
-}*/
+/* -------------------------------*/
+/* 04. Modal Regras de Utilização */ 
+/* -------------------------------*/
 
 /* --------------------*/
 /* 05. Geração Bilhete */
@@ -347,9 +232,11 @@ section {
 .img-geracao {
 	display: flex;
     justify-content: center;
+
+	border: #E8EFF6;
+	border-radius: 25px;
 	margin-left: 35px;
 	margin-top: 55px;
-	background-color: #e8eff6;
 }
 
 .img-geracao .img {
@@ -362,7 +249,7 @@ section {
     height: auto;
 	object-fit: cover;
 	object-position: 0px;
-	border-radius: 35px;
+	border-radius: 45px;
 }
 
 /* Texto */
@@ -415,7 +302,7 @@ section {
 .checkbox {
 	background-color: #e8eff6;
 	align-items: center;
-	margin-left: 250px;
+	margin-left: 120px;
 }
 .checkbox .termos-uso {
 	background-color: #e8eff6;
@@ -436,8 +323,7 @@ section {
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
-	align-items: center;
-	margin-left: 320px;
+	margin-left: 160px;
 }
 
 .btn-gerar-bilhete:hover {
@@ -448,10 +334,6 @@ section {
 }
 
 /* Modal Gerar Bilhete */
-.section__modal {
-	background-color: #E33B4A;
-}
-
 .modal-container{
     z-index: 9999;
     position: fixed;
@@ -469,14 +351,10 @@ section {
     display: flex;
 }
 
-.modal-content {
-	background-color: #fff;
-}
-
 .modal{
     max-width: 700px;
     max-height: 500px;
-    background-color: #fff;
+    background-color: white;
     border-color: 3px;
     border-radius: 10px;
 }
@@ -487,7 +365,7 @@ section {
     padding: 0.5em 1em;
     border: none;
     color: #fff;
-    /* background-color: rgba(0,0,0,0.5); */
+    background-color: rgba(0,0,0,0.5);
     border-radius: 3px;
     margin-left: 0.5em;
 }
@@ -498,13 +376,12 @@ section {
 .modal-cancel-button{
     background-color: #E33B4A;
 }
+/* .modal-header{
 
-.modal-header {
-	background-color: #fff;
-}
+} */
+
 .modal-header h2 {
-    /* margin: 1em; */
-	background-color: #fff;
+    margin: 1em;
 }
 
 .modal-content {
@@ -514,14 +391,18 @@ section {
 .modal-footer {
     padding: 1em;
 
-	background-color: #fff;
     display: flex;
     justify-content: flex-end;
 }
 
+/* ----------------------------*/
+/* 06. Modal Geração do Código */
+/* ----------------------------*/
+
+
 
 /* -----------*/
-/* 06. Planos */
+/* 07. Planos */
 /* -----------*/
 
 .section__planos {
@@ -594,7 +475,7 @@ section {
 
 
 /* -----------------*/
-/* 07. Input Código */
+/* 08. Input Código */
 /* -----------------*/
 
 .section__inputcodigo {
@@ -639,116 +520,93 @@ section {
 	text-decoration: none;
 }
 
-/* -------------*/
-/* 08. Contador */
-/* -------------*/
+/* ---------------- */
+/* 09. Meu TechTIKT */
+/* ---------------- */
 
-.counter {
-	padding-top: 8rem;
+
+/* ---------*/
+/* 10. Info */ 
+/* ---------*/
+
+.section__info {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: #fff;
+
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+} 
+.info {
+    display: flex;
+    justify-content: auto;
+    margin-bottom: 0;
+
+    left: 53px;
+    right: 53px;
+    border: none;
+    position: absolute;
+}
+.info p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+
+	letter-spacing: -0.015em;
+
+	color: #000
+}
+
+.info b{
+	font-weight: 500;
+}
+
+
+/*
+.header {
+	position: absolute;
+	overflow: hidden;
+	padding-top: 0rem;
 	padding-bottom: 5rem;
-	background-color: #e8eff6;
-	text-align: center;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+
+	background-color: #fff;
 }
 
-.counter #counter {
-	margin-bottom: 0.75rem;
-	background-color: #e8eff6;
+.header p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+
+	letter-spacing: -0.015em;
+
+	color: #000
 }
 
-.counter #counter .cell {
-	display: inline-block;
-	width: 6.25rem;
-	margin-right: 1.5rem;
-	margin-bottom: 2rem;
-	margin-left: 1.5rem;
-	vertical-align: top;
-	background-color: #e8eff6;
-}
-
-.counter #counter .fas {
-	margin-bottom: 0.875rem;
-	font-size: 2.5rem;
-	color: #aa7eec;
-	background-color: #e8eff6;
-}
-
-.counter #counter .fas.green {
-	color: #19ca94;
-}
-
-.counter #counter .fas.red {
-	color: #ff556e;
-}
-
-.counter #counter .fas.yellow {
-	color: #ffb30f;
-}
-
-.counter #counter .fas.blue {
-	color: #50b9e8;
-}
-
-.counter #counter .counter-value {
-	color: #000;
-	font-weight: 700;
-	font-size: 3.5rem;
-	line-height: 4.25rem;
-	vertical-align: middle;
-	background-color: #e8eff6;
-}
-
-.counter #counter .counter-info {
-	margin-bottom: 0;
-	vertical-align: middle;
-	background-color: #e8eff6;
-}
+.header b{
+	font-weight: 500;
+}*/
 
 
-
-/* --------------------*/
-/* 09. Desenvolvedores */
-/* --------------------*/
 
 /* -----------*/
-/* 10. Footer */
+/* 11. Footer */
 /* -----------*/
 
 /* Redes Sociais */
 .footer .footer-bot .cell {
 	display: inline-block;
-	width: 2rem;
+	width: 1.8rem;
 	margin-right: 0rem;
 	margin-bottom: 2rem;
 	margin-left: 0rem;
 	vertical-align: top;
-}
-
-footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px 3%;
-    position: sticky;
-}
-
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.footer__ctt{
-    list-style: none;
-}
-
-.footer__ctt li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.footer__ctt li a {
-    transition: all 0.2s;
-}
-
-.footer__ctt li a:hover {
-    color: #e33b4a;
 }
