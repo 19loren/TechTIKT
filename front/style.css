@@ -34,6 +34,7 @@ body, html {
      height: 100%;
 	 margin: 0;
 	 padding: 0;
+	 background: linear-gradient(0deg, rgba(255, 251, 246, 0.8), rgba(255, 251, 246, 0.8)), url(assets/techtikt_principal.jpg);
 }
 
 body, p {
@@ -93,9 +94,9 @@ h6 {
 
 
 
-/* -----------------------*/
-/* 01. Barra de Navegação */
-/* -----------------------*/
+/** -----------------------*/
+/** 01. Barra de Navegação */
+/** -----------------------*/
 
 * {
     box-sizing: border-box;
@@ -116,6 +117,22 @@ header {
     align-items: center;
     padding: 5px 3%;
     position: sticky;
+}
+
+header p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+
+	letter-spacing: -0.015em;
+
+	color: #000
+}
+
+header b{
+	font-weight: 500;
 }
 
 .logo {
@@ -163,9 +180,9 @@ header {
 }
 
 
-/* -------------------*/
-/* 02. Página Inicial */
-/* -------------------*/
+/** -------------------*/
+/** 02. Página Inicial */
+/** -------------------*/
 
 /* position: absolute;
 left: 0%;
@@ -196,23 +213,23 @@ section {
 	object-position: 0 -300px;
 }
 
-/* ------------------------*/
-/* 03. Modal Termos de Uso */ 
-/* ------------------------*/
+/** ------------------------*/
+/** 03. Modal Termos de Uso */ 
+/** ------------------------*/
 
-/* -------------------------------*/
-/* 04. Modal Regras de Utilização */ 
-/* -------------------------------*/
+/** -------------------------------*/
+/** 04. Modal Regras de Utilização */ 
+/** -------------------------------*/
 
-/* --------------------*/
-/* 05. Geração Bilhete */
-/* --------------------*/
+/** --------------------*/
+/** 05. Geração Bilhete */
+/** --------------------*/
 .section__geracao {
 	margin-top: 0;
     margin-bottom: 0; 
 	background-color: #e8eff6;
 
-    min-height: 80vh;
+    min-height: 50vh;
     display: flex;
     align-items:center;
     position: relative;
@@ -395,15 +412,15 @@ section {
     justify-content: flex-end;
 }
 
-/* ----------------------------*/
-/* 06. Modal Geração do Código */
-/* ----------------------------*/
+/** ----------------------------*/
+/** 06. Modal Geração do Código */
+/** ----------------------------*/
 
 
 
-/* -----------*/
-/* 07. Planos */
-/* -----------*/
+/** -----------*/
+/** 07. Planos */
+/** -----------*/
 
 .section__planos {
 	margin-top: 0;
@@ -443,40 +460,27 @@ section {
 }
 
 /* Duo */
-.plano-duo{
+.plano-duplo{
     float: left;
     width: 25%;
 }
 
 /* 7DAYS */
-.plano-7days{
+.plano-7diass{
     float: left;
     width: 25%;
 }
 
 /* 30DAYS */
-.plano-30days{
+.plano-30dias{
     float: left;
     width: 25%;
 }
 
-/* Seletor Planos */
-.seletor{
-	padding: 50px;
-}
-.seletor-tipo {
-    padding: 10px;
-    width: 150px;
-    font: 700 1rem/1.5rem "Open Sans", sans-serif;
-    border-radius: 10px;
 
-	background-color: #E8EFF6;
-}
-
-
-/* -----------------*/
-/* 08. Input Código */
-/* -----------------*/
+/** -----------------*/
+/** 08. Input Código */
+/** -----------------*/
 
 .section__inputcodigo {
 	margin-top: 0;
@@ -520,114 +524,137 @@ section {
 	text-decoration: none;
 }
 
-/* ---------------- */
-/* 09. Meu TechTIKT */
-/* ---------------- */
+/** ---------------- */
+/** 09. Meu TechTIKT */
+/** ---------------- */
 
 
-/* ---------*/
-/* 10. Info */ 
-/* ---------*/
+/** ---------*/
+/** 10. Info */ 
+/** ---------*/
 
-.info-content {
-	position: absolute;
-	width: 1674px;
-	height: 539px;
-	left: 173px;
-	top: 1481px;
-
-	background: linear-gradient(0deg, rgba(255, 251, 246, 0.8), rgba(255, 251, 246, 0.8)), url(techtikt_principal.jpg);
-}
-
-.ret-info {
-	position: absolute;
-	left: 3.27%;
-	right: 3.27%;
-	top: 16.3%;
-	bottom: 16.3%;
-	
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	background: #FFFBF6;
-}
-
-/* .section__info {
-	margin-top: 0;
+.section__info {
+    margin-top: 0;
     margin-bottom: 0; 
-	background-color: #fff;
-
+    background: transparent;
     min-height: 45vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-} 
-.info {
-    display: flex;
-    justify-content: auto;
-    margin-bottom: 0;
+}
 
-    left: 53px;
-    right: 53px;
-    border: none;
+.container-info {
     position: absolute;
+    background: #FFFBF6;
+    border-radius: 0px 95px 45px 45px;
+    padding: 45px;
+    margin: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.info p {
-	font-family: 'Montserrat';
+
+.container-info h3 {
+    background-color: #FFFBF6;
+}
+.container-info p {
+    font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 30px;
 
-	letter-spacing: -0.015em;
-
-	color: #000
+	background-color: transparent;
 }
 
-.info b{
-	font-weight: 500;
-} */
 
-
-/*
-.header {
-	position: absolute;
-	overflow: hidden;
-	padding-top: 0rem;
-	padding-bottom: 5rem;
-	margin-left: 3.5rem;
-	margin-right: 3.5rem;
-
-	background-color: #fff;
+/** -----------*/
+/** 11. Footer */
+/** -----------*/
+footer {
+	justify-content: space-around;
 }
 
-.header p {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
+/* Footer - Sup */
+.footer__links {
+	list-style: none;
 
-	letter-spacing: -0.015em;
-
-	color: #000
 }
 
-.header b{
-	font-weight: 500;
-}*/
+.footer__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.footer__links li a {
+    transition: all 0.2s;
+}
+
+.footer__links li a:hover {
+    color: #e33b4a;
+}
 
 
+/* Footer - Content */
+.footer-content {
+	display: inline-block;
+	justify-content: space-around;
+}
 
-/* -----------*/
-/* 11. Footer */
-/* -----------*/
+/* Footer - Nav */
+.footer__nav{
+    list-style: none;
+}
+
+.footer__navs li {
+    display: block;
+    padding: 2px 0px;
+}
+
+.footer__nav li a {
+    transition: all 0.2s;
+}
+
+.footer__nav li a:hover {
+    color: #e33b4a;
+}
 
 /* Redes Sociais */
-.footer .footer-bot .cell {
+.footer-content .cell {
 	display: inline-block;
 	width: 1.8rem;
 	margin-right: 0rem;
 	margin-bottom: 2rem;
 	margin-left: 0rem;
 	vertical-align: top;
+}
+
+.fa-brands.fa-github {
+	color: #183052;
+}
+
+.fa-solid.fa-graduation-cap {
+	color: #183052;
+}
+
+/* E-mails */
+.footer__ctt{
+    list-style: none;
+}
+
+.footer__ctt li {
+    /* display: inline-block; */
+	display: block;
+    padding: 2px 0px;
+}
+
+.footer__ctt li a {
+    transition: all 0.2s;
+}
+
+.footer__ctt li a:hover {
+    color: #e33b4a;
+}
+
+.footer-bottom {
+	align-items: center;
 }
