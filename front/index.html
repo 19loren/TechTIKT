@@ -14,7 +14,7 @@
         <!-- Favicon  -->
         <link rel="icon" href="assets/techtikt_favicon.png">
     </head>
-    <body data-spy="scroll" data-target=".fixed-top">
+    <body data-spy="fixed-top" data-target=".fixed-top">
 
         <!-- Nav -->
         <header>
@@ -25,17 +25,17 @@
             <!-- Links -->
             <nav>
                 <ul class="nav__links">
-                    <li><a href="#info">Info</a></li>
-                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="#utilizar">Utilizar</a></li>
                     <li><a href="#recarga">Recarga</a></li>
-                    <li><a href="meu-techtikt.html">Histórico</a></li>
+                    <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
                 </ul>
             </nav>
 
             <!-- Btn Nav -->
-            <a class="nav-gerarbilhete" href="#geracao-bilhete">
+            <!-- <a class="nav-gerarbilhete" href="#geracao-bilhete">
                 <button>Gerar Bilhete</button>
-            </a>
+            </a> -->
         </header>
 
         <!-- Img Principal -->
@@ -87,7 +87,7 @@
                                 <div class="regras-utilizacao">
                                     <input id="rub" type="checkbox" name="regras-de-utilizacao">
                                     <label for="rub">
-                                            <a href="regras-utilizacao.html" target="_blank">Regras de Utilização do Bilhete</a>
+                                            <a href="regras-utilizacao.html" target="_blank">Regras de Utilização do Bilhete</a> <!--Arrumar as checkboxes para abrir um modal ao clicar no link -->
                                     </label>
                                 </div>
                             </div>
@@ -97,11 +97,34 @@
                         <!-- Btn Gerar Bilhete -->
                         <a class="btn-gerar-bilhete" type="button" id="teste" onclick="ConfirmationModalID()">GERAR</a>
                         
-                        <!-- Código Gerado -->
-                        <label id="codigo" type="text"></label>
                         
+                        
+                        <!-- Modal Geração Código -->
+                    <section class="section__modal">
+                        <div id="confirmation" class="modal-container">
+                            <div class="modal">
+                                <div class="modal-header">
+                                    <h2>PARABÉNS</h2>
+                                    <p>O Código do seu Bilhete foi gerado!</p>
+                                </div>
+
+                                <div class="modal-content">
+                                    <!-- Código Gerado -->
+                                    <label id="codigo" type="text"></label>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button class="modal-button modal-cancel-button" onclick="CancelModalID()">Ok</button>
+                                    <button class="modal-button modal-confirm-button" onclick="ConfirmGerarID()">Confirmar</button>  
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                        
+                        
+
                         <!-- Modal Confirmação -->
-                        <section class="section__modal">
+                        <!-- <section class="section__modal">
                             <div id="confirmation" class="modal-container">
                                 <div class="modal">
                                     <div class="modal-header">
@@ -114,7 +137,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </section> -->
                     </div>
                 </div>
             </div>
