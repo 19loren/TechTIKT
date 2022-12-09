@@ -115,9 +115,10 @@ h6 {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 9px 3%;
+	padding: 5px 3%;
 	position: sticky;
 	background-color: #fff;
+	margin: 0.1rem 0;
  }
  
  header p {
@@ -163,7 +164,7 @@ h6 {
  .nav-menu button {
 	margin-right: 20px;
 	display: inline-block;
-	padding: 1rem 1.5rem 1rem 1.5rem;
+	padding: 0.8rem 1.2rem 0.8rem 1.2rem;
 	border: 0.125rem solid #e33b4a;
 	border-radius: 2rem;
 	background-color: transparent;
@@ -171,7 +172,7 @@ h6 {
 	font: 500 15px/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
-	margin: 0.5rem 0;
+	margin: 0.1rem 0;
  }
  
  .nav-menu button:hover {

@@ -27,27 +27,30 @@
                 <ul class="nav__links">
                     <li><a href="info.html">Info</a></li>
                     <li><a href="utilizacao.html">Utilizar</a></li>
-                    <li><a href="recarga.html">Recarga</a></li>
+                    <li><a href="#recarga">Recarga</a></li>
                     <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Btn Nav -->
-            <a class="nav-gerarbilhete" href="index.html">
-                <button>Gerar Bilhete</button>
-            </a>
-            
+            <a class="nav-menu" href="index.html">
+                <button>Menu</button>
+            </a> 
         </header>
         <!-- Input bilhete -->
-        <section class="section__utilizacao">
+        <section class="section__uti">
+            <div class="txt-uti">
+                <h2>Insira o código seu bilhete:</h2>
+            </div>
             <div>
-                <h3>Insira o código do seu bilhete:</h3>
                 <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
                 <!-- <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a> -->
                 <label type="text" id="codigoRecarga"></label>
             </div>
 
-            <a type="button" class="btn-recarregar" onclick="Recarregar()">UTILIZAR</a>
+            <a class="btn-recarregar">
+                <button>UTILIZAR</button>
+            </a> 
 
         </section>
         <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
