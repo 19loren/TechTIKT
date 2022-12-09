@@ -216,12 +216,12 @@ h6 {
  .row-menu {
 	list-style: none;
 	background-color: transparent;
+	justify-content: space-between;
  }
  
  .row-menu li {
 	display: inline-block;
 	padding: 80px 20px;
-	justify-content: space-around;
  }
  
  /* GERAR BILHETE */
