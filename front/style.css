@@ -3,7 +3,7 @@
 Conteúdo:
 
 	01. Barra de Navegação
-	02. Página Inicial
+	02. Menu
 	03. Modal Termos de Uso
 	04. Modal Regras de Utilização
 	05. Geração Bilhete
@@ -12,7 +12,8 @@ Conteúdo:
 	08. Input Código
 	09. Meu TechTIKT
 	10. Info
-	11. Footer
+	11. Utilização
+	12. Footer
 -----------------------------------------------------------------------------------------------------------------
 	> Icons:
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -99,119 +100,92 @@ h6 {
 /** -----------------------*/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-}
-
-li, a, button {
-    font: 500 16px "Montserrat", sans-serif;
-    text-decoration: none;
-    color: #000;
-}
-
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px 3%;
-    position: sticky;
-}
-
-header p {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+ }
+ 
+ li, a, button {
+	font: 500 16px "Montserrat", sans-serif;
+	text-decoration: none;
+	color: #000;
+ }
+ 
+ header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 5px 3%;
+	position: sticky;
+	background-color: #fff;
+ }
+ 
+ header p {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 30px;
-
+ 
 	letter-spacing: -0.015em;
-
+ 
 	color: #000
-}
-
-header b{
+ }
+ 
+ header b{
 	font-weight: 500;
-}
-
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.nav__links{
-    list-style: none;
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav__links li a {
-    transition: all 0.2s;
-}
-
-.nav__links li a:hover {
-    color: #e33b4a;
-}
-
-/* Btn Nav */
-
-.nav-menu button {
-    margin-right: 20px;
+ }
+ 
+ .logo {
+	cursor: pointer;
+	margin-right: auto;
+ }
+ 
+ .nav__links{
+	list-style: none;
+ }
+ 
+ .nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+ }
+ 
+ .nav__links li a {
+	transition: all 0.2s;
+ }
+ 
+ .nav__links li a:hover {
+	color: #e33b4a;
+ }
+ 
+ /* Btn Nav */
+ 
+ .nav-menu button {
+	margin-right: 20px;
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
 	border: 0.125rem solid #e33b4a;
 	border-radius: 2rem;
 	background-color: transparent;
 	color: #e33b4a;
-	font: 500 0.875rem/0 "Montserrat", sans-serif;
+	font: 500 15px/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 	margin: 0.5rem 0;
-}
-
-.nav-menu button:hover {
+ }
+ 
+ .nav-menu button:hover {
 	border: 0.125rem solid #e33b4a;
 	background-color: #e33b4a;
 	color: #fff;
-}
+ }
 
 
-/** -------------------*/
-/** 02. Página Inicial */
-/** -------------------*/
+/** ---------*/
+/** 02. Menu */
+/** ---------*/
 
-/* position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url( */
-section {
-    min-height: 45vh;
-}
-
-/* div */
-.image {
-    display: flex;
-    justify-content: auto;
-
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    border: none;
-}
-.image img{
-    width: 100vw;
-    height: 688px;
-	object-fit: cover;
-	object-position: 0 -300px;
-}
 
 /** ------------------------*/
 /** 03. Modal Termos de Uso */ 
@@ -222,132 +196,105 @@ section {
 /** -------------------------------*/
 
 /** --------------------*/
-/** 05. Geração Bilhete */
+/** 04. Geração Bilhete */
 /** --------------------*/
+
 .section__geracao {
 	margin-top: 0;
     margin-bottom: 0; 
-	background-color: #e8eff6;
+	background-color: transparent;
 
     min-height: 50vh;
-    display: flex;
     align-items:center;
     position: relative;
     overflow: hidden;
-} 
-
-.container-geracao {
-	position: relative;
-    width: 100%;
-    margin: 20px;
-    display: grid;
-	background-color: #e8eff6;
-    grid-template-columns: 1fr 1fr;
+    padding: 80px;
 }
 
-/* Imagem */
-.img-geracao {
-	display: flex;
-    justify-content: center;
+/* Título Principal */
 
-	border: #E8EFF6;
-	border-radius: 25px;
-	margin-left: 35px;
-	margin-top: 55px;
+.section__geracao h2{
+    font-size: 70px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: -0.015em;
+
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.img-geracao .img {
-	position: relative;
-    overflow: hidden;
-	background-color: #e8eff6;
-}
-.img-geracao .img img {
-    width: auto;
-    height: auto;
-	object-fit: cover;
-	object-position: 0px;
-	border-radius: 45px;
-}
+/* Subtítulo */
 
-/* Texto */
-.geracao {
-    position: relative;
-    padding: 40px;
-	background-color: #e8eff6;
-	margin-top: 35px;
+.section__geracao p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px; 
+    line-height: 50px;
+    background-color: transparent;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.txt-geracao {
-    margin-bottom: 50px;
-	background-color: #e8eff6;
-}
+/* Checkbox's */
 
-.txt-geracao :last-child {
-    margin-bottom: 0;
-	background-color: #e8eff6;
-}
-
-.txt-geracao .h1-geracao {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 48px;
-	line-height: 85px;
-
-	text-align: center;
-	letter-spacing: -0.015em;
-
-	color: #000;
-	background-color: #e8eff6;
-}
-
-.txt-geracao .p-geracao {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 50px;
-
-	text-align: center;
-	letter-spacing: -0.015em;
-
-	color: #000;
-	background-color: #e8eff6;
-}
-
-/* Checkbox */
 .checkbox {
-	background-color: #e8eff6;
-	align-items: center;
-	margin-left: 120px;
-}
-.checkbox .termos-uso {
-	background-color: #e8eff6;
-}
-.checkbox .regras-utlizacao {
-	background-color: #e8eff6;
+    padding: 30px;
+    background-color: transparent;
+    text-align: center;
 }
 
-/* Btn Gerar Bilhete */
-.btn-gerar-bilhete {
-	display:inline-block;
-	padding: 1.8rem 4.5rem 1.8rem 4.5rem;
-	border: 0.125rem solid #18A0FB;
-	border-radius: 2rem;
-	background-color: #18a0fb;
-	color: #fff;
-	font: 500 1.25rem/0 "Montserrat", sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	margin: 0.5rem 0;
-	margin-left: 160px;
+/* Btn Gerar */
+.btn-geracao {
+   background-color: transparent;
+   text-align: center;
+   align-items: center;
+   padding: 20px;
 }
+
+.btn-gerar-bilhete {
+   text-align: center;
+   display: inline-block;
+   padding: 1.9rem 5.8rem 1.9rem 5.8rem;
+   border: 0.125rem solid #e33b4a;
+   border-radius: 2rem;
+   background-color: transparent;
+   color: #e33b4a;
+   font: 600 26px/0 "Montserrat", sans-serif;
+   text-decoration: none;
+   transition: all 0.2s;
+   margin: 0.5rem 0;
+   line-height:15px;
+}
+
 
 .btn-gerar-bilhete:hover {
-	border: 0.125rem solid #1691e3;
-	background-color: #1691e3;
+	border: 0.125rem solid #e33b4a;
+	background-color: #e33b4a;
 	color: #fff;
 	text-decoration: none;
+}
+/* Rodapé ¹ */
+.rodape {
+    background-color: transparent;
+}
+.rodape p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 50px;
+    background-color: transparent;
+
+    letter-spacing: -0.015em;
+
+    color: rgba(0, 0, 0, 0.8);
 }
 
 /* Modal Gerar Bilhete */
@@ -566,9 +513,12 @@ section {
 	background-color: transparent;
 }
 
+/** ---------------*/
+/** 11. Utilização */
+/** ---------------*/
 
 /** -----------*/
-/** 11. Footer */
+/** 12. Footer */
 /** -----------*/
 footer {
 	justify-content: space-around;
