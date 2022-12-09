@@ -159,7 +159,7 @@ header b{
 
 /* Btn Nav */
 
-.nav-gerarbilhete button {
+.nav-menu button {
     margin-right: 20px;
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
@@ -173,7 +173,7 @@ header b{
 	margin: 0.5rem 0;
 }
 
-.nav-gerarbilhete button:hover {
+.nav-menu button:hover {
 	border: 0.125rem solid #e33b4a;
 	background-color: #e33b4a;
 	color: #fff;

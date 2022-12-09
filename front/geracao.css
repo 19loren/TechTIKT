@@ -175,3 +175,98 @@ header b{
    background-color: #e33b4a;
    color: #fff;
 }
+
+/** --------------------*/
+/** 04. Geração Bilhete */
+/** --------------------*/
+
+.section__geracao {
+	margin-top: 0;
+    margin-bottom: 0; 
+	background-color: transparent;
+
+    min-height: 50vh;
+    align-items:center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px;
+}
+
+/* Título Principal */
+
+.section__geracao h2{
+    font-size: 70px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: -0.015em;
+
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Subtítulo */
+
+.section__geracao p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px; 
+    line-height: 50px;
+    background-color: transparent;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Checkbox's */
+
+.checkbox {
+    padding: 30px;
+    background-color: transparent;
+    text-align: center;
+}
+
+/*! Btn Gerar */
+
+.btn-gerar-bilhete {
+
+        text-align: center;
+        display: inline-block;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        border: 0.125rem solid #e33b4a;
+        border-radius: 2rem;
+        background-color: transparent;
+        color: #e33b4a;
+        font: 500 0.875rem/0 "Montserrat", sans-serif;
+        text-decoration: none;
+        transition: all 0.2s;
+        margin: 0.5rem 0;
+    }
+
+.btn-gerar-bilhete button:hover {
+        border: 0.125rem solid #e33b4a;
+        background-color: #e33b4a;
+        color: #fff;
+    }
+
+/* Rodapé ¹ */
+.rodape {
+    background-color: transparent;
+}
+.rodape p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 50px;
+    background-color: transparent;
+
+    letter-spacing: -0.015em;
+
+    color: rgba(0, 0, 0, 0.8);
+}
