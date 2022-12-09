@@ -13,7 +13,6 @@ Conteúdo:
 	09. Meu TechTIKT
 	10. Info
 	11. Utilização
-	12. Footer
 -----------------------------------------------------------------------------------------------------------------
 	> Icons:
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -116,7 +115,7 @@ h6 {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 5px 3%;
+	padding: 9px 3%;
 	position: sticky;
 	background-color: #fff;
  }
@@ -186,14 +185,188 @@ h6 {
 /** 02. Menu */
 /** ---------*/
 
+/* Título */
 
-/** ------------------------*/
-/** 03. Modal Termos de Uso */ 
-/** ------------------------*/
+.section__menu {
+	margin-top: 0;
+	margin-bottom: 0; 
+	background-color: transparent;
+	
+	min-height: 50vh;
+	align-items:center;
+	position: relative;
+	overflow: hidden;
+	padding: 80px;
+ }
+ 
+ .txt-menu h2{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 85px;
+ 
+	text-align: center;
+	letter-spacing: -0.015em;
+ 
+	color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ .row-menu {
+	list-style: none;
+	background-color: transparent;
+ }
+ 
+ .row-menu li {
+	display: inline-block;
+	padding: 80px 20px;
+	justify-content: space-around;
+ }
+ 
+ /* GERAR BILHETE */
+ .container-gb {
+	height: 230px;
+	width: 287px;
+	background: url(assets/techtikit_laranja.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+ 
+ .div-btn-gb {
+	position: absolute;
+	background: #FFFBF6;
+	border-radius: 0px 75px 25px 25px;
+	height: 160px;
+	width: 215px;
+	padding: 40px; 
+	padding-top: 40px;
+	margin: 40px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .btn-gb{
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+	color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ /* RECARREGAR BILHETE */
+ .container-rb {
+	height: 230px;
+	width: 287px;
+	background: url(assets/techtikt_rosa.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+ 
+ .div-btn-rb {
+	position: absolute;
+	background: #FFFBF6;
+	border-radius: 0px 75px 25px 25px;
+	height: 160px;
+	width: 215px;
+	padding: 12px;
+	padding-top: 40px;
+	margin: 40px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .btn-rb{
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+	color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ /* UTILIZAR BILHETE */
+ .container-ub {
+	height: 230px;
+	width: 287px;
+	background: url(assets/techtikt_roxo.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+ 
+ .div-btn-ub {
+	position: absolute;
+	background: #FFFBF6;
+	border-radius: 0px 75px 25px 25px;
+	height: 160px;
+	width: 215px;
+	padding: 40px;
+	padding-top: 40px;
+	margin: 40px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .btn-ub{
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+	color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ /* MEU TECHTIKT */
+ .container-mt {
+	height: 230px;
+	width: 287px;
+	background: url(assets/techtikt_azul.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+ 
+ .div-btn-mt {
+	position: absolute;
+	background: #FFFBF6;
+	border-radius: 0px 75px 25px 25px;
+	height: 160px;
+	width: 215px;
+	padding: 40px;
+	padding-top: 40px;
+	margin: 40px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .btn-mt{
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+	color: rgba(0, 0, 0, 0.9);
+ }
 
-/** -------------------------------*/
-/** 04. Modal Regras de Utilização */ 
-/** -------------------------------*/
+
+/**! ------------------------*/
+/**! 03. Modal Termos de Uso */ 
+/**! ------------------------*/
+
+/**! -------------------------------*/
+/**! 04. Modal Regras de Utilização */ 
+/**! -------------------------------*/
 
 /** --------------------*/
 /** 04. Geração Bilhete */
@@ -359,9 +532,9 @@ h6 {
     justify-content: flex-end;
 }
 
-/** ----------------------------*/
-/** 06. Modal Geração do Código */
-/** ----------------------------*/
+/**! ----------------------------*/
+/**! 06. Modal Geração do Código */
+/**! ----------------------------*/
 
 
 
@@ -489,13 +662,14 @@ h6 {
     align-items: center;
     position: relative;
     overflow: hidden;
+	padding-top: 80px;
 }
 
 .container-info {
-    position: absolute;
+    position: relative;
     background: #FFFBF6;
     border-radius: 0px 95px 45px 45px;
-    padding: 45px;
+    padding: 90px;
     margin: 30px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -511,6 +685,9 @@ h6 {
 	line-height: 30px;
 
 	background-color: transparent;
+}
+.container-info b {
+	font-weight: 600;
 }
 
 /** ---------------*/
