@@ -7,7 +7,6 @@
         <title>TechTIKT - Gerar Bilhete</title>
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="bootstrap.css" rel="stylesheet">
         <link href="font-awesome.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
 
@@ -31,25 +30,41 @@
                     <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Btn Nav -->
-            <a class="nav-gerarbilhete" href="index.html">
-                <button>Gerar Bilhete</button>
+            <a class="nav-menu" href="index.html">
+                <button>Menu</button>
             </a> 
-            
         </header>
-        <!-- Input Código -->
-        <section class="section__recarga">
-            <div>
-                <h3>Insira o código do seu bilhete:</h3>
+
+        <!-- Input bilhete -->
+        <section class="section__uti">
+            
+            <!-- Titulo -->
+            <div class="txt-uti">
+                <h2>Recarregue seu TechTIKT</h2>
+            </div>
+            
+            <!-- Subtítulo -->
+            <p class="subtitulo">Insira o código do seu bilhete:</p>
+           
+           <!-- Container Input Código -->
+            <div class="container-input">
                 <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
                 <!-- <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a> -->
                 <label type="text" id="codigoRecarga"></label>
             </div>
 
-            <a type="button" class="btn-recarregar" onclick="Recarregar()">RECARREGAR</a>
-
+            <!-- Btn Utilizar -->
+            <div class="btn-rec">
+                <a class="btn-recarregar">
+                    <button>RECARREGAR</button>
+                </a> 
+            </div>
         </section>
+
+        <!-- Script -->
         <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
         <script src="../js/script.js"></script>
+
     </body>
