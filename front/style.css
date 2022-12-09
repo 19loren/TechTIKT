@@ -193,7 +193,7 @@ h6 {
 	margin-bottom: 0; 
 	background-color: transparent;
 	
-	min-height: 50vh;
+	min-height: 90vh;
 	align-items:center;
 	position: relative;
 	overflow: hidden;
@@ -216,14 +216,20 @@ h6 {
  .row-menu {
 	list-style: none;
 	background-color: transparent;
-	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-top: 80px;
  }
  
  .row-menu li {
 	display: inline-block;
-	padding: 80px 20px;
+	min-width: 5em;
+	margin: 0 0.5em;
  }
  
+/* !ARRUMAR ANIMATION ROW CONTAINERS */
  /* GERAR BILHETE */
  .container-gb {
 	height: 230px;
@@ -234,7 +240,7 @@ h6 {
 	background-position: center;
 	background-size: cover;
  }
- 
+
  .div-btn-gb {
 	position: absolute;
 	background: #FFFBF6;
@@ -246,6 +252,10 @@ h6 {
 	margin: 40px;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
  }
+
+ .div-btn-gb:hover{
+	background-color: #183052;
+ }
  
  .btn-gb{
 	font-size: 26px;
@@ -256,6 +266,10 @@ h6 {
 	text-align: center;
 	letter-spacing: -0.015em;
 	color: rgba(0, 0, 0, 0.9);
+ }
+
+ .btn-gb:hover{
+	color: #fff;
  }
  
  /* RECARREGAR BILHETE */
