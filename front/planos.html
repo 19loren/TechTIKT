@@ -8,7 +8,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
         <link href="font-awesome.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link href="planos.css" rel="stylesheet">
 
         <!-- Favicon  -->
         <link rel="icon" href="assets/techtikt_favicon.png">
@@ -26,7 +26,7 @@
                 <ul class="nav__links">
                     <li><a href="info.html">Info</a></li>
                     <li><a href="utilizacao.html">Utilizar</a></li>
-                    <li><a href="#recarga">Recarga</a></li>
+                    <li><a href="recarga.html">Recarga</a></li>
                     <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
                 </ul>
             </nav>
@@ -38,7 +38,7 @@
         </header>
 
         <!-- Planos -->
-        <section>
+        <section class="section__planos">
 
             <!-- Título -->
             <div class="txt-planos">
@@ -46,102 +46,140 @@
             </div>
 
             <!-- Container Row Planos -->
-            <div class="row-planos">
+            <ul class="row-planos">
 
                 <!-- Plano Único -->
-                <div class="plano-unico">
-                    <!-- Planos Sup -->
-                    <div class="planos-sup">
-                        <p class="preco">R$ 5,79</p>
-                        <p class="tipo-plano">ÚNICO</p>
-                    </div>
-                    <!-- Container Info -->
-                    <div class="container-infopl">
-                        <div>
-                            
+                <li>
+                    <div class="plano-unico">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="preco">R$ 5,79</p>
+                            <p class="tipo-plano">ÚNICO</p>
+                        </div>
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você possui o direito de utilizar o bilhete apenas <b>uma vez</b>.
+                                    <br/>Após a ativação,
+                                    o mesmo poderá <b>ser utilizado em quantos transportes quiser</b>,
+                                    por um período de <b>40 minutos</b>!  
+                                    </p>
+                                </div>
+
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-unico">
+                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                       
+                            </div>
                         </div>
                     </div>
+                </li>
 
-                </div>
-            </div>
+                <!-- Plano Duplo -->
+                <li>
+                    <div class="plano-duplo">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="preco">R$ 10,49</p>
+                            <p class="tipo-plano">DUPLO</p>
+                        </div>
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
 
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você possui o direito de utilizar o bilhete <b>duas vezes</b>.
+                                    <br/>Após a ativação, para cada período de utilização do bilhete, 
+                                    o mesmo poderá <b>ser utilizado em quantos transportes quiser</b>, 
+                                    por um período de <b>40 minutos</b>! 
+                                    </p>
+                                </div>
+                                
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-duplo">
+                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>    
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Plano 7Dias -->
+                <li>
+                    <div class="plano-7d">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="preco">R$ 69,90</p>
+                            <p class="tipo-plano">7 DIAS</p>
+                        </div>
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você possui o direito de utilizar o bilhete <b>durante 7 dias</b>.
+                                    <br/>Após a ativação,
+                                    você possui o direito de utilizar o <b>mesmo bilhete em quantos transportes quiser</b>,
+                                    por um período de <b>7 dias</b>!  
+                                    </p>
+                                </div>
+
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-7d">
+                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Plano 30Dias -->
+                <li>
+                    <div class="plano-30d">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="preco">R$ 270,90</p>
+                            <p class="tipo-plano">30 DIAS</p>
+                        </div>
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você possui o direito de utilizar o bilhete <b>durante 30 dias</b>.
+                                    <br/>Após a ativação,
+                                    você possui o direito de utilizar o <b>mesmo bilhete em quantos transportes quiser</b>, 
+                                    por um período de <b>30 dias</b>! 
+                                    </p>
+                                </div>
+                                
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-30d">
+                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
-
-
-
-
-
-
-
-        <!-- <section class="section__planos" id="planos">
-            <div class="planos-txt">
-                <h1 class="txt-planos">Planos</h1>
-            </div>
-            <div class="planos">
-                <div class="plano-unico">
-                     <img src="assets/img_planos.jpeg"> 
-
-                    Unico 
-                    <div class="unico-container">
-                        <div class="preco-unico"> 
-                            <h2>R$ 5,79</h2>
-                            <p>ÚNICO</p> 
-                        </div>
-                        <div class="txt-container">
-                            <p>Você possui o direito de utilizar o bilhete apenas uma vez.
-                                <br/>Após a ativação,
-                                o mesmo poderá ser utilizado em quantos transportes quiser,
-                                por um período de 40 minutos!  
-                            </p>
-                        </div>
-                    </div>
-
-                    >
-                    <div class="duplo-container">
-                        <div class="preco-duplo"> 
-                            
-                            <h2>R$ 10,49</h2>
-                            <p>DUPLO</p>
-                        </div>
-                        <div class="txt-container">
-                            <p>Você possui o direito de utilizar o bilhete duas vezes. 
-                                <br/>Após a ativação, para cada período de utilização do bilhete, 
-                                o mesmo poderá ser utilizado em quantos transportes quiser, 
-                                por um período de 40 minutos! 
-                            </p>
-                        </div>
-                    </div>
-
-                    
-                    <div class="7d-container">
-                        <div class="preco-7d"> 
-                            <h2>R$ 69,90</h2>
-                            <p>7DIAS</p>
-                        </div>
-                        <div class="txt-container">
-                            <p>Você possui o direito de utilizar o bilhete durante 7 dias.
-                                <br/>Após a ativação, você possui o direito de utilizar o mesmo bilhete
-                                em quantos transportes quiser, por um período de 7 dias!                                
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="30d-container">
-                        <div class="preco-30d"> 
-                            <h2>R$ 270,90</h2>
-                            <p>30DIAS</p> 
-                        </div>
-                        <div class="txt-container">
-                            <p>Você possui o direito de utilizar o bilhete durante 30 dias.
-                                <br/>Após a ativação, você possui o direito de utilizar o mesmo bilhete
-                                em quantos transportes quiser, por um período de 30 dias!                                                            
-                            </p>
-                        </div>
-                    </div>
-
-                </div> -->
 
         <!-- Script -->
         <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
         <script src="../js/script.js"></script>
-</body>
+</body> 

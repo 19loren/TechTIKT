@@ -3,16 +3,7 @@
 Conteúdo:
 
 	01. Barra de Navegação
-	02. Página Inicial
-	03. Modal Termos de Uso
-	04. Modal Regras de Utilização
-	05. Geração Bilhete
-	06. Modal Geração do Código
 	07. Planos
-	08. Input Código
-	09. Meu TechTIKT
-	10. Info
-	11. Footer
 -----------------------------------------------------------------------------------------------------------------
 	> Icons:
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -30,11 +21,13 @@ Cores:
 */
 
 body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(0deg, rgba(255, 251, 246, 0.8), rgba(255, 251, 246, 0.8)), url(assets/techtikt_principal.jpg);
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(0deg, rgba(255, 251, 246, 0.6), rgba(255, 251, 246, 0.9)), url(assets/techtikt_principal.jpg);
+   background-position: center;
+   background-size: cover;
 }
 
 body, p {
@@ -102,7 +95,7 @@ h6 {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-   background-color: #fff;
+   background-color: transparent;
 }
 
 li, a, button {
@@ -115,8 +108,9 @@ header {
    display: flex;
    justify-content: flex-end;
    align-items: center;
-   padding: 5px 3%;
+   padding: 2px 3%;
    position: sticky;
+   background-color: #fff;
 }
 
 header p {
@@ -159,7 +153,7 @@ header b{
 
 /* Btn Nav */
 
-.nav-gerarbilhete button {
+.nav-menu button {
    margin-right: 20px;
    display: inline-block;
    padding: 1rem 1.5rem 1rem 1.5rem;
@@ -173,8 +167,204 @@ header b{
    margin: 0.5rem 0;
 }
 
-.nav-gerarbilhete button:hover {
+.nav-menu button:hover {
    border: 0.125rem solid #e33b4a;
    background-color: #e33b4a;
    color: #fff;
 }
+
+/** -----------*/
+/** 07. Planos */
+/** -----------*/
+
+.section__planos {
+   margin-top: 0;
+   margin-bottom: 0; 
+   background-color: transparent;
+
+   min-height: 50vh;
+   align-items:center;
+   position: relative;
+   overflow: hidden;
+   padding: 20px;
+}
+
+/* Título */
+.txt-planos {
+   padding-left: 50px;
+   background-color: transparent;
+}
+
+.txt-planos h2 {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 48px;
+   line-height: 72px;
+   letter-spacing: -0.015em;
+   color: #000;
+}
+
+.row-planos {
+	list-style: none;
+	background-color: transparent;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-top: 15px;
+ }
+
+
+.row-planos li {
+	display: inline-block;
+	min-width: 5em;
+	margin: 0 0.5em;
+}
+
+.planos-sup {
+   background: rgba(255, 255, 255, 0.4);
+   border-radius: 25px 25px 0px 0px;
+   height: 145px;
+}
+.preco{
+   font-weight: 600;
+   font-size: 46px;
+   line-height: 72px;
+
+   padding-top: 15px;
+   text-align: center;
+   letter-spacing: -0.015em;
+
+   color: #000;
+}
+
+.tipo-plano {
+   font-weight: 500;
+   font-size: 30px;
+   line-height: 40px;
+
+   padding-top: 0;
+   text-align: center;
+   letter-spacing: -0.015em;
+
+   color: #000;
+}
+.txt-infopl {
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 50px;
+
+   letter-spacing: -0.015em;
+   text-align: left;
+   color: #000;
+}
+
+.txt-infopl b {
+   font-weight: 600;
+}
+
+.container-infopl {
+   position: absolute;
+   background: #FFFBF6;
+   border-radius: 0px 75px 25px 25px;
+   height: 360px;
+   width: 284px;
+   padding: 35px; 
+   padding-top: 22px;
+   margin: 25px;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.txt-planos {
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 50px;
+
+   letter-spacing: -0.015em;
+
+   color: #000;
+}
+
+ /* Btn Planos */
+ 
+ .btn-plano button {
+   display: inline-block;
+   padding: 0.6rem 2.2rem 0.6rem 2.2rem;
+   border: 0.125rem solid #e33b4a;
+   border-radius: 15px;
+   background-color: transparent;
+   color: #e33b4a;
+   font: 500 16px/0 "Montserrat", sans-serif;
+   text-decoration: none;
+   transition: all 0.2s;
+   margin: 0.5rem 0;
+   line-height: 24px;
+   align-content: flex-end;
+}
+
+.btn-plano button:hover {
+   border: 0.125rem solid #e33b4a;
+   background-color: #e33b4a;
+   color: #fff;
+}
+
+.btn-unico {
+   margin-top: 40px;
+}
+
+.btn-duplo {
+   margin-top: 40px;
+}
+
+.btn-7d {
+   margin-top: 11px;
+}
+
+.btn-30d {
+   margin-top: 11px;
+}
+
+
+
+ /* Planos */
+ .plano-unico {
+	height: 550px;
+	width: 333px;
+	background: url(assets/techtikit_laranja.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+
+ .plano-duplo {
+	height: 550px;
+	width: 333px;
+	background: url(assets/techtikt_rosa.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+
+ .plano-7d {
+	height: 550px;
+	width: 333px;
+	background: url(assets/techtikt_roxo.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+
+ .plano-30d {
+	height: 550px;
+	width: 333px;
+	background: url(assets/techtikt_azul.jpeg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+ }
+
