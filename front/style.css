@@ -34,7 +34,7 @@ body, html {
     height: 100%;
 	margin: 0;
 	padding: 0; 
-	background: linear-gradient(0deg, rgba(255, 251, 246, 0.8), rgba(255, 251, 246, 0.8)), url(assets/techtikt_principal.jpg);
+	background: linear-gradient(0deg, rgba(255, 251, 246, 0.7), rgba(255, 251, 246, 0.9)), url(assets/techtikt_principal.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -117,7 +117,7 @@ h6 {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 5px 3%;
+	padding: 9px 3%;
 	position: sticky;
 	background-color: #fff;
 	margin: 0.1rem 0;
@@ -195,7 +195,7 @@ h6 {
 	margin-bottom: 0; 
 	background-color: transparent;
 	
-	min-height: 70vh;
+	min-height: 50vh;
 	align-items:center;
 	position: relative;
 	overflow: hidden;
@@ -212,7 +212,7 @@ h6 {
 	text-align: center;
 	letter-spacing: -0.015em;
  
-	color: rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0.8);
  }
  
  .row-menu {
@@ -243,7 +243,7 @@ h6 {
  }
 
  .container-gb:hover {
-	background: linear-gradient(0deg, #183052cc, #183052cc), url(assets/techtikit_laranja.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(assets/techtikit_laranja.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -262,14 +262,14 @@ h6 {
  }
  
  .btn-gb{
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 28px;
+	font-weight: 600;
 	line-height: 40px;
-	display: flex;
+	display: block;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.015em;
-	color: rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0.8);
  }
 
  
@@ -285,7 +285,7 @@ h6 {
  }
  
  .container-rb:hover {
-	background: linear-gradient(0deg, #183052cc, #183052cc), url(assets/techtikt_rosa.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(assets/techtikt_rosa.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -303,14 +303,14 @@ h6 {
  }
  
  .btn-rb{
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 28px;
+	font-weight: 600;
 	line-height: 40px;
-	display: flex;
+	display: block;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.015em;
-	color: rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0.8);
  }
  
  /* UTILIZAR BILHETE */
@@ -325,7 +325,7 @@ h6 {
  }
  
  .container-ub:hover {
-	background: linear-gradient(0deg, #183052cc, #183052cc), url(assets/techtikt_roxo.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(assets/techtikt_roxo.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -336,21 +336,20 @@ h6 {
 	border-radius: 0px 75px 25px 25px;
 	height: 160px;
 	width: 215px;
-	padding: 40px;
 	padding-top: 40px;
 	margin: 40px;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
  }
  
  .btn-ub{
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 28px;
+	font-weight: 600;
 	line-height: 40px;
-	display: flex;
+	display: block;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.015em;
-	color: rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0.8);
  }
  
  /* MEU TECHTIKT */
@@ -365,7 +364,7 @@ h6 {
  }
 
  .container-mt:hover {
-	background: linear-gradient(0deg, #183052cc, #183052cc), url(assets/techtikt_azul.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(assets/techtikt_azul.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -383,14 +382,14 @@ h6 {
  }
  
  .btn-mt{
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 28px;
+	font-weight: 600;
 	line-height: 40px;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.015em;
-	color: rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0.8);
  }
 
 
@@ -798,7 +797,7 @@ h6 {
 }
 
 .btn-recarregar button:hover {
-	border: 0.125rem solid #e33b4a;
+	border: 3px solid #e33b4a;
 	background-color: #e33b4a;
 	color: #fff;
  }
