@@ -927,7 +927,7 @@ h6 {
 .txt-uti h2 {
    font-weight: 700;
    font-size: 70px;
-   line-height: 85px;
+   line-height: 75px;
 
    background-color: transparent;
    text-align: center;
@@ -956,6 +956,7 @@ h6 {
 	padding: 20px;
 	padding-top: 30px;
 }
+
 .input-codigo {
    background-color: #FFFBF6;
    border-radius: 35px;
@@ -970,16 +971,8 @@ h6 {
    letter-spacing: -0.015em;
 
    color: rgba(0, 0, 0, 0.8);
-   background-image: url(./assets/ti);
-   background-repeat: no-repeat;
-   background-position: 2px 3px;
 }
 
-#icon {
-	background-image: url(../images/icons/dollar.png);
-	background-repeat: no-repeat;
-	background-position: 2px 3px;
-  }
 
 .btn-rec {
 	background-color: transparent;
