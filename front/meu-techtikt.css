@@ -34,7 +34,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg, rgba(255, 251, 246, 0.8), rgba(255, 251, 246, 0.8)), url(assets/techtikt_principal.jpg);
+    background: linear-gradient(0deg, rgba(255, 251, 246, 0.7), rgba(255, 251, 246, 0.9)), url(assets/techtikt_principal.jpg);
 }
 
 body, p {
@@ -99,82 +99,88 @@ h6 {
 /** -----------------------*/
 
 * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   background-color: #fff;
-}
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+ }
+ 
+ li, a, button {
+	font: 500 16px "Montserrat", sans-serif;
+	text-decoration: none;
+	color: #000;
+ }
+ 
+ header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 9px 3%;
+	position: sticky;
+	background-color: #fff;
+	margin: 0.1rem 0;
+ }
+ 
+ header p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+ 
+	letter-spacing: -0.015em;
+ 
+	color: #000
+ }
+ 
+ header b{
+	font-weight: 500;
+ }
+ 
+ .logo {
+	cursor: pointer;
+	margin-right: auto;
+ }
+ 
+ .nav__links{
+	list-style: none;
+ }
+ 
+ .nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+ }
+ 
+ .nav__links li a {
+	transition: all 0.2s;
+ }
+ 
+ .nav__links li a:hover {
+	color: #e33b4a;
+ }
+ 
+ /* Btn Nav */
+ 
+ .nav-menu button {
+	margin-right: 20px;
+	display: inline-block;
+	padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+	border: 0.125rem solid #e33b4a;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 500 15px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.1rem 0;
+ }
+ 
+ .nav-menu button:hover {
+	border: 0.125rem solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+ }
 
-li, a, button {
-   font: 500 16px "Montserrat", sans-serif;
-   text-decoration: none;
-   color: #000;
-}
-
-header {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   padding: 5px 3%;
-   position: sticky;
-}
-
-header p {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 20px;
-   line-height: 30px;
-
-   letter-spacing: -0.015em;
-
-   color: #000
-}
-
-header b{
-   font-weight: 500;
-}
-
-.logo {
-   cursor: pointer;
-   margin-right: auto;
-}
-
-.nav__links{
-   list-style: none;
-}
-
-.nav__links li {
-   display: inline-block;
-   padding: 0px 20px;
-}
-
-.nav__links li a {
-   transition: all 0.2s;
-}
-
-.nav__links li a:hover {
-   color: #e33b4a;
-}
-
-/* Btn Nav */
-
-.nav-gerarbilhete button {
-   margin-right: 20px;
-   display: inline-block;
-   padding: 1rem 1.5rem 1rem 1.5rem;
-   border: 0.125rem solid #e33b4a;
-   border-radius: 2rem;
-   background-color: transparent;
-   color: #e33b4a;
-   font: 500 0.875rem/0 "Montserrat", sans-serif;
-   text-decoration: none;
-   transition: all 0.2s;
-   margin: 0.5rem 0;
-}
-
-.nav-gerarbilhete button:hover {
-   border: 0.125rem solid #e33b4a;
-   background-color: #e33b4a;
-   color: #fff;
-}
+/** ---------------- */
+/** 09. Meu TechTIKT */
+/** ---------------- */

@@ -203,8 +203,6 @@ h6 {
  }
  
  .txt-menu h2{
-	font-family: 'Montserrat';
-	font-style: normal;
 	font-weight: 700;
 	font-size: 70px;
 	line-height: 85px;
@@ -420,9 +418,6 @@ h6 {
 /* Título Principal */
 
 .section__geracao h2{
-    font-size: 70px;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 70px;
     line-height: 85px;
@@ -437,8 +432,6 @@ h6 {
 /* Subtítulo */
 
 .section__geracao p {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 32px; 
     line-height: 50px;
@@ -491,8 +484,6 @@ h6 {
     background-color: transparent;
 }
 .rodape p {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 50px;
@@ -594,8 +585,6 @@ h6 {
  }
  
  .txt-planos h2 {
-	font-family: 'Montserrat';
-	font-style: normal;
 	font-weight: 500;
 	font-size: 48px;
 	line-height: 72px;
@@ -875,8 +864,6 @@ h6 {
     background-color: #FFFBF6;
 }
 .container-info p {
-    font-family: 'Montserrat';
-	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 30px;
@@ -911,7 +898,7 @@ h6 {
 	text-align: center;
 	letter-spacing: -0.015em;
 
-	color: #000;
+	color: #183052;
 	transition: all 0.2s;
  }
  
@@ -919,7 +906,6 @@ h6 {
 	color: #e33b4a;
  }
 
- .row-ft-info
 
 /** ---------------*/
 /** 11. Utilização */
@@ -939,9 +925,6 @@ h6 {
 
 /* Título */
 .txt-uti h2 {
-   font-size: 70px;
-   font-family: 'Montserrat';
-   font-style: normal;
    font-weight: 700;
    font-size: 70px;
    line-height: 85px;
@@ -955,8 +938,6 @@ h6 {
 
 /* Subtítulo */
 .section__uti p {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 32px; 
     line-height: 50px;
@@ -982,8 +963,6 @@ h6 {
    height: 88px;
 
    font-size: 40px;
-   font-family: 'Montserrat';
-   font-style: normal;
    font-weight: 500;
    line-height: 85px;
 
@@ -991,7 +970,16 @@ h6 {
    letter-spacing: -0.015em;
 
    color: rgba(0, 0, 0, 0.8);
+   background-image: url(./assets/ti);
+   background-repeat: no-repeat;
+   background-position: 2px 3px;
 }
+
+#icon {
+	background-image: url(../images/icons/dollar.png);
+	background-repeat: no-repeat;
+	background-position: 2px 3px;
+  }
 
 .btn-rec {
 	background-color: transparent;
@@ -1020,89 +1008,3 @@ h6 {
 	background-color: #e33b4a;
 	color: #fff;
  }
-
-
-/** -----------*/
-/** 12. Footer */
-/** -----------*/
-footer {
-	justify-content: space-around;
-}
-
-/* Footer - Sup */
-.footer__links {
-	list-style: none;
-
-}
-
-.footer__links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.footer__links li a {
-    transition: all 0.2s;
-}
-
-.footer__links li a:hover {
-    color: #e33b4a;
-}
-
-
-/* Footer - Content */
-.footer-content {
-	display: inline-block;
-	justify-content: space-around;
-}
-
-/* Footer - Nav */
-.footer__nav{
-    list-style: none;
-}
-
-.footer__navs li {
-    display: block;
-    padding: 2px 0px;
-}
-
-.footer__nav li a {
-    transition: all 0.2s;
-}
-
-.footer__nav li a:hover {
-    color: #e33b4a;
-}
-
-/* Redes Sociais */
-.footer-content .cell {
-	display: inline-block;
-	width: 1.8rem;
-	margin-right: 0rem;
-	margin-bottom: 2rem;
-	margin-left: 0rem;
-	vertical-align: top;
-}
-
-
-/* E-mails */
-.footer__ctt{
-    list-style: none;
-}
-
-.footer__ctt li {
-    /* display: inline-block; */
-	display: block;
-    padding: 2px 0px;
-}
-
-.footer__ctt li a {
-    transition: all 0.2s;
-}
-
-.footer__ctt li a:hover {
-    color: #e33b4a;
-}
-
-.footer-bottom {
-	align-items: center;
-}
