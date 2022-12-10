@@ -830,9 +830,89 @@ h6 {
 	text-align: center;
 }
 
+
 /** ---------------- */
 /** 09. Meu TechTIKT */
 /** ---------------- */
+
+.section__mt {
+	margin-top: 0;
+	margin-bottom: 0; 
+	background: transparent;
+	min-height: 45vh;
+ 
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	padding-top: 80px;
+ }
+ 
+ .txt-mt {
+	padding-left: 50px;
+	 background-color: transparent;
+ }
+ 
+ .txt-mt h2 {
+	font-weight: 500;
+	 font-size: 40px;
+	 line-height: 20px;
+	 letter-spacing: -0.015em;
+	 color: #000;
+ }
+ 
+ .mt-container {
+	position: relative;
+	background: #FFFBF6;
+	border-radius: 0px 95px 45px 45px;
+	text-align: center;
+	align-items: center;
+	padding: 80px;
+	margin: 50px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .ul-mt {
+	list-style: none;
+ }
+ 
+ .ul-mt li {
+	display: inline-flex;
+	 align-items: center;
+	padding: 0px 30px;
+	justify-content: space-around;
+ }
+ 
+ .ul-mt div {
+	padding: 10px 40px;
+ }
+ 
+ .ul-mt hr {
+	background-color: #E0D9D1;
+	height: 3px;
+	margin-top: 30px;
+	border-color: #e0d9d1;
+	border-style: none;
+ }
+ 
+ .ul-mt p {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 20px;
+ 
+	letter-spacing: -0.015em;
+ 
+	color: #000;
+ }
+ 
+ .ul-mt label {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 20px;
+ 
+	letter-spacing: -0.015em;
+ 
+	color: #000;
+ }
 
 
 /** ---------*/
@@ -913,7 +993,7 @@ h6 {
 
 .section__uti {
 	margin-top: 0;
-   margin-bottom: 0; 
+   	margin-bottom: 0; 
 	background-color: transparent;
 
    min-height: 50vh;
