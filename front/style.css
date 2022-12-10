@@ -577,59 +577,244 @@ h6 {
 
 .section__planos {
 	margin-top: 0;
-    margin-bottom: 0; 
-	background-color: #fff;
-
-    min-height: 80vh;
-    display: flex;
-    align-items:center;
-    position: relative;
-    overflow: hidden;
-}
-
-.planos-txt .txt-planos {
+	margin-bottom: 0; 
+	background-color: transparent;
+ 
+	min-height: 50vh;
+	align-items:center;
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+ }
+ 
+ /* Título */
+ .txt-planos {
+	padding-left: 50px;
+	background-color: transparent;
+ }
+ 
+ .txt-planos h2 {
 	font-family: 'Montserrat';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 48px;
 	line-height: 72px;
-
 	letter-spacing: -0.015em;
-
 	color: #000;
-}
-
-.planos{
-    padding-top: 90px;
-	display: flex;
-	align-content: space-between;
-}
-
-
-/* Único */
-.plano-unico{
-    float: left;
-    width: 25%;
-}
-
-/* Duo */
-.plano-duplo{
-    float: left;
-    width: 25%;
-}
-
-/* 7DAYS */
-.plano-7diass{
-    float: left;
-    width: 25%;
-}
-
-/* 30DAYS */
-.plano-30dias{
-    float: left;
-    width: 25%;
-}
-
+ }
+ 
+ .row-planos {
+	 list-style: none;
+	 background-color: transparent;
+	 align-items: center;
+	 margin: 0;
+	 padding: 0;
+	 text-align: center;
+	 margin-top: 5px;
+  }
+ 
+ .row-planos li {
+	 display: inline-block;
+	 min-width: 5em;
+	 margin: 0 0.5em;
+ }
+ 
+ .planos-sup {
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 25px 25px 0px 0px;
+	height: 100px;
+ }
+ 
+ .tipo-plano {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 72px;
+ 
+	padding-top: 15px;
+	text-align: center;
+	letter-spacing: -0.015em;
+ 
+	color: #000;
+ }
+ 
+ .pr-dr {
+	list-style: none;
+	 background-color: transparent;
+	 align-items: center;
+	 margin: 0;
+	 padding: 0;
+	 text-align: center;
+ }
+ 
+ .pr-dr li {
+	display: inline-flex;
+	 min-width: 5em;
+	align-items: center;
+	justify-content: left;
+	text-align: left;
+	width: 166.833px;
+ }
+ 
+ .preco{
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 20px;
+  
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+	
+	color: #183052;
+ }
+ 
+ .duracao {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 40px;
+ 
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.015em;
+ 
+	color: #183052;
+ }
+ 
+ .txt-infopl {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 35px;
+	text-align: left;
+	letter-spacing: -0.015em;
+	color: #000;
+	padding-top: 10px;
+ }
+ 
+ .txt-infopl b {
+	font-weight: 600;
+ }
+ 
+ .container-infopl {
+	position: absolute;
+	background: #FFFBF6;
+	border-radius: 0px 75px 25px 25px;
+	height: 400px;
+	width: 284px;
+	padding: 35px; 
+	margin-left: 25px;
+	margin-top: 12px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ .txt-planos {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 50px;
+ 
+	letter-spacing: -0.015em;
+ 
+	color: #000;
+ }
+ 
+  /* Btn Planos */
+  
+  .btn-plano button {
+	display: inline-block;
+	padding: 0.8rem 2.8rem 0.8rem 2.8rem;
+	border: 0.125rem solid #e33b4a;
+	border-radius: 15px;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 500 16px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
+	line-height: 24px;
+	align-content: flex-end;
+ }
+ 
+ .btn-plano button:hover {
+	border: 0.125rem solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+ }
+ 
+ .btn-unico {
+	margin-top: 15px;
+ }
+ 
+ .btn-duplo {
+	margin-top: 15px;
+ }
+ 
+ .btn-7d {
+	margin-top: 40px;
+ }
+ 
+ .btn-30d {
+	margin-top: 40px;
+ }
+ 
+  /* Planos */
+  .plano-unico {
+	 height: 530px;
+	 width: 333px;
+	 background: url(assets/techtikit_laranja.jpeg);
+	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	 border-radius: 25px;
+	 background-position: center;
+	 background-size: cover;
+  }
+ 
+  .plano-duplo {
+	 height: 530px;
+	 width: 333px;
+	 background: url(assets/techtikt_rosa.jpeg);
+	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	 border-radius: 25px;
+	 background-position: center;
+	 background-size: cover;
+  }
+ 
+  .plano-7d {
+	 height: 530px;
+	 width: 333px;
+	 background: url(assets/techtikt_roxo.jpeg);
+	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	 border-radius: 25px;
+	 background-position: center;
+	 background-size: cover;
+  }
+ 
+  .plano-30d {
+	 height: 530px;
+	 width: 333px;
+	 background: url(assets/techtikt_azul.jpeg);
+	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	 border-radius: 25px;
+	 background-position: center;
+	 background-size: cover;
+  }
+ 
+ /* Footer Planos */
+ .footer-planos {
+	align-items: center;
+	margin-top: 17px;
+ }
+ 
+ .footer-planos p {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+ 
+	text-align: center;
+	letter-spacing: -0.015em;
+ 
+	color: #000;
+ }
+ 
+ .footer-planos b {
+	font-weight: 600;
+ }
 
 /** -----------------*/
 /** 08. Input Código */
@@ -864,13 +1049,6 @@ footer {
 	vertical-align: top;
 }
 
-.fa-brands.fa-github {
-	color: #183052;
-}
-
-.fa-solid.fa-graduation-cap {
-	color: #183052;
-}
 
 /* E-mails */
 .footer__ctt{

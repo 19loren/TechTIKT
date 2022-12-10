@@ -25,7 +25,7 @@ body, html {
    height: 100%;
    margin: 0;
    padding: 0;
-   background: linear-gradient(0deg, rgba(255, 251, 246, 0.6), rgba(255, 251, 246, 0.9)), url(assets/techtikt_principal.jpg);
+   background: linear-gradient(0deg, rgba(255, 251, 246, 0.7), rgba(255, 251, 246, 0.9)), url(assets/techtikt_principal.jpg);
    background-position: center;
    background-size: cover;
 }
@@ -212,9 +212,8 @@ header b{
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 5px;
  }
-
 
 .row-planos li {
 	display: inline-block;
@@ -223,13 +222,14 @@ header b{
 }
 
 .planos-sup {
-   background: rgba(255, 255, 255, 0.4);
+   background: rgba(255, 255, 255, 0.5);
    border-radius: 25px 25px 0px 0px;
-   height: 145px;
+   height: 100px;
 }
-.preco{
+
+.tipo-plano {
    font-weight: 600;
-   font-size: 46px;
+   font-size: 40px;
    line-height: 72px;
 
    padding-top: 15px;
@@ -239,25 +239,56 @@ header b{
    color: #000;
 }
 
-.tipo-plano {
-   font-weight: 500;
-   font-size: 30px;
+.pr-dr {
+   list-style: none;
+	background-color: transparent;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.pr-dr li {
+   display: inline-flex;
+	min-width: 5em;
+   align-items: center;
+   justify-content: left;
+   text-align: left;
+   width: 166.833px;
+}
+
+.preco{
+   font-weight: 600;
+   font-size: 26px;
+   line-height: 20px;
+ 
+   align-items: center;
+   text-align: center;
+   letter-spacing: -0.015em;
+   
+   color: #183052;
+}
+
+.duracao {
+   font-weight: 600;
+   font-size: 26px;
    line-height: 40px;
 
-   padding-top: 0;
+   align-items: center;
    text-align: center;
    letter-spacing: -0.015em;
 
-   color: #000;
+   color: #183052;
 }
+
 .txt-infopl {
    font-weight: 400;
-   font-size: 28px;
-   line-height: 50px;
-
-   letter-spacing: -0.015em;
+   font-size: 20px;
+   line-height: 35px;
    text-align: left;
+   letter-spacing: -0.015em;
    color: #000;
+   padding-top: 10px;
 }
 
 .txt-infopl b {
@@ -268,11 +299,11 @@ header b{
    position: absolute;
    background: #FFFBF6;
    border-radius: 0px 75px 25px 25px;
-   height: 360px;
+   height: 400px;
    width: 284px;
    padding: 35px; 
-   padding-top: 22px;
-   margin: 25px;
+   margin-left: 25px;
+   margin-top: 12px;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -290,7 +321,7 @@ header b{
  
  .btn-plano button {
    display: inline-block;
-   padding: 0.6rem 2.2rem 0.6rem 2.2rem;
+   padding: 0.8rem 2.8rem 0.8rem 2.8rem;
    border: 0.125rem solid #e33b4a;
    border-radius: 15px;
    background-color: transparent;
@@ -310,26 +341,24 @@ header b{
 }
 
 .btn-unico {
-   margin-top: 40px;
+   margin-top: 15px;
 }
 
 .btn-duplo {
-   margin-top: 40px;
+   margin-top: 15px;
 }
 
 .btn-7d {
-   margin-top: 11px;
+   margin-top: 40px;
 }
 
 .btn-30d {
-   margin-top: 11px;
+   margin-top: 40px;
 }
-
-
 
  /* Planos */
  .plano-unico {
-	height: 550px;
+	height: 530px;
 	width: 333px;
 	background: url(assets/techtikit_laranja.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -339,7 +368,7 @@ header b{
  }
 
  .plano-duplo {
-	height: 550px;
+	height: 530px;
 	width: 333px;
 	background: url(assets/techtikt_rosa.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -349,7 +378,7 @@ header b{
  }
 
  .plano-7d {
-	height: 550px;
+	height: 530px;
 	width: 333px;
 	background: url(assets/techtikt_roxo.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -359,7 +388,7 @@ header b{
  }
 
  .plano-30d {
-	height: 550px;
+	height: 530px;
 	width: 333px;
 	background: url(assets/techtikt_azul.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -368,3 +397,23 @@ header b{
 	background-size: cover;
  }
 
+/* Footer Planos */
+.footer-planos {
+   align-items: center;
+   margin-top: 17px;
+}
+
+.footer-planos p {
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 20px;
+
+   text-align: center;
+   letter-spacing: -0.015em;
+
+   color: #000;
+}
+
+.footer-planos b {
+   font-weight: 600;
+}
