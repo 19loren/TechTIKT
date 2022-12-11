@@ -477,6 +477,10 @@ h6 {
 	color: #fff;
 	text-decoration: none;
 }
+
+#lbl-aceite-false {
+	color: #e33b4a;
+}
 /* Rodapé ¹ */
 .rodape {
     background-color: transparent;
@@ -493,65 +497,78 @@ h6 {
 }
 
 /* Modal Gerar Bilhete */
-.modal-container{
-    z-index: 9999;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    align-items: center;
-    justify-content: center;
+#section__modal__gerado {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modal-open{
-    display: flex;
+#section__modal__gerado h2 {
+	margin-bottom: 1rem;
 }
 
-.modal{
-    max-width: 700px;
-    max-height: 500px;
-    background-color: white;
-    border-color: 3px;
-    border-radius: 10px;
+#section__modal__gerado button {
+	padding: 0.6rem 1.2rem;
+	background-color: #18a0fb;
+	border: none;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: 0.4s;
+	width: 200px;
 }
 
-.modal-button{
-    font: 700 1rem/1.5rem "Montserrat", sans-serif;
-    text-transform: uppercase;
-    padding: 0.5em 1em;
-    border: none;
-    color: #fff;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 3px;
-    margin-left: 0.5em;
+#section__modal__gerado button:hover {
+	opacity: 1;
 }
 
-.modal-confirm-button{
-    background-color: #18A0FB;
-}
-.modal-cancel-button{
-    background-color: #E33B4A;
-}
-/* .modal-header{
-
-} */
-
-.modal-header h2 {
-    margin: 1em;
+#section__modal__gerado img{
+	border-radius: 0.6em;
+	max-width: 75%;
+	max-height: 75%;
 }
 
-.modal-content {
-    padding: 1em;
+.modal-container-gerado {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: #ffffff;
+	border-radius: 0.6em;
+	width: 900px;
+	max-width: 90%;
+	padding: 1.2rem;
 }
 
-.modal-footer {
-    padding: 1em;
+.modal-gerado-header {
+	display: inline;
+	align-items: center;
+	text-align: center;
+	border-bottom: 1px ;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
 
-    display: flex;
-    justify-content: flex-end;
+.modal-gerado-body {
+	align-items: center;
+	margin-bottom: 1rem;
+	display:inline-block;
+	text-align: center;
+}
+
+.modal-gerado-footer{
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+#section__modal__gerado.hide {
+	opacity: 0;
+	z-index: -1;
 }
 
 /**! ----------------------------*/

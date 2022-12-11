@@ -55,28 +55,35 @@ async function RecarregarBilhete(tipo,saldo){
 
 async function utilizar(){
     try {
-        document.getElementById("lbl-res").textContent="";
-        document.getElementById("lbl-sub").textContent="";
-        document.getElementById("codigo").textContent="";
-        const codigo = document.getElementById("inputUtilizacao").value;
-        var dadosUtilizacao = await fetch(`http://localhost:8081/utilizar/${codigo}`,{method:'POST'}).then((dadosUtilizacao)=> dadosUtilizacao.json());
-        if(dadosUtilizacao.existe==0){
-            document.getElementById("lbl-res").textContent="Código Invalido!!!";
-        }
-        else if(dadosUtilizacao.menssagem === "Saldo insuficiente!!!"){
-            document.getElementById("lbl-res").textContent=dadosUtilizacao.menssagem;
-        }
-        else if(dadosUtilizacao.menssagem ==="O bilhete ja esta ativo!!!"){
-            document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
-            document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
-            document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
-        }
-        else if(dadosUtilizacao.menssagem ==="Ativo!!!"){
-            document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
-            document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
-            document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
-        }
-        toggleModal();
+        const codigoUtilizacao = document.getElementById("inputUtilizacao").value;
+        if(codigoUtilizacao==""){
+            document.querySelector("#inputUtilizacao").setAttribute("placeholder","Código Inválido!!!");
+        }else{
+            document.getElementById("lbl-res").textContent="";
+            document.getElementById("lbl-sub").textContent="";
+            document.getElementById("codigo").textContent="";
+            const codigo = document.getElementById("inputUtilizacao").value;
+            var dadosUtilizacao = await fetch(`http://localhost:8081/utilizar/${codigo}`,{method:'POST'}).then((dadosUtilizacao)=> dadosUtilizacao.json());
+            if(dadosUtilizacao.existe==0){
+                document.getElementById("inputUtilizacao").value="";
+                document.querySelector("#inputUtilizacao").setAttribute("placeholder","Código Inválido!!!");
+                return null;
+            }
+            else if(dadosUtilizacao.menssagem === "Saldo insuficiente!!!"){
+                document.getElementById("lbl-res").textContent=dadosUtilizacao.menssagem;
+            }
+            else if(dadosUtilizacao.menssagem ==="O bilhete ja esta ativo!!!"){
+                document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
+                document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
+            }
+            else if(dadosUtilizacao.menssagem ==="Ativo!!!"){
+                document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
+                document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
+            }
+            toggleModal();
+    }
     }catch (error) {
         console.log(error);
     }
