@@ -233,7 +233,7 @@ h6 {
  .container-gb {
 	height: 230px;
 	width: 287px;
-	background: url(../assets/techtikit_laranja.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0)), url(../assets/techtikit_laranja.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -241,7 +241,7 @@ h6 {
  }
 
  .container-gb:hover {
-	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(../assets/techtikit_laranja.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0.8)), url(../assets/techtikit_laranja.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -275,7 +275,7 @@ h6 {
  .container-rb {
 	height: 230px;
 	width: 287px;
-	background: url(../assets/techtikt_rosa.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0)),url(../assets/techtikt_rosa.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -283,7 +283,7 @@ h6 {
  }
  
  .container-rb:hover {
-	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_rosa.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_rosa.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -315,7 +315,7 @@ h6 {
  .container-ub {
 	height: 230px;
 	width: 287px;
-	background: url(../assets/techtikt_roxo.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0)), url(../assets/techtikt_roxo.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -323,7 +323,7 @@ h6 {
  }
  
  .container-ub:hover {
-	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_roxo.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_roxo.jpeg);
 	background-position: center;
 	background-size: cover;
  }
@@ -354,7 +354,7 @@ h6 {
  .container-mt {
 	height: 230px;
 	width: 287px;
-	background: url(../assets/techtikt_azul.jpeg);
+	background: linear-gradient(0deg, rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0)), url(../assets/techtikt_azul.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -362,7 +362,7 @@ h6 {
  }
 
  .container-mt:hover {
-	background: linear-gradient(rgba(24, 48, 82, 0.5), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_azul.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0.8), rgba(24, 48, 82, 0.8)), url(../assets/techtikt_azul.jpeg);
 	background-position: center;
 	background-size: cover;
  }
