@@ -496,6 +496,11 @@ h6 {
     color: rgba(0, 0, 0, 0.8);
 }
 
+
+/** ----------------------------*/
+/** 06. Modal Geração do Código */
+/** ----------------------------*/
+
 /* Modal Gerar Bilhete */
 #section__modal__gerado {
 	z-index: 5;
@@ -507,29 +512,30 @@ h6 {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-#section__modal__gerado h2 {
-	margin-bottom: 1rem;
-}
-
 #section__modal__gerado button {
-	padding: 0.6rem 1.2rem;
-	background-color: #18a0fb;
-	border: none;
-	border-radius: 0.25rem;
-	cursor: pointer;
-	opacity: 0.8;
-	transition: 0.4s;
-	width: 200px;
+	margin-right: 20px;
+	display: inline-block;
+	padding: 1.9rem 4.8rem 1.9rem 4.8rem;
+	border: 2px solid #e33b4a;
+	border-radius: 25px;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 600 20px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.5rem 0;
 }
 
 #section__modal__gerado button:hover {
-	opacity: 1;
+	border: 2px solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
 }
 
 #section__modal__gerado img{
 	border-radius: 0.6em;
-	max-width: 75%;
-	max-height: 75%;
+	max-width: 65%;
+	max-height: 65%;
 }
 
 .modal-container-gerado {
@@ -539,26 +545,57 @@ h6 {
 	transform: translate(-50%, -50%);
 	z-index: 10;
 	background-color: #ffffff;
-	border-radius: 0.6em;
+	border-radius: 60px;
 	width: 900px;
+	text-align: center;
 	max-width: 90%;
-	padding: 1.2rem;
+	padding: 30px;
 }
 
 .modal-gerado-header {
 	display: inline;
-	align-items: center;
 	text-align: center;
 	border-bottom: 1px ;
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 }
 
+.modal-gerado-header h2 {
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 80px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+.modal-gerado-header p {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 39px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
 .modal-gerado-body {
-	align-items: center;
 	margin-bottom: 1rem;
 	display:inline-block;
 	text-align: center;
+}
+
+.modal-gerado-body p {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 39px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
 }
 
 .modal-gerado-footer{
@@ -570,11 +607,6 @@ h6 {
 	opacity: 0;
 	z-index: -1;
 }
-
-/**! ----------------------------*/
-/**! 06. Modal Geração do Código */
-/**! ----------------------------*/
-
 
 
 /** -----------*/
@@ -1088,6 +1120,7 @@ h6 {
 	padding: 20px;
 	padding-top: 40px;
 }
+
 
 .btn-recarregar button {
    margin-right: 20px;

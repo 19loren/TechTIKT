@@ -52,14 +52,14 @@
                 <div class="termos-uso">
                     <input id="tdu" type="checkbox" name="termos-de-uso">
                     <label class="ter-uso" for="tdu">
-                            <a href="termos-uso.html" target="_blank">Termos de Uso e Política de Privacidade</a>
+                            <a class="btn-tdu" onclick="">Termos de Uso e Política de Privacidade</a>
                     </label>
                 </div>
 
                 <div class="regras-utilizacao">
                     <input id="rub" type="checkbox" name="regras-de-utilizacao">
                     <label class="reg-uti" for="rub">
-                            <a href="regras-utilizacao.html" target="_blank">Regras de Utilização do Bilhete</a> <!--Arrumar as checkboxes para abrir um modal ao clicar no link -->
+                            <a class="btn-rub" onclick="">Regras de Utilização do Bilhete</a> 
                     </label>
                 </div>
                 <div>
@@ -79,6 +79,7 @@
 
         </section>
         
+        <!-- Modal - Bilhete Gerado -->
         <section id="section__modal__gerado" class="hide">
             <div id="modal-container-gerado" class="modal-container-gerado">
                 <div class="modal-gerado-header">
@@ -87,15 +88,46 @@
                 </div>
 
                 <div class="modal-gerado-body">
-                    <p><img src="assets/techtikt_geracaobilhete.jpeg"/></p>
+                    <p><img src="../assets/techtikt_geracaobilhete1.jpeg"/></p>
                     <p><label id="codigo" type="text">xxxxxxx</label></p>
                 </div>
                 
                 <div class="modal-gerado-footer">
-                    <button id="modal-gerado-ok-button" onclick="VoltarMenu()">Ok</button>
+                    <button id="modal-gerado-ok-button" onclick="VoltarMenu()">OK</button>
                 </div>
             </div>
         </section>
+        
+        <!-- Modal - Termos de Uso -->
+        <section id="section__tdu" class="hide">
+            <div class="main-container">
+                <p>This is the page main content</p>
+            </div>
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-container-controls">
+                    <button class="modal-container-close-button">Close modal button</button>
+                </div>
+                <div class="modal-container-content">
+                    <p><strong>Modal title</strong></p>
+                    <p>Modal content text 1</p>
+                </div>
+            </div>
+        </section>
+          <!-- Modal - Regras de Utilizacao -->
+          <div class="main-container">
+            <p>This is the page main content</p>
+          </div>
+          <div class="modal-overlay" id="modal-overlay"></div>
+          <div class="modal-container">
+              <div class="modal-container-controls">
+                  <button class="modal-container-close-button">Close modal button</button>
+              </div>
+              <div class="modal-container-content">
+                  <p><strong>Modal title</strong></p>
+                  <p>Modal content text 1</p>
+              </div>
+          </div>
 
 
         <!-- Script -->
