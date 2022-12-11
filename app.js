@@ -4,6 +4,7 @@ const Inserir = require("./src/controllers/insertBilhete");
 const Recarregar = require("./src/controllers/insertRecarga");
 const Utilizar = require("./src/controllers/insertUtilizacao");
 const verificarBilhete = require("./src/controllers/verificarBilhete");
+const selectGerenciar = require("./src/controllers/selectGerenciar");
 // const teste = require("./src/controllers/teste");
 
 
@@ -54,6 +55,11 @@ app.post("/RecarregarBilhete/:tipo/:saldo",async(req,next)=>{
 app.post("/utilizar/:codigo", async(req,res,next)=>{
     var dadosUtilizacao = await Utilizar(req.params.codigo);
     return res.json(dadosUtilizacao);
+});
+
+app.post("/gerenciar/:codigo", async(req,res,next)=>{
+    var dadosGerenciar = await selectGerenciar(req.params.codigo);
+    return res.json(dadosGerenciar)
 });
 
 app.listen(8081,function(){

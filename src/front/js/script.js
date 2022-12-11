@@ -52,7 +52,7 @@ async function RecarregarBilhete(tipo,saldo){
 }
 //#endregion
 
-
+//#region UtilizarBilhete
 async function utilizar(){
     try {
         const codigoUtilizacao = document.getElementById("inputUtilizacao").value;
@@ -94,4 +94,39 @@ const toggleModal=() =>{
     sectionBilheteGerado.classList.toggle("hide")
 }
 
-//"existe":"0", "menssagem":"coreinthians","dataExpiracao":""
+//#endregion
+
+const adicionarLinha=(plano,dataGeracao,dataRecarga,dataUtilizaca) =>{
+    let li=document.createElement('li');
+    li.className='mt-teste'
+    li.innerHTML =`
+    <div class="mt-pgru">
+        <p class="txt-plano">${plano}</p>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">${dataGeracao}</p>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">${dataRecarga}</p>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">${dataUtilizaca}</p>
+    </div>
+    <hr size="3"></hr>`
+    document.querySelector('.ul-mt').appendChild(li);
+}
+
+async function GerenciarBilhete(){
+    const codigo=document.getElementById("inputUtilizacao").value;
+    var dadosGerenciar = await fetch(`http://localhost:8081/gerenciar/${codigo}`,{method:'POST'}).then((dadosGerenciar)=> dadosGerenciar.json());
+    console.log(dadosGerenciar);
+    if(dadosGerenciar[0].existe){
+        for(dado in dadosGerenciar){
+            console.log(dadosGerenciar[dado].tipo);
+            adicionarLinha(dadosGerenciar[dado].tipo,dadosGerenciar[dado].dataGeracao,dadosGerenciar[dado].dataRecarga,dadosGerenciar[dado].dataUtilizacao);
+        }
+    }else{
+        document.getElementById("inputUtilizacao").value="";
+        document.getElementById("inputUtilizacao").setAttribute("placeholder","Código Invalido");
+    }
+}
