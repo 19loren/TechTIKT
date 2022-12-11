@@ -233,7 +233,7 @@ h6 {
  .container-gb {
 	height: 230px;
 	width: 287px;
-	background: url(assets/techtikit_laranja.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikit_laranja.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -275,7 +275,7 @@ h6 {
  .container-rb {
 	height: 230px;
 	width: 287px;
-	background: url(assets/techtikt_rosa.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_rosa.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -315,7 +315,7 @@ h6 {
  .container-ub {
 	height: 230px;
 	width: 287px;
-	background: url(assets/techtikt_roxo.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_roxo.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -354,7 +354,7 @@ h6 {
  .container-mt {
 	height: 230px;
 	width: 287px;
-	background: url(assets/techtikt_azul.jpeg);
+	background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_azul.jpeg);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 25px;
 	background-position: center;
@@ -747,7 +747,7 @@ h6 {
   .plano-unico {
 	 height: 530px;
 	 width: 333px;
-	 background: url(assets/techtikit_laranja.jpeg);
+	 background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikit_laranja.jpeg);;
 	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	 border-radius: 25px;
 	 background-position: center;
@@ -757,7 +757,7 @@ h6 {
   .plano-duplo {
 	 height: 530px;
 	 width: 333px;
-	 background: url(assets/techtikt_rosa.jpeg);
+	 background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_rosa.jpeg);
 	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	 border-radius: 25px;
 	 background-position: center;
@@ -767,7 +767,7 @@ h6 {
   .plano-7d {
 	 height: 530px;
 	 width: 333px;
-	 background: url(assets/techtikt_roxo.jpeg);
+	 background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_roxo.jpeg);
 	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	 border-radius: 25px;
 	 background-position: center;
@@ -777,7 +777,7 @@ h6 {
   .plano-30d {
 	 height: 530px;
 	 width: 333px;
-	 background: url(assets/techtikt_azul.jpeg);
+	 background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 0.8)), url(assets/techtikt_azul.jpeg);
 	 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	 border-radius: 25px;
 	 background-position: center;
@@ -905,7 +905,7 @@ h6 {
  }
  
  .ul-mt label {
-	font-weight: 400;
+	font-weight: 4 00;
 	font-size: 20px;
 	line-height: 20px;
  
@@ -931,13 +931,21 @@ h6 {
 	padding-top: 80px;
 }
 
+.container-inf {
+	position: relative;
+	background: linear-gradient(rgba(24, 48, 82, 0), rgba(24, 48, 82, 1)), url(assets/techtikt_azul.jpeg);
+    border-radius: 0px 95px 45px 45px;
+    padding: 5px;
+    margin: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .container-info {
     position: relative;
     background: #FFFBF6;
-    border-radius: 0px 95px 45px 45px;
-    padding: 70px;
+    border-radius: 0px 135px 45px 45px;
+    padding: 30px;
     margin: 30px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .container-info h3 {
@@ -946,7 +954,7 @@ h6 {
 .container-info p {
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 30px;
+	line-height: 25px;
 
 	background-color: transparent;
 }
