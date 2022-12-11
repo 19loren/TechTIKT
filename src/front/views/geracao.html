@@ -62,11 +62,14 @@
                             <a href="regras-utilizacao.html" target="_blank">Regras de Utilização do Bilhete</a> <!--Arrumar as checkboxes para abrir um modal ao clicar no link -->
                     </label>
                 </div>
+                <div>
+                    <label id="lbl-aceite-false"></label>
+                </div>
             </div>
 
             <!-- Btn Gerar -->
             <div class="btn-geracao">
-                <a class="btn-gerar-bilhete" href="modal">GERAR</a>
+                <a class="btn-gerar-bilhete" onclick="GerarBilhete()">GERAR</a>
             </div>
             
             <!-- Rodapé ¹ -->
@@ -76,47 +79,23 @@
 
         </section>
         
-                   <!--  <section class="section__modal">
-                        <div id="confirmation" class="modal-container">
-                            <div class="modal">
-                                <div class="modal-header">
-                                    <h2>PARABÉNS</h2>
-                                    <p>O Código do seu Bilhete foi gerado!</p>
-                                </div>
+        <section id="section__modal__gerado" class="hide">
+            <div id="modal-container-gerado" class="modal-container-gerado">
+                <div class="modal-gerado-header">
+                    <h2>PARABÉNS!!!</h2>
+                    <p>O Código do seu Bilhete foi gerado!</p>
+                </div>
 
-                                <div class="modal-content">
-                                    
-                                    <label id="codigo" type="text"></label>
-                                </div>
-                                
-                                <div class="modal-footer">
-                                    <button class="modal-button modal-cancel-button" onclick="CancelModalID()">Ok</button>
-                                    <button class="modal-button modal-confirm-button" onclick="ConfirmGerarID()">Confirmar</button>  
-                                </div>
-                            </div>
-                        </div>
-                    </section> -->
-                        
-
-                        <!-- Modal Confirmação -->
-                        <!-- <section class="section__modal">
-                            <div id="confirmation" class="modal-container">
-                                <div class="modal">
-                                    <div class="modal-header">
-                                        <h2> Tem certeza que deseja continuar?</h2>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button class="modal-button modal-cancel-button" onclick="CancelModalID()">Cancelar</button>
-                                        <button class="modal-button modal-confirm-button" onclick="ConfirmGerarID()">Confirmar</button>  
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                <div class="modal-gerado-body">
+                    <p><img src="assets/techtikt_geracaobilhete.jpeg"/></p>
+                    <p><label id="codigo" type="text">xxxxxxx</label></p>
+                </div>
+                
+                <div class="modal-gerado-footer">
+                    <button id="modal-gerado-ok-button" onclick="VoltarMenu()">Ok</button>
                 </div>
             </div>
-        </section>    -->
+        </section>
 
 
         <!-- Script -->

@@ -1,5 +1,8 @@
 require('./corinthians');
 
+var data = new Date();
+var saldonew = 0;
+var objetoJson={"existe":"0", "menssagem":"coreinthians","dataExpiracao":""}
 
 function formatarData (data) {
   var dataString = data.getDate()  + "/" + (data.getMonth()+1) + "/" + data.getFullYear() + " " +
@@ -16,18 +19,79 @@ function addHoursToDate(dateObj,intHour){
   return newDateObj;
 }
 
-// async function inserirUtilizacao(codigo){
-//     const existeBilhete = await runQuery('SELECT count(*) as COUNT FROM bilhetes where codigo_bilhete = :id',[codigo])
-//     const count = existeBilhete.rows[0].COUNT
-//     const existeUtilizacao = await runQuery('SELECT count(*) as COUNT FROM utilizacao where FK_CODIGO_BILHETE = :id',[codigo])
-//     const countUti = existeUtilizacao.rows[0].COUNT
-//     const selectSaldo = await runQuery('SELECT saldo_bilhete FROM bilhetes WHERE codigo_bilhete = :id'[codigo]);
-//     const saldo = selectSaldo.rows[0].SALDO_BILHETE
-    
+async function ExisteBilhete(codigo){
+  const existeBilhete = await runQuery('SELECT count(*) as COUNT FROM bilhetes where codigo_bilhete = :id',[codigo])
+  const existe = existeBilhete.rows[0].COUNT
+  if(existe == 1) return true;
+  return false;
+}
+
+async function ExisteUtilização(codigo){
+  const existeUtilizacao = await runQuery('SELECT count(*) as COUNT FROM utilizacao where FK_CODIGO_BILHETE = :id',[codigo])
+  const existe = existeUtilizacao.rows[0].COUNT
+  if(existe == 1) return true;
+  return false;
+}
+
+async function inserir(codigo,saldo){
+  var tempo;
+  switch(saldo){
+    case 1:
+      tempo = 0.667;
+      break;
+    case 2:
+      tempo = 0.667;
+      saldonew = 1;
+      break;
+    case 7:
+      tempo = 168;
+      break;
+    case 30:
+      tempo = 720;
+      break;
+  }
+  console.log(tempo);
+  var dataAtivacao = formatarData(data);
+  var dataExpiracao = formatarData(addHoursToDate(data,tempo));
+  console.log(dataAtivacao);
+  console.log(saldonew);
+  await runQuery('insert into utilizacao(DATAATIVACAO_BILHETE,DATAEXPIRACAO_BILHETE,FK_CODIGO_BILHETE) values (:id,:id,:id)',[dataAtivacao,dataExpiracao,codigo]);
+  await runQuery('UPDATE Bilhetes SET saldo_bilhete=:id where codigo_bilhete = :id',[saldonew,codigo]);
+  saldonew=0;
+  tempo=0;
+  objetoJson.dataExpiracao = dataExpiracao;              
+}
+
+module.exports=async function inserirUtilizacao(codigo){
+
+  if(await ExisteBilhete(codigo)){
+    objetoJson.existe=1;
+    const selectSaldo = await runQuery('SELECT saldo_bilhete FROM bilhetes WHERE codigo_bilhete = :id',[codigo]);
+    var saldo = selectSaldo.rows[0].SALDO_BILHETE
+    if(saldo != 0 && saldo != null){
+      if(await ExisteUtilização(codigo)){
+        const expSelect = await runQuery('SELECT dataexpiracao_bilhete from utilizacao where FK_CODIGO_BILHETE = :id ORDER BY dataexpiracao_bilhete desc',[codigo]);
+        if(expSelect.rows[0].DATAEXPIRACAO_BILHETE <= data){
+          await inserir(codigo,saldo);
+          objetoJson.menssagem="Ativo!!!";
+        }else{
+          objetoJson.menssagem="O bilhete ja esta ativo";
+          var dataExpiracao = formatarData(expSelect.rows[0].DATAEXPIRACAO_BILHETE);
+          objetoJson.dataExpiracao = dataExpiracao;
+        }
+      }else{
+        await inserir(codigo,saldo);
+        objetoJson.menssagem="Ativo!!!";
+      }
+    }else{
+      objetoJson.menssagem="Saldo insuficiente!!!";
+    }
+    return objetoJson;
+  }
+  return objetoJson;
+} 
   
-//     var tempo;
-//     var data = new Date();
-//     var saldonew = 0;
+
     
 //     if(count == 1){
 //       if(saldo != 0 && saldo != null){
