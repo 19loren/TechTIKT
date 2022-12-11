@@ -4,14 +4,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8">
         
-        <title>TechTIKT</title>
+        <title>TechTIKT - Gerar Bilhete</title>
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="font-awesome.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
         <!-- Favicon  -->
-        <link rel="icon" href="assets/techtikt_favicon.png">
+        <link rel="icon" href="../assets/techtikt_favicon.png">
     </head>
     <body data-spy="fixed-top" data-target=".fixed-top">
 
@@ -19,20 +19,20 @@
         <header>
 
             <!-- Logo -->
-            <img class="logo" href="index.html" src="assets/techtikt_logo1.jpeg" alt="logo">
+            <a class="logo" href="/"><img src="../assets/techtikt_logo1.jpeg" alt="logo"></a>
             
             <!-- Links -->
             <nav>
                 <ul class="nav__links">
-                    <li><a href="info.html">Info</a></li>
-                    <li><a href="utilizacao.html">Utilizar</a></li>
-                    <li><a href="recarga.html">Recarga</a></li>
-                    <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
+                    <li><a href="/info">Info</a></li>
+                    <li><a href="/utilizacao">Utilizar</a></li>
+                    <li><a href="/recarga">Recarga</a></li>
+                    <li><a href="/meu-techtikt">Meu TechTIKT</a></li>
                 </ul>
             </nav>
 
             <!-- Btn Nav -->
-            <a class="nav-menu" href="index.html">
+            <a class="nav-menu" href="/">
                 <button>Menu</button>
             </a> 
         </header>
@@ -82,7 +82,7 @@
 
                                 <!-- Btn Comprar Plano -->
                                 <div class="btn-unico">
-                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                    <a class="btn-plano" onclick="Recarga('unico',1)"> <!-- Ver que vai acontecer ao comprar o plano -->
                                         <button>COMPRAR</button>
                                     </a>
                                 </div>                       
@@ -125,7 +125,7 @@
                 
                                 <!-- Btn Comprar Plano -->
                                 <div class="btn-duplo">
-                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                    <a class="btn-plano" onclick="Recarga('duplo',2)"> <!-- Ver que vai acontecer ao comprar o plano -->
                                         <button>COMPRAR</button>
                                     </a>
                                 </div>                       
@@ -133,6 +133,7 @@
                         </div>
                     </div>
                 </li>
+
                 <!-- Plano 7Dias -->
                 <li>
                     <div class="plano-7d">
@@ -166,7 +167,7 @@
                                 
                                 <!-- Btn Comprar Plano -->
                                 <div class="btn-7d">
-                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                    <a class="btn-plano" onclick="Recarga('semanal',7)"> <!-- Ver que vai acontecer ao comprar o plano -->
                                         <button>COMPRAR</button>
                                     </a>
                                 </div>                       
@@ -208,7 +209,7 @@
 
                                 <!-- Btn Comprar Plano -->
                                 <div class="btn-30d">
-                                    <a class="btn-plano" href="index.html"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                    <a class="btn-plano" onclick="Recarga('mensal',30)"> <!-- Ver que vai acontecer ao comprar o plano -->
                                         <button>COMPRAR</button>
                                     </a>
                                 </div>                       
@@ -226,6 +227,4 @@
         <!-- Script -->
         <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
         <script src="../js/script.js"></script>
-
-    </body> 
-</html>
+</body> 

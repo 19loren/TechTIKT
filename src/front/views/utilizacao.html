@@ -7,11 +7,11 @@
         <title>TechTIKT</title>
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="font-awesome.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
         <!-- Favicon  -->
-        <link rel="icon" href="assets/techtikt_favicon.png">
+        <link rel="icon" href="../assets/techtikt_favicon.png">
     </head>
     <body data-spy="fixed-top" data-target=".fixed-top">
 
@@ -19,20 +19,21 @@
         <header>
 
             <!-- Logo -->
-            <img class="logo" href="index.html" src="assets/techtikt_logo1.jpeg" alt="logo">
+            <a class="logo" href="/"><img src="../assets/techtikt_logo1.jpeg" alt="logo"></a>
             
             <!-- Links -->
             <nav>
                 <ul class="nav__links">
-                    <li><a href="info.html">Info</a></li>
-                    <li><a href="utilizacao.html">Utilizar</a></li>
-                    <li><a href="recarga.html">Recarga</a></li>
-                    <li><a href="meu-techtikt.html">Meu TechTIKT</a></li>
+                    <li><a href="/info">Info</a></li>
+                    <li><a href="/geracao">Gerar Bilhete</a></li>
+                    <li><a href="/utilizacao">Utilizar</a></li>
+                    <li><a href="/recarga">Recarga</a></li>
+                    <li><a href="/meu-techtikt">Meu TechTIKT</a></li>
                 </ul>
             </nav>
 
             <!-- Btn Nav -->
-            <a class="nav-menu" href="index.html">
+            <a class="nav-menu" href="/">
                 <button>Menu</button>
             </a> 
         </header>
@@ -42,7 +43,7 @@
             
             <!-- Titulo -->
             <div class="txt-uti">
-                <h2>Recarregue seu TechTIKT</h2>
+                <h2>Utilize seu TechTIKT</h2>
             </div>
             
             <!-- Subtítulo -->
@@ -50,15 +51,15 @@
            
            <!-- Container Input Código -->
             <div class="container-input">
-                <input class="input-codigo" type="text" id="inputID" maxlength="8"/>
+                <input class="input-codigo" type="text" id="inputUtilizacao" maxlength="8"/>
                 <!-- <a type="button" class="btn-recarregar" onclick="Recarregar()">Recarregar</a> -->
-                <label type="text" id="codigoRecarga"></label>
+                <label type="text" id="codigoUtilizacao"></label>
             </div>
 
             <!-- Btn Utilizar -->
             <div class="btn-rec">
-                <a class="btn-recarregar" href="planos.html">
-                    <button>RECARREGAR</button>
+                <a class="btn-recarregar">
+                    <button onclick="utilizar()">ATIVAR</button>
                 </a> 
             </div>
         </section>
