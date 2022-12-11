@@ -895,7 +895,7 @@ h6 {
  }
  
  .ul-mt p {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 20px;
 	line-height: 20px;
  
@@ -971,7 +971,7 @@ h6 {
 
 .row-ft-info li a {
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 45px;
 	line-height: 29px;
 	display: flex;
 	align-items: center;
