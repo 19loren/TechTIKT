@@ -4,10 +4,10 @@ Conteúdo:
 
 	01. Barra de Navegação
 	02. Menu
-	03. Modal Termos de Uso
-	04. Modal Regras de Utilização
-	05. Geração Bilhete
-	06. Modal Geração do Código
+	03. Geração Bilhete
+	04. Modal Geração do Código
+	05.	Modal Termos de Uso
+	06. Modal Regras de Utilização
 	07. Planos
 	08. Input Código
 	09. Meu TechTIKT
@@ -390,16 +390,10 @@ h6 {
  }
 
 
-/**! ------------------------*/
-/**! 03. Modal Termos de Uso */ 
-/**! ------------------------*/
 
-/**! -------------------------------*/
-/**! 04. Modal Regras de Utilização */ 
-/**! -------------------------------*/
 
 /** --------------------*/
-/** 04. Geração Bilhete */
+/** 03. Geração Bilhete */
 /** --------------------*/
 
 .section__geracao {
@@ -414,7 +408,6 @@ h6 {
 }
 
 /* Título Principal */
-
 .section__geracao h2{
     font-weight: 700;
     font-size: 70px;
@@ -428,7 +421,6 @@ h6 {
 }
 
 /* Subtítulo */
-
 .section__geracao p {
     font-weight: 400;
     font-size: 32px; 
@@ -440,7 +432,6 @@ h6 {
 }
 
 /* Checkbox's */
-
 .checkbox {
     padding: 30px;
     background-color: transparent;
@@ -481,10 +472,12 @@ h6 {
 #lbl-aceite-false {
 	color: #e33b4a;
 }
+
 /* Rodapé ¹ */
 .rodape {
     background-color: transparent;
 }
+
 .rodape p {
     font-weight: 400;
     font-size: 15px;
@@ -496,12 +489,18 @@ h6 {
     color: rgba(0, 0, 0, 0.8);
 }
 
+/**! ------------------------*/
+/**! 04. Modal Termos de Uso */ 
+/**! ------------------------*/
+
+/**! -------------------------------*/
+/**! 05. Modal Regras de Utilização */ 
+/**! -------------------------------*/
 
 /** ----------------------------*/
 /** 06. Modal Geração do Código */
 /** ----------------------------*/
 
-/* Modal Gerar Bilhete */
 #section__modal__gerado {
 	z-index: 5;
 	position: fixed;
@@ -512,6 +511,12 @@ h6 {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+#section__modal__gerado.hide {
+	opacity: 0;
+	z-index: -1;
+}
+
+/* Btn OK */
 #section__modal__gerado button {
 	margin-right: 20px;
 	display: inline-block;
@@ -532,12 +537,14 @@ h6 {
 	color: #fff;
 }
 
+/* Imagem */
 #section__modal__gerado img{
 	border-radius: 0.6em;
 	max-width: 65%;
 	max-height: 65%;
 }
 
+/* Container */
 .modal-container-gerado {
 	position: fixed;
 	left: 50%;
@@ -603,10 +610,7 @@ h6 {
 	text-align: center;
 }
 
-#section__modal__gerado.hide {
-	opacity: 0;
-	z-index: -1;
-}
+
 
 
 /** -----------*/
