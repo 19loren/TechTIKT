@@ -5,9 +5,9 @@ Conteúdo:
 	01. Barra de Navegação
 	02. Menu
 	03. Geração Bilhete
-	04. Modal Geração do Código
-	05.	Modal Termos de Uso
-	06. Modal Regras de Utilização
+	04. Modal - Geração do Código
+	05.	Modal - Termos de Uso
+	06. Modal - Regras de Utilização
 	07. Planos
 	08. Input Código
 	09. Meu TechTIKT
@@ -21,10 +21,12 @@ Conteúdo:
 -----------------------------------------------------------------------------------------------------------------
 Cores:
 
-	Vermelho Btn > #e33b4a
-	Azul claro > #18a0fb
-	Background cinza/azul > #e8eff6
+	Vermelho - Btn > #e33b4a
 	Background bege > #fffbf6
+	Modal Checkbox fundo > #f8f8f8
+	Cinza claro fundo - Barra de Rolagem > #e6e6e6
+	Cinza escuro - Barra de Rolagem > #bababa
+	Hover - Barra de Rolagem > #929292
 
 --------------------------------------
 */
@@ -489,16 +491,146 @@ h6 {
     color: rgba(0, 0, 0, 0.8);
 }
 
-/**! ------------------------*/
-/**! 04. Modal Termos de Uso */ 
-/**! ------------------------*/
+/** --------------------------*/
+/** 04. Modal - Termos de Uso */ 
+/** --------------------------*/
 
-/**! -------------------------------*/
-/**! 05. Modal Regras de Utilização */ 
-/**! -------------------------------*/
+#section__tdu {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#section__tdu.hide {
+	opacity: 0;
+	z-index: -1;
+}
+
+/* Containers */
+.modal-container-checkbox {
+    position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: #fff;
+	border-radius: 30px;
+	width: 700px;    
+    height: 500px;
+	text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    overflow-y: auto;
+}
+
+.modal-checkbox {
+    margin: 30px;
+    text-align: justify;
+}
+
+
+/* Btn Fechar */
+.btn-fechar button{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+
+	background-color: transparent;
+	color: #e33b4a;
+	padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+	border: 2px solid #e33b4a;
+    border-radius: 25px;
+    font: 600 14px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-fechar button:hover {
+	border: 2px solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+}
+
+/* Título */
+.titulo-modal p {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    margin-left: 20px;
+	margin-bottom: 20px;
+
+    color: #000;
+}
+
+/* Info Modal Checkbox */
+.modal-checkbox-body {
+    position: absolute;
+    width: auto;
+    height: calc(100% - 140px);
+    overflow-y: auto;
+    margin: 0px 30px 30px 30px;
+    padding: 20px 30px 20px 30px;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+}
+
+.modal-checkbox-body p {
+    font-weight: 500;
+}
+
+/* Barra Rolagem */
+
+.modal-checkbox-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-checkbox-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px #bababa; 
+    background: #e6e6e6;
+    border-radius: 10px;
+}
+    
+.modal-checkbox-body::-webkit-scrollbar-thumb {
+    background: #bababa;
+    opacity: 0.6;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.modal-checkbox-body::-webkit-scrollbar-thumb:hover {
+    background: #929292;
+}
+
+
+/** ---------------------------------*/
+/** 05. Modal - Regras de Utilização */ 
+/** ---------------------------------*/
+
+#section__rub {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#section__rub.hide {
+	opacity: 0;
+	z-index: -1;
+}
+
 
 /** ----------------------------*/
-/** 06. Modal Geração do Código */
+/** 06. Modal - Geração do Código */
 /** ----------------------------*/
 
 #section__modal__gerado {
@@ -520,7 +652,8 @@ h6 {
 #section__modal__gerado button {
 	margin-right: 20px;
 	display: inline-block;
-	padding: 1.9rem 4.8rem 1.9rem 4.8rem;
+
+	padding: 1.5rem 2.8rem 1.5rem 2.8rem;
 	border: 2px solid #e33b4a;
 	border-radius: 25px;
 	background-color: transparent;
@@ -528,7 +661,7 @@ h6 {
 	font: 600 20px/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
-	margin: 0.5rem 0;
+	margin: 0.2rem 0;
 }
 
 #section__modal__gerado button:hover {
@@ -540,8 +673,8 @@ h6 {
 /* Imagem */
 #section__modal__gerado img{
 	border-radius: 0.6em;
-	max-width: 65%;
-	max-height: 65%;
+	max-width: 67%;
+	max-height: 67%;
 }
 
 /* Container */
@@ -553,10 +686,12 @@ h6 {
 	z-index: 10;
 	background-color: #ffffff;
 	border-radius: 60px;
-	width: 900px;
+	width: 600px;
+	height: 400px;
 	text-align: center;
 	max-width: 90%;
-	padding: 30px;
+	padding: 20px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .modal-gerado-header {
@@ -569,8 +704,8 @@ h6 {
 
 .modal-gerado-header h2 {
 	font-weight: 600;
-	font-size: 48px;
-	line-height: 80px;
+	font-size: 35px;
+	line-height: 50px;
 
 	text-align: center;
 	letter-spacing: -0.015em;
@@ -579,8 +714,8 @@ h6 {
 }
 .modal-gerado-header p {
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 39px;
+	font-size: 24px;
+	line-height: 28px;
 
 	text-align: center;
 	letter-spacing: -0.015em;
@@ -596,8 +731,8 @@ h6 {
 
 .modal-gerado-body p {
 	font-weight: 500;
-	font-size: 26px;
-	line-height: 39px;
+	font-size: 18px;
+	line-height: 17px;
 
 	text-align: center;
 	letter-spacing: -0.015em;
@@ -609,8 +744,6 @@ h6 {
 	margin-bottom: 1rem;
 	text-align: center;
 }
-
-
 
 
 /** -----------*/
