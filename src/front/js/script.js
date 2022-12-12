@@ -101,7 +101,7 @@ async function utilizar(){
             toggleModal();
     }
     }catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -137,11 +137,12 @@ const adicionarLinha=(plano,dataGeracao,dataRecarga,dataUtilizaca) =>{
 async function GerenciarBilhete(){
     const codigo=document.getElementById("inputUtilizacao").value;
     var dadosGerenciar = await fetch(`http://localhost:8081/gerenciar/${codigo}`,{method:'POST'}).then((dadosGerenciar)=> dadosGerenciar.json());
-    console.log(dadosGerenciar);
+    //console.log(dadosGerenciar);
     if(dadosGerenciar[0].existe){
+        limparLinha()
         for(dado in dadosGerenciar){
-            console.log(dadosGerenciar[dado].tipo);
-            console.log(dado);
+            //console.log(dadosGerenciar[dado].tipo);
+            //console.log(dado);
             adicionarLinha(dadosGerenciar[dado].tipo,dadosGerenciar[dado].dataGeracao,dadosGerenciar[dado].dataRecarga,dadosGerenciar[dado].dataUtilizacao);
         }
     }else{
@@ -149,5 +150,35 @@ async function GerenciarBilhete(){
         document.getElementById("inputUtilizacao").setAttribute("placeholder","Código Invalido");
     }
 }
+
+const limparLinha=() =>{
+    document.querySelector('.ul-mt').innerHTML=""
+    let li=document.createElement('li');
+    li.className='row-mt'
+    li.innerHTML =`
+    <div class="mt-pgru">
+        <p class="txt-plano">Plano Utilizado</p>
+        <label for=""></label>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">Data de Geração do Bilhete</p>
+        <label for=""></label>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">Data de Recarga</p>
+        <label for=""></label>
+    </div>
+    <div class="mt-pgru">
+        <p class="txt-dru">Data de Utilização</p>
+        <label for=""></label>
+    </div>'
+
+    `
+    let hr=document.createElement('hr')
+    hr.setAttribute("size","3")
+    document.querySelector('.ul-mt').appendChild(li);
+    document.querySelector('.ul-mt').appendChild(hr);
+}
+
 //#endregion
 

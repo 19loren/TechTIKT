@@ -50,11 +50,11 @@ async function inserir(codigo,saldo){
       tempo = 720;
       break;
   }
-  console.log(tempo);
+  //console.log(tempo);
   var dataAtivacao = formatarData(data);
   var dataExpiracao = formatarData(addHoursToDate(data,tempo));
-  console.log(dataAtivacao);
-  console.log(saldonew);
+  //console.log(dataAtivacao);
+  //console.log(saldonew);
   await runQuery('insert into utilizacao(DATAATIVACAO_BILHETE,DATAEXPIRACAO_BILHETE,FK_CODIGO_BILHETE) values (:id,:id,:id)',[dataAtivacao,dataExpiracao,codigo]);
   await runQuery('UPDATE Bilhetes SET saldo_bilhete=:id where codigo_bilhete = :id',[saldonew,codigo]);
   saldonew=0;

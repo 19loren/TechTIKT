@@ -48,7 +48,7 @@ app.post("/VerificarBilhete/:codigo",async(req,res,next)=>{
 });
 
 app.post("/RecarregarBilhete/:tipo/:saldo",async(req,next)=>{
-    console.log(codigo);
+    //(codigo);
     await Recarregar(codigo,req.params.tipo,req.params.saldo);
 });
 

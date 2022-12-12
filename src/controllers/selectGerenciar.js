@@ -32,7 +32,7 @@ module.exports = async function testeHora(codigo){
             from bilhetes join recarga on bilhetes.codigo_bilhete = recarga.fk_codigo_bilhete
             join utilizacao on bilhetes.codigo_bilhete = utilizacao.fk_codigo_bilhete
             where codigo_bilhete = :id`,[codigo]);
-            console.log(Object.keys(existe.rows).length);
+            //console.log(Object.keys(existe.rows).length);
         for (i in existe.rows){
             objGerenciamento={}
             // console.log(existe.rows[i]);
@@ -45,12 +45,12 @@ module.exports = async function testeHora(codigo){
             objGerenciamento.existe=true;
             //console.log(objGerenciamento);
             dados.push(objGerenciamento);
-            console.log(dados);
-            console.log(i);
+            //console.log(dados);
+            //console.log(i);
             // aqui deveria mandar pro front 
         }
         
-       console.log(dados);
+       //console.log(dados);
         return dados;
     }else{
         dados.push(objGerenciamento);
