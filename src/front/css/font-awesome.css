@@ -43,3 +43,12 @@
 .fa-brands.fa-trello:hover {
     color: #e33b4a;
 }
+
+.fa-solid.fa-arrow-down {
+    color: #e33b4a;
+    transition: all 0.2s;
+}
+
+.fa-solid.fa-arrow-down:hover {
+    color: #fff;
+}

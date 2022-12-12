@@ -1042,13 +1042,13 @@ h6 {
  
 	position: relative;
 	overflow: hidden;
-	padding-top: 80px;
+	padding-top: 50px;
  }
  
  .txt-mt {
 	padding-left: 50px;
-	 background-color: transparent;
-	 display: flex;
+	background-color: transparent;
+	display: inline-flex;
  }
  
  .txt-mt h2 {
@@ -1062,8 +1062,26 @@ h6 {
 	height: 50px;
 	width: 400px;
 	font-weight: 500;
-	font-size: 40px;
+	font-size: 20px;
 	margin: 10px;
+ }
+
+ .txt-mt button {
+	display: inline-block;
+	padding: 0rem 0.9rem 0rem 0.9rem;
+	border: 0.125rem solid #e33b4a;
+	border-radius: 25px;
+	background-color: transparent;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.9rem 0;
+	align-content: flex-end;
+ }
+
+ .txt-mt button:hover {
+	border: 0.125rem solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
  }
 
  .meut-container {
@@ -1111,8 +1129,8 @@ h6 {
  .ul-mt p {
 	font-weight: 600;
 	font-size: 20px;
-	line-height: 20px;
-	display: inline;
+	line-height: 25px;
+	text-align: center;
 
 	letter-spacing: -0.015em;
  
