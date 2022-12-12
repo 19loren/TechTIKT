@@ -20,7 +20,7 @@ async function ExisteBilhete(codigo){
 module.exports = async function testeHora(codigo){
     // const existe = await runQuery('select (datageracao_bilhete) from Bilhetes where codigo_bilhete = :id',[codigo]);
     var dados= [];
-    var objGerenciamento = {"tipo":"","dataGeracao":"","dataRecarga":"","dataUtilizacao":"","existe":false};
+    var objGerenciamento = {tipo:"",dataGeracao:"",dataRecarga:"",dataUtilizacao:"",existe:false};
     if(await ExisteBilhete(codigo)){
         const existe = await runQuery(
             `select
@@ -34,16 +34,23 @@ module.exports = async function testeHora(codigo){
             where codigo_bilhete = :id`,[codigo]);
             console.log(Object.keys(existe.rows).length);
         for (i in existe.rows){
+            objGerenciamento={}
             // console.log(existe.rows[i]);
+            //console.log(objGerenciamento);
             objGerenciamento.tipo = existe.rows[i].TIPO!=undefined ? existe.rows[i].TIPO :"";
+            //console.log(objGerenciamento);
             objGerenciamento.dataGeracao = formatarData(existe.rows[i].DATA_GERARACAO);
             objGerenciamento.dataRecarga = formatarData(existe.rows[i].DATA_RECARGA);
             objGerenciamento.dataUtilizacao = formatarData(existe.rows[i].DATA_UTILIZACAO);
             objGerenciamento.existe=true;
+            //console.log(objGerenciamento);
             dados.push(objGerenciamento);
+            console.log(dados);
+            console.log(i);
             // aqui deveria mandar pro front 
         }
-        console.log(dados);
+        
+       console.log(dados);
         return dados;
     }else{
         dados.push(objGerenciamento);

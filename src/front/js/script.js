@@ -35,7 +35,6 @@ const toggleModalTermosU=() =>{
 
 //#endregion
 
-
 //#region RecarregarBilhete
 async function VerificarBilhete(){
     const codigoRecarga = document.getElementById("inputRecarga").value;
@@ -142,6 +141,7 @@ async function GerenciarBilhete(){
     if(dadosGerenciar[0].existe){
         for(dado in dadosGerenciar){
             console.log(dadosGerenciar[dado].tipo);
+            console.log(dado);
             adicionarLinha(dadosGerenciar[dado].tipo,dadosGerenciar[dado].dataGeracao,dadosGerenciar[dado].dataRecarga,dadosGerenciar[dado].dataUtilizacao);
         }
     }else{
