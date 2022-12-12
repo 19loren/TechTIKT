@@ -440,6 +440,23 @@ h6 {
     text-align: center;
 }
 
+.btn-tdu {
+	transition: all 0.2s;
+}
+
+.btn-tdu:hover{
+    color: #e33b4a;
+}
+
+.btn-rub {
+	transition: all 0.2s;
+}
+
+.btn-rub:hover{
+    color: #e33b4a;
+}
+
+
 /* Btn Gerar */
 .btn-geracao {
    background-color: transparent;
@@ -629,9 +646,9 @@ h6 {
 }
 
 
-/** ----------------------------*/
+/** ------------------------------*/
 /** 06. Modal - Geração do Código */
-/** ----------------------------*/
+/** ------------------------------*/
 
 #section__modal__gerado {
 	z-index: 5;
