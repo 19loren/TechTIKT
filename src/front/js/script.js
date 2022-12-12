@@ -23,10 +23,20 @@ async function GerarID() {
     document.getElementById("codigo").textContent='Seu Código é: '+result;
     await fetch(`http://localhost:8081/gerarBilhete/${result}`,{method:'POST'}).catch();
 }
+
+const toggleModalRegraU=() =>{
+    const sectionBilheteGerado= document.querySelector("#section__rub");
+    sectionBilheteGerado.classList.toggle("hide")
+}
+const toggleModalTermosU=() =>{
+    const sectionBilheteGerado= document.querySelector("#section__tdu");
+    sectionBilheteGerado.classList.toggle("hide")
+}
+
 //#endregion
 
 
-//#region VerificaBilhete
+//#region RecarregarBilhete
 async function VerificarBilhete(){
     const codigoRecarga = document.getElementById("inputRecarga").value;
     if(codigoRecarga==""){
@@ -43,13 +53,18 @@ async function VerificarBilhete(){
         }
     }
 }
-//#endregion
 
-//#region RecarregarBilhete
 async function RecarregarBilhete(tipo,saldo){
     VoltarMenu();
     await fetch(`http://localhost:8081/RecarregarBilhete/${tipo}/${saldo}`,{method:"POST"}).catch();
 }
+
+const toggleRecarregado=() =>{
+    const sectionBilheteGerado= document.querySelector("#section__recargaef");
+    sectionBilheteGerado.classList.toggle("hide")
+}
+
+
 //#endregion
 
 //#region UtilizarBilhete
@@ -96,6 +111,7 @@ const toggleModal=() =>{
 
 //#endregion
 
+//#region GerenciarBilhete
 const adicionarLinha=(plano,dataGeracao,dataRecarga,dataUtilizaca) =>{
     let li=document.createElement('li');
     li.className='mt-teste'
@@ -116,6 +132,7 @@ const adicionarLinha=(plano,dataGeracao,dataRecarga,dataUtilizaca) =>{
     document.querySelector('.ul-mt').appendChild(li);
 }
 
+
 async function GerenciarBilhete(){
     const codigo=document.getElementById("inputUtilizacao").value;
     var dadosGerenciar = await fetch(`http://localhost:8081/gerenciar/${codigo}`,{method:'POST'}).then((dadosGerenciar)=> dadosGerenciar.json());
@@ -130,3 +147,5 @@ async function GerenciarBilhete(){
         document.getElementById("inputUtilizacao").setAttribute("placeholder","Código Invalido");
     }
 }
+//#endregion
+

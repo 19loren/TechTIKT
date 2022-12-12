@@ -52,14 +52,14 @@
                 <div class="termos-uso">
                     <input id="tdu" type="checkbox" name="termos-de-uso">
                     <label class="ter-uso" for="tdu">
-                            <a class="btn-tdu" onclick="">Termos de Uso e Política de Privacidade</a>
+                            <a class="btn-tdu" onclick="toggleModalTermosU()">Termos de Uso e Política de Privacidade</a>
                     </label>
                 </div>
 
                 <div class="regras-utilizacao">
                     <input id="rub" type="checkbox" name="regras-de-utilizacao">
                     <label class="reg-uti" for="rub">
-                            <a class="btn-rub" onclick="">Regras de Utilização do Bilhete</a> 
+                            <a class="btn-rub" onclick="toggleModalRegraU()">Regras de Utilização do Bilhete</a> 
                     </label>
                 </div>
                 <div>
@@ -105,7 +105,7 @@
 
                 <!-- Btn Fechar -->
                 <div class="btn-fechar">
-                    <button>FECHAR</button>
+                    <button onclick="toggleModalTermosU()">FECHAR</button>
                 </div>
             
                 <div class="modal-checkbox">
@@ -151,7 +151,7 @@
 
                 <!-- Btn Fechar -->
                 <div class="btn-fechar">
-                    <button>FECHAR</button>
+                    <button onclick="toggleModalRegraU()">FECHAR</button>
                 </div>
             
                 <div class="modal-checkbox">

@@ -1031,16 +1031,24 @@ h6 {
  .txt-mt {
 	padding-left: 50px;
 	 background-color: transparent;
+	 display: flex;
  }
  
  .txt-mt h2 {
 	font-weight: 500;
 	 font-size: 40px;
-	 line-height: 20px;
 	 letter-spacing: -0.015em;
 	 color: #000;
  }
  
+ .txt-mt input{
+	height: 50px;
+	width: 400px;
+	font-weight: 500;
+	font-size: 40px;
+	margin: 10px;
+ }
+
  .meut-container {
 	position: relative;
 	background: linear-gradient(0deg, rgba(24, 48, 82, 1), rgba(24, 48, 82, 0)), url(../assets/techtikt_azul.jpeg);
@@ -1062,14 +1070,17 @@ h6 {
  .ul-mt {
 	list-style: none;
 	display: inline;
+	width: 100%;
  }
  
  .ul-mt li {
 	display: inline-flex;
+	width: 100%;
  }
  
  .ul-mt div {
 	padding: 10px 60px;
+	width: 25%;
  }
  
  .ul-mt hr {
