@@ -5,14 +5,16 @@ Conteúdo:
 	01. Barra de Navegação
 	02. Menu
 	03. Geração Bilhete
-	04. Modal - Geração do Código
-	05.	Modal - Termos de Uso
-	06. Modal - Regras de Utilização
-	07. Planos
-	08. Input Código
-	09. Meu TechTIKT
-	10. Info
-	11. Utilização
+	04.	Modal - Termos de Uso
+	05. Modal - Regras de Utilização
+	06. Modal - Geração do Código
+	07. Modal - Recarga Efetuada
+	08. Modal - Utilização
+	09. Planos
+	10. Input Código
+	11. Meu TechTIKT
+	12. Info
+	13. Utilização
 -----------------------------------------------------------------------------------------------------------------
 	> Icons:
     Font Awesome Free 5.10.1 - https://fontawesome.com 
@@ -762,9 +764,215 @@ h6 {
 	text-align: center;
 }
 
+/** -----------------------------*/
+/** 07. Modal - Recagra Efetuada */
+/** -----------------------------*/
+
+#section__recargaef {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#section__recargaef.hide {
+	opacity: 0;
+	z-index: -1;
+}
+
+/* Btn OK */
+#section__recargaef button {
+	margin-right: 20px;
+	display: inline-block;
+
+	padding: 1.5rem 2.8rem 1.5rem 2.8rem;
+	border: 2px solid #e33b4a;
+	border-radius: 25px;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 600 20px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.2rem 0;
+}
+
+#section__recargaef button:hover {
+	border: 2px solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+}
+
+#section__recargaef img{
+	border-radius: 0.6em;
+	max-width: 67%;
+	max-height: 67%;
+}
+
+.modal-container-rec {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: #ffffff;
+	border-radius: 60px;
+	width: 760px;
+	height: 450px;
+	text-align: center;
+	max-width: 90%;
+	padding: 20px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal-rec-header h2 {
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 60px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-rec-header p {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-rec-body p {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 17px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-rec-footer{
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.modal-rec-ok-button {
+	margin-right: 20px;
+	display: inline-block;
+
+	padding: 1.5rem 2.8rem 1.5rem 2.8rem;
+	border: 2px solid #e33b4a;
+	border-radius: 25px;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 600 20px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.2rem 0;
+}
+
+
+.modal-rec-ok-button button:hover {
+	border: 2px solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+}
+
+
+
+/** -----------------------*/
+/** 08. Modal - Utilização */
+/** -----------------------*/
+
+.modal-container-uti {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: #ffffff;
+	border-radius: 60px;
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	max-width: 90%;
+	padding: 20px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal-uti-header h2 {
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 50px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-uti-header p {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-uti-body p {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 17px;
+
+	text-align: center;
+	letter-spacing: -0.015em;
+
+	color: #000;
+}
+
+.modal-uti-footer{
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.modal-uti-ok-button {
+	margin-right: 20px;
+	display: inline-block;
+
+	padding: 1.5rem 2.8rem 1.5rem 2.8rem;
+	border: 2px solid #e33b4a;
+	border-radius: 25px;
+	background-color: transparent;
+	color: #e33b4a;
+	font: 600 20px/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	margin: 0.2rem 0;
+}
+
+
+.modal-uti-ok-button button:hover {
+	border: 2px solid #e33b4a;
+	background-color: #e33b4a;
+	color: #fff;
+}
+
+
 
 /** -----------*/
-/** 07. Planos */
+/** 09. Planos */
 /** -----------*/
 
 .section__planos {
@@ -1006,7 +1214,7 @@ h6 {
  }
 
 /** -----------------*/
-/** 08. Input Código */
+/** 10. Input Código */
 /** -----------------*/
 
 .section__inputcodigo {
@@ -1031,7 +1239,7 @@ h6 {
 
 
 /** ---------------- */
-/** 09. Meu TechTIKT */
+/** 11. Meu TechTIKT */
 /** ---------------- */
 
 .section__mt {
@@ -1149,7 +1357,7 @@ h6 {
 
 
 /** ---------*/
-/** 10. Info */ 
+/** 12. Info */ 
 /** ---------*/
 
 .section__info {
@@ -1231,7 +1439,7 @@ h6 {
 
 
 /** ---------------*/
-/** 11. Utilização */
+/** 13. Utilização */
 /** ---------------*/
 
 .section__uti {

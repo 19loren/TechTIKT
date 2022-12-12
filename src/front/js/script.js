@@ -55,7 +55,7 @@ async function VerificarBilhete(){
 }
 
 async function RecarregarBilhete(tipo,saldo){
-    VoltarMenu();
+    toggleRecarregado();
     await fetch(`http://localhost:8081/RecarregarBilhete/${tipo}/${saldo}`,{method:"POST"}).catch();
 }
 
@@ -85,11 +85,13 @@ async function utilizar(){
                 return null;
             }
             else if(dadosUtilizacao.menssagem === "Saldo insuficiente!!!"){
-                document.getElementById("lbl-res").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("lbl-res").textContent="SALDO INSUFICIENTE!";
+                document.getElementById("lbl-sub").textContent="Recarregue seu Bilhete TechTIKT.";
+                document.getElementById("codigo").textContent='';
             }
             else if(dadosUtilizacao.menssagem ==="O bilhete ja esta ativo!!!"){
-                document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
-                document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("lbl-res").textContent="O BILHETE ESTÁ ATIVO";
+                document.getElementById("lbl-sub").textContent="Catraca Liberada!!";
                 document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
             }
             else if(dadosUtilizacao.menssagem ==="Ativo!!!"){
