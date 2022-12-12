@@ -90,13 +90,13 @@ async function utilizar(){
                 document.getElementById("codigo").textContent='';
             }
             else if(dadosUtilizacao.menssagem ==="O bilhete ja esta ativo!!!"){
-                document.getElementById("lbl-res").textContent="O BILHETE ESTÁ ATIVO";
-                document.getElementById("lbl-sub").textContent="Catraca Liberada!!";
+                document.getElementById("lbl-res").textContent="Catraca Liberada!!";
+                document.getElementById("lbl-sub").textContent="O BILHETE ESTÁ ATIVO";
                 document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
             }
             else if(dadosUtilizacao.menssagem ==="Ativo!!!"){
-                document.getElementById("lbl-res").textContent="Catraca Liberada!!!";
-                document.getElementById("lbl-sub").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("lbl-res").textContent=dadosUtilizacao.menssagem;
+                document.getElementById("lbl-sub").textContent="Catraca Liberada!!!";
                 document.getElementById("codigo").textContent='Validade: '+dadosUtilizacao.dataExpiracao;
             }
             toggleModal();
