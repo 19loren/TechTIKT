@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        
+        <title>TechTIKT - Gerar Bilhete</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+
+        <!-- Favicon  -->
+        <link rel="icon" href="../assets/techtikt_favicon.png">
+    </head>
+    <body data-spy="fixed-top" data-target=".fixed-top">
+
+        <!-- Nav -->
+        <header>
+
+            <!-- Logo -->
+            <a class="logo" href="/"><img src="../assets/techtikt_logo1.jpeg" alt="logo"></a>
+            
+            <!-- Links -->
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/info">Info</a></li>
+                    <li><a href="/geracao">Gerar Bilhete</a></li>
+                    <li><a href="/utilizacao">Utilizar</a></li>
+                    <li><a href="/recarga">Recarga</a></li>
+                    <li><a href="/meu-techtikt">Meu TechTIKT</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Btn Nav -->
+            <a class="nav-menu" href="/">
+                <button>Menu</button>
+            </a> 
+        </header>
+
+        <!-- Gerar Bilhete -->
+        <section class="section__geracao">
+
+            <!-- Título Principal -->
+                <h2>Gere seu bilhete</h2>
+
+            <!-- Subtítulo -->
+                <p class="subtitulo">Comece nossa jornada criando seu bilhete¹.</p>
+
+            <!-- Checkbox's -->
+            <div class="checkbox">
+                <div class="termos-uso">
+                    <input id="tdu" type="checkbox" name="termos-de-uso">
+                    <label class="ter-uso" for="tdu">
+                            <a class="btn-tdu" onclick="toggleModalTermosU()">Termos de Uso e Política de Privacidade</a>
+                    </label>
+                </div>
+
+                <div class="regras-utilizacao">
+                    <input id="rub" type="checkbox" name="regras-de-utilizacao">
+                    <label class="reg-uti" for="rub">
+                            <a class="btn-rub" onclick="toggleModalRegraU()">Regras de Utilização do Bilhete</a> 
+                    </label>
+                </div>
+                <div>
+                    <label id="lbl-aceite-false"></label>
+                </div>
+            </div>
+
+            <!-- Btn Gerar -->
+            <div class="btn-geracao">
+                <a class="btn-gerar-bilhete" onclick="GerarBilhete()">GERAR</a>
+            </div>
+            
+            <!-- Rodapé ¹ -->
+            <div class="rodape">
+                <p class="txt-rodape">¹ O bilhete só poderá ser gerado se os Termos de Uso e Política de Privacidade e as Regras de Utilização do Bilhete forem aceitos.</p>
+            </div>
+
+        </section>
+        
+        <!-- Modal - Bilhete Gerado -->
+        <section id="section__modal__gerado" class="hide">
+            <div id="modal-container-gerado" class="modal-container-gerado">
+                <div class="modal-gerado-header">
+                    <h2>PARABÉNS!!!</h2>
+                    <p>O Código do seu Bilhete foi gerado!</p>
+                </div>
+
+                <div class="modal-gerado-body">
+                    <p><img src="../assets/techtikt_geracaobilhete1.jpeg"/></p>
+                    <p><label id="codigo" type="text">xxxxxxx</label></p>
+                </div>
+                
+                <!-- Btn OK -->
+                <div class="modal-gerado-footer">
+                    <button id="modal-gerado-ok-button" onclick="VoltarMenu()">OK</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal - Termos de Uso -->
+        <section id="section__tdu" class="hide">
+            <div class="modal-container-checkbox">
+
+                <!-- Btn Fechar -->
+                <div class="btn-fechar">
+                    <button onclick="toggleModalTermosU()">FECHAR</button>
+                </div>
+            
+                <div class="modal-checkbox">
+                    <!-- Título -->
+                    <div class="titulo-modal">
+                        <p>TERMOS DE USO E <br>POLÍTICA DE PRIVACIDADE</p>
+                    </div>
+                    <div class="modal-checkbox-body">
+                        <p>
+                            A sua privacidade é importante para nós. É política do TechTIKT respeitar a sua privacidade em relação
+                            a qualquer informação sua que possamos coletar no site TechTIKT, e outros sites que possuímos e operamos.
+                        </p>
+                        <p>
+                            Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço.
+                            Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento.
+                        </p>
+                        <p>
+                            Também informamos por que estamos coletando e como será usado. Apenas retemos as informações coletadas pelo tempo necessário
+                            para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+                        </p>
+                        <p>
+                            Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+                        </p>
+                        <p>
+                            O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o 
+                            conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.
+                            Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos 
+                            serviços desejados.
+                        </p>
+                        <p>
+                            O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações 
+                            pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal - Regras de Utilizacao -->
+
+        <section id="section__rub" class="hide">
+            <div class="modal-container-checkbox">
+
+                <!-- Btn Fechar -->
+                <div class="btn-fechar">
+                    <button onclick="toggleModalRegraU()">FECHAR</button>
+                </div>
+            
+                <div class="modal-checkbox">
+                    <!-- Título -->
+                    <div class="titulo-modal">
+                        <p>REGRAS DE UTILIZAÇÃO<br>DO BILHETE</p>
+                    </div>
+                    <div class="modal-checkbox-body">
+                        <p>
+                            O usuário de transporte público, ao acessar o sistema de utilização do bilhete, 
+                            digitará o número do Bilhete Urbano e o sistema irá liberar o acesso ao transporte público
+                            seguindo as seguintes regras:
+                        </p>
+                        <p>
+                            1. O usuário deverá possuir um número do bilhete urbano gerado.
+                        </p>
+                        <p>
+                            2. O usuário deverá possuir recarga no seu bilhete urbano.
+                        </p>
+                        <p>
+                            3. O usuário irá até um transporte urbano (ônibus, metrô ou trem) e utilizará o terminal de acesso 
+                            junto à catraca de entrada.
+                        </p>
+                        <p>
+                            4. O sistema na catraca do transporte urbano solicitará ao usuário o número do bilhete  urbano.
+                        </p>
+                        <p>
+                            5. O usuário digitará o número do bilhete urbano e escolherá a opção de confirmar.
+                        </p>
+                        <p>
+                            6. O sistema irá verificar as recargas contidas no bilhete urbano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Script -->
+        <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
+
+    </body>
+</html>

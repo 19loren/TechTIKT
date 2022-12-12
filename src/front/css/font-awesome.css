@@ -4,8 +4,6 @@
 */
 
 .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -20,3 +18,37 @@
     width: 38px;
 }
 
+.fa-solid.fa-money-bills {
+    color: #183052;
+    padding-right: 15px;
+}
+
+.fa-regular.fa-clock {
+    color: #183052;
+    padding-right: 15px;
+}
+
+.fa-brands.fa-github {
+	color: #183052;
+}
+
+.fa-brands.fa-github:hover {
+	color: #e33b4a;
+}
+
+.fa-brands.fa-trello {  
+    color: #183052;
+}
+
+.fa-brands.fa-trello:hover {
+    color: #e33b4a;
+}
+
+.fa-solid.fa-arrow-down {
+    color: #e33b4a;
+    transition: all 0.2s;
+}
+
+.fa-solid.fa-arrow-down:hover {
+    color: #fff;
+}

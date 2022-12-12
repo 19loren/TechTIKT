@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        
+        <title>TechTIKT - Gerar Bilhete</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+
+        <!-- Favicon  -->
+        <link rel="icon" href="../assets/techtikt_favicon.png">
+    </head>
+    <body data-spy="fixed-top" data-target=".fixed-top">
+
+        <!-- Nav -->
+        <header>
+
+            <!-- Logo -->
+            <a class="logo" href="/"><img src="../assets/techtikt_logo1.jpeg" alt="logo"></a>
+            
+            <!-- Links -->
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/info">Info</a></li>
+                    <li><a href="/geracao">Gerar Bilhete</a></li>
+                    <li><a href="/utilizacao">Utilizar</a></li>
+                    <li><a href="/recarga">Recarga</a></li>
+                    <li><a href="/meu-techtikt">Meu TechTIKT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Btn Nav -->
+            <a class="nav-menu" href="/">
+                <button>Menu</button>
+            </a> 
+        </header>
+
+        <!-- Planos -->
+        <section class="section__planos">
+
+            <!-- Título -->
+            <div class="txt-planos">
+                <h2>Planos</h2>
+            </div>
+
+            <!-- Container Row Planos -->
+            <ul class="row-planos">
+
+                <!-- Plano Único -->
+                <li>
+                    <div class="plano-unico">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="tipo-plano">ÚNICO</p>
+                        </div>
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+                                <!-- Preço e Duração do Bilhete -->
+                                <ul class="pr-dr">
+                                    <li>
+                                        <i class="fa-solid fa-money-bills fa-lg"></i>
+                                        <p class="preco">R$ 5,79</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-clock fa-lg"></i>
+                                        <p class="duracao">40 min</p>
+                                    </li>
+                                </ul>
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você terá <b>um crédito de uso</b>.
+                                    <br/> 
+                                    Poderá <b>ser utilizado em quantos transportes quiser</b>,
+                                    durante um período de <b>40 minutos</b> após a ativação!
+                                    </p>
+                                </div>
+
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-unico">
+                                    <a class="btn-plano" onclick="RecarregarBilhete('unico',1)"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Plano Duplo -->
+                <li>
+                    <div class="plano-duplo">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="tipo-plano">DUPLO</p>
+                        </div>
+
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+                                <!-- Preço e Duração do Bilhete -->
+                                <ul class="pr-dr">
+                                    <li>
+                                        <i class="fa-solid fa-money-bills fa-lg"></i>
+                                        <p class="preco">R$ 10,49</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-clock fa-lg"></i>
+                                        <p class="duracao">40 min</p>
+                                    </li>
+                                </ul>
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você terá <b>dois créditos de uso</b>.
+                                    <br/> 
+                                    Poderá <b>ser utilizado em quantos transportes quiser</b>,
+                                    durante um período de <b>40 minutos</b> após a ativação!
+                                    </p>
+                                </div>
+                
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-duplo">
+                                    <a class="btn-plano" onclick="RecarregarBilhete('duplo',2)"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Plano 7Dias -->
+                <li>
+                    <div class="plano-7d">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="tipo-plano">7DIAS</p>
+                        </div>
+                        
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+                                <!-- Preço e Duração do Bilhete -->
+                                <ul class="pr-dr">
+                                    <li>
+                                        <i class="fa-solid fa-money-bills fa-lg"></i>
+                                        <p class="preco">R$ 69,90</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-clock fa-lg"></i>
+                                        <p class="duracao">7 dias</p>
+                                    </li>
+                                </ul>
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você terá um <b>crédito semanal¹</b>.
+                                    <br/> 
+                                    Poderá <b>ser utilizado em quantos transportes quiser</b>, durante <b>7 dias</b> após a ativação!
+                                    </p>
+                                </div>
+                                
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-7d">
+                                    <a class="btn-plano" onclick="RecarregarBilhete('semanal',7)"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Plano 30Dias -->
+                <li>
+                    <div class="plano-30d">
+                        <!-- Planos Sup -->
+                        <div class="planos-sup">
+                            <p class="tipo-plano">30DIAS</p>
+                        </div>
+                        
+                        <!-- Container Info -->
+                        <div class="planos-content">
+                            <div class="container-infopl">
+                                <!-- Preço e Duração do Bilhete -->
+                                <ul class="pr-dr">
+                                    <li>
+                                        <i class="fa-solid fa-money-bills fa-lg"></i>
+                                        <p class="preco">R$ 270,90</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-clock fa-lg"></i>
+                                        <p class="duracao">30 dias</p>
+                                    </li>
+                                </ul>
+
+                                <!-- Texto Planos -->
+                                <div class="txt-infopl">
+                                    <p>Você terá um <b>crédito mensal¹</b>.
+                                    <br/> 
+                                    Poderá <b>ser utilizado em quantos transportes quiser</b>, durante <b>30 dias</b> após a ativação!
+                                    </p>
+                                </div>
+
+                                <!-- Btn Comprar Plano -->
+                                <div class="btn-30d">
+                                    <a class="btn-plano" onclick="RecarregarBilhete('mensal',30)"> <!-- Ver que vai acontecer ao comprar o plano -->
+                                        <button>COMPRAR</button>
+                                    </a>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- Footer Planos -->
+            <div class="footer-planos">
+                <p>¹Deve ser utilizado apenas durante o <b>horário de funcionamento</b> das estações.</p>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <section id="section__recargaef" class="hide">
+            <div id="modal-container-rec" class="modal-container-rec">
+                <div class="modal-rec-header">
+                    <h2>RECARGA EFETUADA COM SUCESSO</h2>
+                    <p>Seu bilhete foi recarregado e já pode ser utilizado.</p>
+                </div>
+
+                <div class="modal-rec-body">
+                    <p><img src="../assets/techtikt_geracaobilhete.jpeg"/></p>
+                    <p> </p>
+                </div>
+                
+                <div class="modal-rec-footer">
+                    <button id="modal-rec-ok-button" onclick="VoltarMenu()">OK</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Script -->
+        <script src="https://kit.fontawesome.com/c8c0505216.js" crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
+</body> 
