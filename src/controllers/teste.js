@@ -1,4 +1,4 @@
-require ('./corinthians');
+require ('./dbConexao');
 
 module.exports = async function testeHora(codigo){
     const existe = await runQuery('select (datageracao_bilhete) from Bilhetes where codigo_bilhete = :id',[codigo]);

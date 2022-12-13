@@ -1,4 +1,4 @@
-require ('./corinthians');
+require ('./dbConexao');
 
 function formatarData (data) {
     try{
@@ -57,12 +57,4 @@ module.exports = async function testeHora(codigo){
         return dados;
     }
     
-    // console.log(formatarData(existe.rows[0].DATA_GERARACAO));
-    // console.log(formatarData(existe.rows[0].DATA_RECARGA));
-    // console.log(formatarData(existe.rows[0].DATA_UTILIZACAO));
-    // objGerenciamento.tipo = existe.rows[0].TIPO;
-    // objGerenciamento.dataGeracao = formatarData(existe.rows[0].DATA_GERARACAO);
-    // objGerenciamento.dataRecarga = formatarData(existe.rows[0].DATA_RECARGA);
-    // objGerenciamento.dataUtilizacao = formatarData(existe.rows[0].DATA_UTILIZACAO);
-    // console.log(objGerenciamento);
 }

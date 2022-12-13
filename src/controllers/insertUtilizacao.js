@@ -1,4 +1,4 @@
-require('./corinthians');
+require('./dbConexao');
 
 var data = new Date();
 var saldonew = 0;
@@ -22,7 +22,8 @@ function addHoursToDate(dateObj,intHour){
 async function ExisteBilhete(codigo){
   const existeBilhete = await runQuery('SELECT count(*) as COUNT FROM bilhetes where codigo_bilhete = :id',[codigo])
   const existe = existeBilhete.rows[0].COUNT
-  if(existe == 1) return true;
+  console.log(existe)
+  if(existe != 0) return true;
   return false;
 }
 
@@ -63,7 +64,6 @@ async function inserir(codigo,saldo){
 }
 
 module.exports=async function inserirUtilizacao(codigo){
-
   if(await ExisteBilhete(codigo)){
     objetoJson.existe=1;
     const selectSaldo = await runQuery('SELECT saldo_bilhete FROM bilhetes WHERE codigo_bilhete = :id',[codigo]);
@@ -87,64 +87,8 @@ module.exports=async function inserirUtilizacao(codigo){
       objetoJson.menssagem="Saldo insuficiente!!!";
     }
     return objetoJson;
+  }else{
+    objetoJson.existe=0
   }
   return objetoJson;
 } 
-  
-
-    
-//     if(count == 1){
-//       if(saldo != 0 && saldo != null){
-//         if(countUti != 0){
-//           const expSelect = await runQuery('SELECT dataexpiracao_bilhete from utilizacao where codigo_bilhete = :id',[codigo]);
-//           if(expSelect.rows[0].DATAEXPIRACAO_BILHETE <= data){
-//             switch(saldo){
-//               case '1':
-//                 tempo = 0.667;
-//               case '2':
-//                 tempo = 0.667;
-//                 var saldonew = 1;
-//               case '7':
-//                 tempo = 168;
-//               case '30':
-//                 tempo = 720;
-//             }
-//             var dataAtivacao = formatarData(data);
-//             var dataExpiracao = formatarData(addHoursToDate(data,tempo));
-//             await runQuery('insert into utilizacao(DATAATIVACAO_BILHETE,DATAEXPIRACAO_BILHETE,FK_CODIGO_BILHETE) values (:id,:id,:id)',[dataAtivacao,dataExpiracao,codigo]);
-//             await runQuery('UPDATE Bilhetes SET saldo_bilhete=:id where codigo_bilhete = :id'[saldonew,codigo]);
-//             objeto.dataExpiracao = dataExpiracao;
-//           }else{
-//             var dataExpiracao = formatarData(addHoursToDate(data,tempo));
-//             objeto.dataExpiracao = dataExpiracao;
-//           }
-//         }else{
-//           switch(saldo){
-//             case '1':
-//               tempo = 0.667;
-//             case '2':
-//               tempo = 0.667;
-//               var saldonew = 1;
-//             case '7':
-//               tempo = 168;
-//             case '30':
-//               tempo = 720;
-//           }
-//           var dataAtivacao = formatarData(data);
-//           var dataExpiracao = formatarData(addHoursToDate(data,tempo));
-//           await runQuery('insert into utilizacao(DATAATIVACAO_BILHETE,DATAEXPIRACAO_BILHETE,FK_CODIGO_BILHETE) values (:id,:id,:id)',[dataAtivacao,dataExpiracao,codigo]);
-//           await runQuery('UPDATE Bilhetes SET saldo_bilhete=:id where codigo_bilhete = :id'[saldonew,codigo]);
-//           objeto.dataExpiracao = dataExpiracao;
-//         }
-//       }else{
-//         objeto.message = 'Você não possui uma recarga válida!';
-//       }
-//       return objeto;
-//     }else{
-//       objeto.message = 'Bilhete Inválido!';
-//       return objeto;
-//     }
-// }
-
-
-// module.exports = inserirUtilizacao();

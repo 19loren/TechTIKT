@@ -1,7 +1,8 @@
-//#region GerarBilhete
 VoltarMenu =() =>{
     window.location.href ="http://localhost:8081/";
 }
+//#region GerarBilhete
+
 
 GerarBilhete =() =>{
     const sectionBilheteGerado= document.querySelector("#section__modal__gerado");
@@ -28,17 +29,19 @@ const toggleModalRegraU=() =>{
     const sectionBilheteGerado= document.querySelector("#section__rub");
     sectionBilheteGerado.classList.toggle("hide")
 }
+
 const toggleModalTermosU=() =>{
     const sectionBilheteGerado= document.querySelector("#section__tdu");
     sectionBilheteGerado.classList.toggle("hide")
 }
-
 //#endregion
 
 //#region RecarregarBilhete
 async function VerificarBilhete(){
     const codigoRecarga = document.getElementById("inputRecarga").value;
-    if(codigoRecarga==""){
+    console.log(isNaN(codigoRecarga))
+    if(codigoRecarga=="" || isNaN(codigoRecarga)==true){
+        document.getElementById("inputRecarga").value="";
         document.querySelector("#inputRecarga").setAttribute("placeholder","Código Invalido");
     }
     else{
@@ -70,7 +73,8 @@ const toggleRecarregado=() =>{
 async function utilizar(){
     try {
         const codigoUtilizacao = document.getElementById("inputUtilizacao").value;
-        if(codigoUtilizacao==""){
+        if(codigoUtilizacao==""|| isNaN(codigoUtilizacao)==true){
+            document.getElementById("inputUtilizacao").value="";
             document.querySelector("#inputUtilizacao").setAttribute("placeholder","Código Inválido!!!");
         }else{
             document.getElementById("lbl-res").textContent="";
@@ -101,7 +105,7 @@ async function utilizar(){
             toggleModal();
     }
     }catch (error) {
-        //console.log(error);
+        console.log(error);
     }
 }
 
@@ -136,19 +140,25 @@ const adicionarLinha=(plano,dataGeracao,dataRecarga,dataUtilizaca) =>{
 
 async function GerenciarBilhete(){
     const codigo=document.getElementById("inputUtilizacao").value;
-    var dadosGerenciar = await fetch(`http://localhost:8081/gerenciar/${codigo}`,{method:'POST'}).then((dadosGerenciar)=> dadosGerenciar.json());
-    //console.log(dadosGerenciar);
-    if(dadosGerenciar[0].existe){
-        limparLinha()
-        for(dado in dadosGerenciar){
-            //console.log(dadosGerenciar[dado].tipo);
-            //console.log(dado);
-            adicionarLinha(dadosGerenciar[dado].tipo,dadosGerenciar[dado].dataGeracao,dadosGerenciar[dado].dataRecarga,dadosGerenciar[dado].dataUtilizacao);
+    if(isNaN(codigo)==false){
+        var dadosGerenciar = await fetch(`http://localhost:8081/gerenciar/${codigo}`,{method:'POST'}).then((dadosGerenciar)=> dadosGerenciar.json());
+        //console.log(dadosGerenciar);
+        if(dadosGerenciar[0].existe){
+            limparLinha()
+            for(dado in dadosGerenciar){
+                //console.log(dadosGerenciar[dado].tipo);
+                //console.log(dado);
+                adicionarLinha(dadosGerenciar[dado].tipo,dadosGerenciar[dado].dataGeracao,dadosGerenciar[dado].dataRecarga,dadosGerenciar[dado].dataUtilizacao);
+            }
+        }else{
+            document.getElementById("inputUtilizacao").value="";
+            document.getElementById("inputUtilizacao").setAttribute("placeholder","Código Invalido");
         }
     }else{
         document.getElementById("inputUtilizacao").value="";
         document.getElementById("inputUtilizacao").setAttribute("placeholder","Código Invalido");
     }
+    
 }
 
 const limparLinha=() =>{
